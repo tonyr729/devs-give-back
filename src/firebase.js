@@ -1,7 +1,8 @@
 import firebase from 'firebase';
+import { firebaseKey } from './apiKeys';
 
 const config = {
-  apiKey: "AIzaSyAVk4m35HpmPoi0Rr1K495lVyfskmVDiD4",
+  apiKey: firebaseKey,
   authDomain: "devsgiveback.firebaseapp.com",
   databaseURL: "https://devsgiveback.firebaseio.com",
   projectId: "devsgiveback",
