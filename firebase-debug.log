@@ -1,0 +1,32 @@
+[debug] [2018-05-24T21:12:48.317Z] ----------------------------------------------------------------------
+[debug] [2018-05-24T21:12:48.319Z] Command:       /Users/tonysmac/.nvm/versions/node/v9.4.0/bin/node /Users/tonysmac/.nvm/versions/node/v9.4.0/bin/firebase serve
+[debug] [2018-05-24T21:12:48.319Z] CLI Version:   3.18.5
+[debug] [2018-05-24T21:12:48.319Z] Platform:      darwin
+[debug] [2018-05-24T21:12:48.319Z] Node Version:  v9.4.0
+[debug] [2018-05-24T21:12:48.320Z] Time:          Thu May 24 2018 15:12:48 GMT-0600 (MDT)
+[debug] [2018-05-24T21:12:48.320Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-24T21:12:48.328Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-24T21:12:48.328Z] > authorizing via signed-in user
+[debug] [2018-05-24T21:12:48.330Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/devsgiveback  
+  
+ Thu May 24 2018 15:12:48 GMT-0600 (MDT)
+[debug] [2018-05-24T21:12:48.666Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-24T21:12:48.667Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/devsgiveback/tokens  
+  
+ Thu May 24 2018 15:12:48 GMT-0600 (MDT)
+[debug] [2018-05-24T21:12:48.939Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-24T21:12:48.940Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/devsgiveback  
+  
+ Thu May 24 2018 15:12:48 GMT-0600 (MDT)
+[debug] [2018-05-24T21:12:49.197Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/tonysmac/Turing/mod3/devs-give-back'...
+[info] 
+[debug] [2018-05-24T21:12:49.199Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/171321681886/clients/_:getWebAppConfig  
+  
+ Thu May 24 2018 15:12:49 GMT-0600 (MDT)
+[debug] [2018-05-24T21:12:50.520Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: y
+[info] ✔  hosting: Local server: http://localhost:5000
+
