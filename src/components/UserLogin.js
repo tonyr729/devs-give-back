@@ -1,7 +1,7 @@
 import React from 'react';
 import firebase from '../firebase';
 
-const UserLogin =() => {
+export const UserLogin =() => {
 
   const googleLogin = async () => {
     try {
@@ -16,10 +16,9 @@ const UserLogin =() => {
       const errorInfo = { errorCode, errorMessage, email, credential};
     };
 
+  };
+  
   return (
     <button onClick={()=> googleLogin()}>Login with Google</button>
   );
-
-}
-
-export default UserLogin;
+};
