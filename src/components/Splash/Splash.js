@@ -1,10 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './Splash.css';
 
 export const Splash =() => {
   return (
-    <div>
-      <h1>Devs<span>GIVE</span>bacK</h1>
+    <div className='splash'>
+      <h1>devs<span>GIVE</span>back</h1>
       <h3>MISSION</h3>
       <p>Passionate and talented developers exist all around the world.
          Many of these developers are looking to volunteer their skill 
@@ -19,7 +20,7 @@ export const Splash =() => {
          discretion of the developer to take on a problem. 
       </p>
       <NavLink to='/sort'><button className='begin-button'>BEGIN</button></NavLink>
-      <NavLink to='/split-login'>I already have an account</NavLink>
+      <NavLink className='split-link' to='/split-login'>I already have an account</NavLink>
     </div>
   );
 };
