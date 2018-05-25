@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
-import firebase from './firebase';
-import UserLogin from './components/UserLogin'
+import { UserLogin } from './components/UserLogin';
+import DevLogin from './components/DevLogin';
 import './App.css';
 
 class App extends Component {
 
 
-componentDidMount() {
-  const app = firebase.app();
-  console.log(app)
-}
 
 
 
   render() {
     return (
       <div className="App">
-      <UserLogin />
+        <UserLogin />
+        <DevLogin />
       </div>
     );
   }

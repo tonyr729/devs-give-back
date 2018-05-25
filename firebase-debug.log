@@ -30,3 +30,35 @@
 [info] i  hosting: Serving hosting files from: y
 [info] ✔  hosting: Local server: http://localhost:5000
 
+[debug] [2018-05-25T00:08:53.917Z] ----------------------------------------------------------------------
+[debug] [2018-05-25T00:08:53.919Z] Command:       /Users/tonysmac/.nvm/versions/node/v9.4.0/bin/node /Users/tonysmac/.nvm/versions/node/v9.4.0/bin/firebase serve
+[debug] [2018-05-25T00:08:53.919Z] CLI Version:   3.18.5
+[debug] [2018-05-25T00:08:53.919Z] Platform:      darwin
+[debug] [2018-05-25T00:08:53.919Z] Node Version:  v9.4.0
+[debug] [2018-05-25T00:08:53.920Z] Time:          Thu May 24 2018 18:08:53 GMT-0600 (MDT)
+[debug] [2018-05-25T00:08:53.920Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-25T00:08:53.928Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-25T00:08:53.928Z] > authorizing via signed-in user
+[debug] [2018-05-25T00:08:53.930Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/devsgiveback  
+  
+ Thu May 24 2018 18:08:53 GMT-0600 (MDT)
+[debug] [2018-05-25T00:08:54.287Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-25T00:08:54.288Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/devsgiveback/tokens  
+  
+ Thu May 24 2018 18:08:54 GMT-0600 (MDT)
+[debug] [2018-05-25T00:08:54.931Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-25T00:08:54.932Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/devsgiveback  
+  
+ Thu May 24 2018 18:08:54 GMT-0600 (MDT)
+[debug] [2018-05-25T00:08:55.114Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/tonysmac/Turing/mod3/devs-give-back'...
+[info] 
+[debug] [2018-05-25T00:08:55.116Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/171321681886/clients/_:getWebAppConfig  
+  
+ Thu May 24 2018 18:08:55 GMT-0600 (MDT)
+[debug] [2018-05-25T00:08:55.334Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
