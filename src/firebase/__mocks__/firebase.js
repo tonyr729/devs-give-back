@@ -1,6 +1,6 @@
-import * as firebase from 'firebase'
+import * as firebase from 'firebase';
 
-const onAuthStateChanged = jest.fn()
+const onAuthStateChanged = jest.fn();
 
 const getRedirectResult = jest.fn(() => {
   return Promise.resolve({
@@ -13,21 +13,21 @@ const getRedirectResult = jest.fn(() => {
 })
 
 const sendEmailVerification = jest.fn(() => {
-  return Promise.resolve('result of sendEmailVerification')
+  return Promise.resolve('result of sendEmailVerification');
 })
 
-const sendPasswordResetEmail = jest.fn(() => Promise.resolve())
+const sendPasswordResetEmail = jest.fn(() => Promise.resolve());
 
 const createUserWithEmailAndPassword = jest.fn(() => {
-  return Promise.resolve('result of createUserWithEmailAndPassword')
+  return Promise.resolve('result of createUserWithEmailAndPassword');
 })
 
 const signInWithEmailAndPassword = jest.fn(() => {
-  return Promise.resolve('result of signInWithEmailAndPassword')
+  return Promise.resolve('result of signInWithEmailAndPassword');
 })
 
 const signInWithPopup = jest.fn(() => {
-  return Promise.resolve('result of signInWithPopup')
+  return Promise.resolve('result of signInWithPopup');
 })
 
 const initializeApp = jest

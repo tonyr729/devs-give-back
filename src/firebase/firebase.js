@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-import { firebaseKey } from './apiKeys';
+import { firebaseKey } from '../apiKeys';
 
 const config = {
   apiKey: firebaseKey,
@@ -9,6 +9,7 @@ const config = {
   storageBucket: "devsgiveback.appspot.com",
   messagingSenderId: "171321681886"
 };
+
 firebase.initializeApp(config);
 
 export default firebase;
