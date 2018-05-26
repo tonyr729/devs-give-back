@@ -1,0 +1,19 @@
+.user-choice {
+  color: #f5f5f5;
+  background-color: #607d8b;
+  height: 50vh; }
+  .user-choice a p {
+    font-size: 5rem;
+    padding-top: 12rem; }
+    .user-choice a p:hover {
+      color: #29bbff; }
+
+.dev-choice {
+  color: #f5f5f5;
+  background-color: #03a9f4;
+  height: 50vh; }
+  .dev-choice a p {
+    font-size: 5rem;
+    padding-top: 12rem; }
+    .dev-choice a p:hover {
+      color: #607d8b; }
