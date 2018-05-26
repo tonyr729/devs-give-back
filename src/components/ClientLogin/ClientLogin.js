@@ -1,7 +1,7 @@
 import React from 'react';
 import firebase from '../../firebase/firebase';
 
-export const UserLogin =() => {
+export const ClientLogin =() => {
 
   const googleLogin = async () => {
     try {
