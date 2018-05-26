@@ -58,7 +58,7 @@ jest.spyOn(firebase, 'auth').mockImplementation(() => {
   };
 });
 
-firebase.auth.FacebookAuthProvider = jest.fn(() => {})
+firebase.auth.GithubAuthProvider = jest.fn(() => {})
 firebase.auth.GoogleAuthProvider = jest.fn(() => {})
 
 export default firebase;
