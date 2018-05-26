@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import { Splash } from './components/Splash';
-import { Sort } from './components/Sort';
-import { SplitLogin } from './components/SplitLogin';
-
+import { Splash } from './components/Splash/Splash';
+import { Sort } from './components/Sort/Sort';
+import { SplitLogin } from './components/SplitLogin/SplitLogin';
 import './App.css';
 
 class App extends Component {

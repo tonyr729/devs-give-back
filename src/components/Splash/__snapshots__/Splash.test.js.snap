@@ -1,0 +1,311 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Splash should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          devs
+          <span>
+                    GIVE
+          </span>
+          back
+</h1>,
+        <h3>
+          MISSION
+</h3>,
+        <p>
+          Passionate and talented developers exist all around the world. Many of these developers are looking to volunteer their skill and passion to help those in need. This site aims to provide a meeting place for individuals who have a problem and developers that can offer solutions. All work should remain voluntary. Developers on this site are not seeking payment. Their main focus is to give back to the community. That being said some projects may require the use of outside services that may come with a cost. (storage, hosting, etc...) Ideal problems are ones that are civic-minded, or that can positively affect a wide range of individuals when solved. It is up to the discretion of the developer to take on a problem.
+</p>,
+        <NavLink
+          activeClassName="active"
+          ariaCurrent="true"
+          to="/sort"
+>
+          <button
+                    className="begin-button"
+          >
+                    BEGIN
+          </button>
+</NavLink>,
+        <NavLink
+          activeClassName="active"
+          ariaCurrent="true"
+          className="split-link"
+          to="/split-login"
+>
+          I already have an account
+</NavLink>,
+      ],
+      "className": "splash",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "devs",
+            <span>
+              GIVE
+</span>,
+            "back",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "devs",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "GIVE",
+            },
+            "ref": null,
+            "rendered": "GIVE",
+            "type": "span",
+          },
+          "back",
+        ],
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "MISSION",
+        },
+        "ref": null,
+        "rendered": "MISSION",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Passionate and talented developers exist all around the world. Many of these developers are looking to volunteer their skill and passion to help those in need. This site aims to provide a meeting place for individuals who have a problem and developers that can offer solutions. All work should remain voluntary. Developers on this site are not seeking payment. Their main focus is to give back to the community. That being said some projects may require the use of outside services that may come with a cost. (storage, hosting, etc...) Ideal problems are ones that are civic-minded, or that can positively affect a wide range of individuals when solved. It is up to the discretion of the developer to take on a problem.",
+        },
+        "ref": null,
+        "rendered": "Passionate and talented developers exist all around the world. Many of these developers are looking to volunteer their skill and passion to help those in need. This site aims to provide a meeting place for individuals who have a problem and developers that can offer solutions. All work should remain voluntary. Developers on this site are not seeking payment. Their main focus is to give back to the community. That being said some projects may require the use of outside services that may come with a cost. (storage, hosting, etc...) Ideal problems are ones that are civic-minded, or that can positively affect a wide range of individuals when solved. It is up to the discretion of the developer to take on a problem.",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "ariaCurrent": "true",
+          "children": <button
+            className="begin-button"
+>
+            BEGIN
+</button>,
+          "to": "/sort",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "BEGIN",
+            "className": "begin-button",
+          },
+          "ref": null,
+          "rendered": "BEGIN",
+          "type": "button",
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "ariaCurrent": "true",
+          "children": "I already have an account",
+          "className": "split-link",
+          "to": "/split-login",
+        },
+        "ref": null,
+        "rendered": "I already have an account",
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            devs
+            <span>
+                        GIVE
+            </span>
+            back
+</h1>,
+          <h3>
+            MISSION
+</h3>,
+          <p>
+            Passionate and talented developers exist all around the world. Many of these developers are looking to volunteer their skill and passion to help those in need. This site aims to provide a meeting place for individuals who have a problem and developers that can offer solutions. All work should remain voluntary. Developers on this site are not seeking payment. Their main focus is to give back to the community. That being said some projects may require the use of outside services that may come with a cost. (storage, hosting, etc...) Ideal problems are ones that are civic-minded, or that can positively affect a wide range of individuals when solved. It is up to the discretion of the developer to take on a problem.
+</p>,
+          <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            to="/sort"
+>
+            <button
+                        className="begin-button"
+            >
+                        BEGIN
+            </button>
+</NavLink>,
+          <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            className="split-link"
+            to="/split-login"
+>
+            I already have an account
+</NavLink>,
+        ],
+        "className": "splash",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "devs",
+              <span>
+                GIVE
+</span>,
+              "back",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "devs",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "GIVE",
+              },
+              "ref": null,
+              "rendered": "GIVE",
+              "type": "span",
+            },
+            "back",
+          ],
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "MISSION",
+          },
+          "ref": null,
+          "rendered": "MISSION",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Passionate and talented developers exist all around the world. Many of these developers are looking to volunteer their skill and passion to help those in need. This site aims to provide a meeting place for individuals who have a problem and developers that can offer solutions. All work should remain voluntary. Developers on this site are not seeking payment. Their main focus is to give back to the community. That being said some projects may require the use of outside services that may come with a cost. (storage, hosting, etc...) Ideal problems are ones that are civic-minded, or that can positively affect a wide range of individuals when solved. It is up to the discretion of the developer to take on a problem.",
+          },
+          "ref": null,
+          "rendered": "Passionate and talented developers exist all around the world. Many of these developers are looking to volunteer their skill and passion to help those in need. This site aims to provide a meeting place for individuals who have a problem and developers that can offer solutions. All work should remain voluntary. Developers on this site are not seeking payment. Their main focus is to give back to the community. That being said some projects may require the use of outside services that may come with a cost. (storage, hosting, etc...) Ideal problems are ones that are civic-minded, or that can positively affect a wide range of individuals when solved. It is up to the discretion of the developer to take on a problem.",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "ariaCurrent": "true",
+            "children": <button
+              className="begin-button"
+>
+              BEGIN
+</button>,
+            "to": "/sort",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "BEGIN",
+              "className": "begin-button",
+            },
+            "ref": null,
+            "rendered": "BEGIN",
+            "type": "button",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "ariaCurrent": "true",
+            "children": "I already have an account",
+            "className": "split-link",
+            "to": "/split-login",
+          },
+          "ref": null,
+          "rendered": "I already have an account",
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
