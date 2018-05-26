@@ -19,7 +19,7 @@ export const Splash =() => {
          affect a wide range of individuals when solved. It is up to the 
          discretion of the developer to take on a problem. 
       </p>
-      <NavLink to='/sort'><button className='begin-button'>BEGIN</button></NavLink>
+      <NavLink to='/choice'><button className='begin-button'>BEGIN</button></NavLink>
       <NavLink className='split-link' to='/split-login'>I already have an account</NavLink>
     </div>
   );

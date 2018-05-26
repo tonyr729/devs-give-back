@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { Splash } from './components/Splash/Splash';
-import { Sort } from './components/Sort/Sort';
+import { Choice } from './components/Choice/Choice';
 import { SplitLogin } from './components/SplitLogin/SplitLogin';
+import { ClientLogin } from './components/ClientLogin/ClientLogin';
+import { DevLogin } from './components/DevLogin/DevLogin';
 import './App.css';
 
 class App extends Component {
@@ -11,8 +13,10 @@ class App extends Component {
     return (
       <div className='app'>
         <Route exact path='/' component={Splash} />
-        <Route path='/sort' component={Sort} />
+        <Route path='/choice' component={Choice} />
         <Route path='/split-login' component={SplitLogin} />
+        <Route path='/dev-login' component={ DevLogin } />
+        <Route path='/client-login' component={ ClientLogin } />
       </div>
     );
   }

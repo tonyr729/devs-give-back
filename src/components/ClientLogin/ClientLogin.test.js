@@ -1,24 +1,24 @@
 import { shallow, mount } from 'enzyme';
 import React from 'react';
-import { UserLogin } from './UserLogin';
+import { ClientLogin } from './ClientLogin';
 import firebase from '../../firebase/firebase'
 jest.mock('../../firebase/firebase')
 
-describe('UserLogin', () => {
+describe('ClientLogin', () => {
   it('should match snapshot', () => {
-    const userLogin = shallow(<UserLogin  />);
+    const clientLogin = shallow(<ClientLogin  />);
 
-    expect(userLogin).toMatchSnapshot();
+    expect(clientLogin).toMatchSnapshot();
   });
 
   describe('googleLogin', () => {
-    let userLogin;
+    let clientLogin;
     beforeEach(() => {
-      userLogin = shallow(<UserLogin />);
+      clientLogin = shallow(<ClientLogin />);
     });
 
     it('should call the expected methods of firebase', () => {
-      userLogin.find('button').simulate('click');
+      clientLogin.find('button').simulate('click');
 
       expect(firebase.auth().signInWithPopup).toHaveBeenCalled()
       expect(firebase.auth.GoogleAuthProvider).toHaveBeenCalled()
