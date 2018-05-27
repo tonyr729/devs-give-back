@@ -1,5 +1,6 @@
 import React from 'react';
 import firebase from '../../firebase/firebase';
+import './ClientLogin.css';
 
 export const ClientLogin =() => {
 
@@ -19,6 +20,9 @@ export const ClientLogin =() => {
   };
   
   return (
-    <button onClick={()=> googleLogin()}>Login with Google</button>
+    <div>
+      <p className='login-message'>Please login</p>
+      <button className='login-button'onClick={()=> googleLogin()}>Login with Google</button>
+    </div>
   );
 };
