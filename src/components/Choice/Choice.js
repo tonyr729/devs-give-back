@@ -3,18 +3,18 @@ import { NavLink } from 'react-router-dom';
 import './Choice.css';
 
 export const Choice = () => {
-  return(
+  return (
     <div>
       <div className='user-choice'>
         <NavLink to='/client-login'>
           <p>I have a problem.</p>
         </NavLink>
       </div>
-      <div className='dev-login'>
+      <div className='dev-choice'>
         <NavLink to='/dev-login'>
           <p>I have a solution.</p>
         </NavLink>
       </div>
     </div>
-  )
-}
+  );
+};
