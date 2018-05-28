@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
+import { clientLoginReducer, clientErrorReducer } from './clientLoginReducer';
 
 export const rootReducer = combineReducers({
-  key: "value"
+  user: clientLoginReducer,
+  clientError: clientErrorReducer
 }); 
