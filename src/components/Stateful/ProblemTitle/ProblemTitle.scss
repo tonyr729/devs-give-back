@@ -1,10 +1,15 @@
+.welcome {
+  font-size: 2rem;
+  padding-top: 10rem;
+}
+
 .title-instructions {
   font-size: 4rem;
-  padding-top: 13rem;
+  padding-top: 4rem;
   color: #f8f8ff
 }
 
-p {
+.example {
   font-size: 1rem;
   padding: 1rem;
   color: #a0a0a0;
@@ -28,6 +33,14 @@ input {
   }
 }
 
-img {
-  width: 1rem;
+.next-button {
+  width: 6rem;
+  height: 6rem;
+  background: none;
+  border: none;
+  display: block;
+  margin: 12rem auto;
+  img {
+    width: 4rem;
+  }
 }
