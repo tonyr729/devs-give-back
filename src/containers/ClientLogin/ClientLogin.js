@@ -3,7 +3,7 @@ import firebase from '../../firebase/firebase';
 import './ClientLogin.css';
 import { connect } from 'react-redux';
 import { signInClient, clientError } from '../../actions/actions';
-import DataCleaner from '../../helpers/DataCleaner'
+import DataCleaner from '../../helpers/DataCleaner';
 
 const cleaner = new DataCleaner();
 
@@ -14,7 +14,7 @@ export class ClientLogin extends Component {
       const provider = new firebase.auth.GoogleAuthProvider();
       const response = await firebase.auth().signInWithPopup(provider);
       const cleanUser = cleaner.cleanClientLogin(response.user)
-      this.props.signInClient(cleanUser);
+      this.handleUser(cleanUser)
       this.props.history.push("/problem-title")
     } catch (error) {
       const errorCode = error.code;
@@ -26,6 +26,14 @@ export class ClientLogin extends Component {
       this.props.history.push("/error-page")
     }
   };
+  
+  handleUser = (user) => {
+    this.props.signInClient(user);
+    firebase.database().ref('users/' + user.id).set({
+      username: user.name,
+      picture: user.photoURL
+    });
+  }
   
   render() {
     return (
