@@ -4,7 +4,7 @@
   height: 50vh; }
   .user-choice a p {
     font-size: 5rem;
-    padding-top: 12rem; }
+    padding: 12rem; }
     .user-choice a p:hover {
       color: #29bbff; }
 
@@ -14,6 +14,6 @@
   height: 50vh; }
   .dev-choice a p {
     font-size: 5rem;
-    padding-top: 12rem; }
+    padding: 12rem; }
     .dev-choice a p:hover {
       color: #607d8b; }

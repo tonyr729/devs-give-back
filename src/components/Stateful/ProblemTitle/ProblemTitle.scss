@@ -1,0 +1,33 @@
+.title-instructions {
+  font-size: 4rem;
+  padding-top: 13rem;
+  color: #f8f8ff
+}
+
+p {
+  font-size: 1rem;
+  padding: 1rem;
+  color: #a0a0a0;
+}
+
+input {
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffaaaa;
+  border: none;
+  margin: 4rem auto;
+  display: block;
+  width: 54rem;
+  font-size: 2rem;
+  height: 4rem;
+  text-align: center;
+  &::placeholder {
+    color: #ffaaaa91;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+img {
+  width: 1rem;
+}
