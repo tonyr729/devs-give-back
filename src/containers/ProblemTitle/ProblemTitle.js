@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './ProblemTitle.css';
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux';
-import {createProblemTitle, createProblemClient } from '../../../actions/actions';
-import rightArrow from '../../../images/right_arrow.svg'
+import {createProblemTitle, createProblemClient } from '../../actions/actions';
+import rightArrow from '../../images/right_arrow.svg'
 
 class ProblemTitle extends Component {
   constructor() {

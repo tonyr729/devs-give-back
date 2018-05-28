@@ -5,7 +5,8 @@ import { Choice } from './components/Stateless/Choice/Choice';
 import { SplitLogin } from './components/Stateless/SplitLogin/SplitLogin';
 import ClientLogin from './containers/ClientLogin/ClientLogin';
 import { DevLogin } from './components/Stateless/DevLogin/DevLogin';
-import ProblemTitle from './components/Stateful/ProblemTitle/ProblemTitle';
+import ProblemTitle from './containers/ProblemTitle/ProblemTitle';
+import ProblemBody from './containers/ProblemBody/ProblemBody';
 import './App.css';
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
         <Route path='/dev-login' component={ DevLogin } />
         <Route path='/client-login' component={ ClientLogin } />
         <Route path='/problem-title' component={ ProblemTitle } />
+        <Route path='/problem-body' component={ ProblemBody } />
       </div>
     );
   }
