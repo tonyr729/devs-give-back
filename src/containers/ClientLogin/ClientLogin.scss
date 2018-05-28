@@ -1,0 +1,36 @@
+div {
+  background-color: #607d8b;
+  width: 100vw;
+  height: 100vh;
+}
+
+.login-message {
+  font-size: 5rem;
+  padding-top: 12rem;
+}
+
+.login-button {
+  border: none;
+  width: 12rem;
+  height: 2.9rem;
+  background-repeat: no-repeat;
+  background-image: url('../../images/btn_google_light_normal_ios.svg');
+  padding-left: 3rem;
+  font-size: 1rem;
+  color: #6d6c6c;
+  margin: 4rem auto;
+  display: block;
+  &:hover {
+    color: #f8f8ff;
+    background-image: url('../../images/btn_google_light_focus_ios.svg');
+    background-color: #448aff;
+  }
+  &:active {
+    color: #f8f8ff;
+    background-image: url('../../images/btn_google_light_focus_ios.svg');
+    background-color: #24498a;
+  }
+  &:focus {
+    outline: none;
+  }
+}
