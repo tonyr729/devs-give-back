@@ -3,7 +3,8 @@ import './ProblemTitle.css';
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux';
 import {createProblemTitle, createProblemClient } from '../../actions/actions';
-import rightArrow from '../../images/right_arrow.svg'
+import { findMatchingProblem } from '../../helpers/apiCalls';
+import rightArrow from '../../images/right_arrow.svg';
 
 class ProblemTitle extends Component {
   constructor() {
@@ -11,6 +12,16 @@ class ProblemTitle extends Component {
     this.state = {
       input: ''
     }
+  }
+
+  componentDidMount(){
+    this.renderCheck(this.props.user)
+  }
+
+  renderCheck = async (user) =>{
+    user.name || this.props.history.push("/client-login")
+    const existingProblem = await findMatchingProblem(user.id);
+    !existingProblem || this.props.history.push("/prior-problem");
   }
 
   handleInputChange= (event) => {
@@ -26,13 +37,14 @@ class ProblemTitle extends Component {
     this.props.history.push("/problem-body")
   }
 
+
   render() {
-    let name;
-    !this.props.user.name ? this.props.history.push("/client-login") : name = this.props.user.name.split(' ')[0];
+    const name = this.props.user.name || 'user unknown';
+    const firstName = name.split(' ')[0];
 
     return (
       <div>
-        <p className='welcome'>Hi {name},</p>
+        <p className='welcome'>Hi {firstName},</p>
         <p className='title-instructions'>Briefly describe your problem...</p>
         <p className='example'>Ex: Looking for a solution to help an afterschool program</p> 
         <input className='title-input' placeholder='Looking for ...' maxLength='70' value={this.state.input} onChange={this.handleInputChange}/>
