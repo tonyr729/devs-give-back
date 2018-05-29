@@ -1,4 +1,4 @@
-const initalState = '';
+const initalState = null;
 
 export const problemTitleReducer = (state = initalState, action) => {
   switch (action.type) {
