@@ -5,13 +5,8 @@ import firebase from '../../firebase/firebase';
 import { findMatchingProblem } from '../../helpers/apiCalls';
 
 
-class ProblemBody extends Component {
+class ClientProfile extends Component {
 
-
-  componentDidMount = () => {
-    const problem = findMatchingProblem(this.props.user.id);
-    
-  }
 
   render() {
     let name;
@@ -21,6 +16,7 @@ class ProblemBody extends Component {
       <div className="frame-container">
         <div className="header">
           <div className="header-container">
+            <img src={this.props.user.photoURL} alt="user profile picture"/>
           </div>
         </div>
         <div className="problem">
@@ -44,5 +40,4 @@ const mapStateToProps = (state) => ({
 });
 
 
-
-export default connect(mapStateToProps)(ProblemBody);
+export default connect(mapStateToProps)(ClientProfile);
