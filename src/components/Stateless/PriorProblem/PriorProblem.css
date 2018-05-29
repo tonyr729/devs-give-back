@@ -1,0 +1,15 @@
+.sorry-text {
+  font-size: 2rem;
+  padding-top: 10rem; }
+
+.info-message {
+  font-size: 4rem;
+  padding: 4rem 0 8rem;
+  width: 60rem;
+  line-height: 5rem; }
+
+a p {
+  font-size: 2rem;
+  padding: 5rem; }
+  a p:hover {
+    color: #29bbff; }
