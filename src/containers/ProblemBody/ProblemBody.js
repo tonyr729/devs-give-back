@@ -27,7 +27,7 @@ class ProblemBody extends Component {
     this.props.createProblemBody(this.state.input);
     const {title, client} = this.props;
     this.writeToDatabase(title, this.state.input, client)
-    this.props.history.push("/problem-main")
+    this.props.history.push("/problem-created")
   }
 
   writeToDatabase = (title, body, clientID) => {

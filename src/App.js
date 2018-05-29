@@ -7,6 +7,7 @@ import ClientLogin from './containers/ClientLogin/ClientLogin';
 import { DevLogin } from './components/Stateless/DevLogin/DevLogin';
 import ProblemTitle from './containers/ProblemTitle/ProblemTitle';
 import ProblemBody from './containers/ProblemBody/ProblemBody';
+import { ProblemCreated } from './components/Stateless/ProblemCreated/ProblemCreated';
 import './App.css';
 
 class App extends Component {
@@ -21,6 +22,8 @@ class App extends Component {
         <Route path='/client-login' component={ ClientLogin } />
         <Route path='/problem-title' component={ ProblemTitle } />
         <Route path='/problem-body' component={ ProblemBody } />
+        <Route path='/problem-created' component={ ProblemCreated} />
+
       </div>
     );
   }

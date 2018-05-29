@@ -28,7 +28,7 @@ class ProblemTitle extends Component {
 
   render() {
     let name;
-    !this.props.user.name ? this.props.history.push("/client-login") : name = this.props.user.name.split(' ')[0];
+    // !this.props.user.name ? this.props.history.push("/client-login") : name = this.props.user.name.split(' ')[0];
 
     return (
       <div>
