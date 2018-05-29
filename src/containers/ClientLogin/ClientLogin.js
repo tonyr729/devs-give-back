@@ -15,7 +15,7 @@ export class ClientLogin extends Component {
       const response = await firebase.auth().signInWithPopup(provider);
       const cleanUser = cleaner.cleanClientLogin(response.user)
       this.handleUser(cleanUser)
-      this.props.history.push("/problem-title")
+      this.props.history.push("/client-profile")
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message
