@@ -1,0 +1,40 @@
+.welcome {
+  font-size: 2rem;
+  padding-top: 10rem; }
+
+.body-instructions {
+  font-size: 4rem;
+  padding-top: 4rem;
+  color: #f8f8ff; }
+
+.body-input {
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffaaaa;
+  border: none;
+  margin: 4rem auto;
+  display: block;
+  width: 54rem;
+  font-size: 2rem;
+  height: 20rem;
+  text-align: center; }
+  .body-input::placeholder {
+    color: #ffaaaa91; }
+  .body-input:focus {
+    outline: none; }
+
+.button-container {
+  display: flex;
+  width: 10rem;
+  margin: 0 auto; }
+
+.next-button,
+.previous-button {
+  width: 6rem;
+  height: 6rem;
+  background: none;
+  border: none;
+  display: block;
+  margin: 3rem auto; }
+  .next-button img,
+  .previous-button img {
+    width: 4rem; }

@@ -1,0 +1,31 @@
+div {
+  background-color: #03a9f4;
+  width: 100vw;
+  height: 100vh; }
+
+.login-message {
+  font-size: 5rem;
+  padding-top: 12rem; }
+
+.login-button-github {
+  border: none;
+  width: 12rem;
+  height: 2.9rem;
+  background-repeat: no-repeat;
+  background-image: url(/static/media/github_icon.5e2d57ae.svg);
+  background-size: 3rem;
+  background-position-x: .3rem;
+  background-color: #000;
+  border-radius: .5rem;
+  padding-left: 3rem;
+  font-size: 1rem;
+  color: #f8f8ff;
+  margin: 4rem auto;
+  display: block; }
+  .login-button-github:hover {
+    background-color: #06b900; }
+  .login-button-github:active {
+    color: #f8f8ff;
+    background-color: #007e11; }
+  .login-button-github:focus {
+    outline: none; }

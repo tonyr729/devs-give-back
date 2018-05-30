@@ -1,0 +1,95 @@
+.header {
+  height: 20vh;
+  width: 100vw;
+  // background-color: #536c79;
+  background: linear-gradient(#96c0d6, #536c79);
+
+}
+
+.header-container {
+  height:100%;
+  width:64rem;
+  display: block;
+  margin: 0 auto;
+  background-color: #607d8b;
+  img {
+    border-radius: 3rem;
+    width: 9rem;
+    margin: 3rem 2rem 0;
+  };
+  p {
+    font-size: 2rem; 
+    text-align: -webkit-auto; 
+    position: relative; 
+    font-weight: 100;
+    top: 7rem; 
+    left: 8rem; 
+  };
+  ul {
+    list-style: none;
+  };
+  li {
+    display: inline;
+    margin-right: 1rem;
+    font-size: .8rem;
+    color: #f8f8ff;
+    position: relative;
+    top: 7.5rem;
+    left: 9.9rem;
+  };
+}
+
+.problem {
+  height: 40vh;
+  width: 100vw;
+  // background-color: rgba(0, 0, 0, 0.712);
+  background: radial-gradient(#000,#181717);
+}
+
+.problem-container {
+  height:100%;
+  width:64rem;
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(0, 0, 0)
+}
+
+.section-title {
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+.problem-title {
+  font-size: 2rem;
+  padding: 4rem 6rem 0;
+  text-align: -webkit-auto;
+}
+
+.problem-body {
+  font-size: 1rem;
+  width: 50rem;
+  text-align: -webkit-auto;
+  font-weight: 100;
+}
+
+.stats {
+  height: 40vh;
+  width: 100vw;
+  // background-color: #1471c9;
+  background: linear-gradient(#0d4d88,#1471c9);
+}
+
+.stats-container {
+  height:100%;
+  width:64rem;
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(24, 131, 231);
+  
+}
+
+.stats-title {
+  font-size: 2rem;
+  padding: 4rem 6rem 0;
+  text-align: -webkit-auto;
+}
