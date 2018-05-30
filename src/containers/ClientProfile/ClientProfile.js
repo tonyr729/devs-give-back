@@ -10,14 +10,13 @@ class ClientProfile extends Component {
 
   render() {
     let name;
-    !this.props.user.name ? this.props.history.push("/client-login") : name = this.props.user.name.split(' ')[0];
-    console.log(this.props)
+    !this.props.client.name ? this.props.history.push("/client-login") : name = this.props.client.name.split(' ')[0];
     return (
       <div className="frame-container">
         <div className="header">
           <div className="header-container">
-            <p>{this.props.user.name}</p>
-            <img className='profile-picture' src={this.props.user.photoURL} alt="user profile picture"/>
+            <p>{this.props.client.name}</p>
+            <img className='profile-picture' src={this.props.client.photoURL} alt="user profile picture"/>
           </div>
         </div>
         <div className="problem">
@@ -40,7 +39,7 @@ class ClientProfile extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  user: state.user,
+  client: state.client,
   title: state.problemTitle,
   body: state.problemBody
 });

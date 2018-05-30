@@ -15,7 +15,7 @@ export class ClientLogin extends Component {
       const response = await firebase.auth().signInWithPopup(provider);
       const cleanUser = cleaner.cleanClientLogin(response.user)
       this.handleUser(cleanUser)
-      this.props.history.push("/client-profile")
+      this.props.history.push("/problem-title");
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message
@@ -46,7 +46,7 @@ export class ClientLogin extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  user: state.user,
+  user: state.client,
   clientError: state.clientError
 })
 
