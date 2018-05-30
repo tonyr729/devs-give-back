@@ -8,8 +8,14 @@
   width: 60rem;
   line-height: 5rem; }
 
-a p {
-  font-size: 2rem;
-  padding: 5rem; }
-  a p:hover {
+.nav-button {
+  background: none;
+  border: none;
+  color: #f8f8ff;
+  width: 16rem;
+  height: 4rem;
+  margin: 0 auto;
+  display: block;
+  font-size: 1.3rem; }
+  .nav-button:hover {
     color: #29bbff; }

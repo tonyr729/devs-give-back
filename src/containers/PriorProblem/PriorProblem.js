@@ -36,8 +36,8 @@ class PriorProblem extends Component {
     return (
       <div>
         <p className='sorry-text'>Sorry,</p>
-        <p className='info-message'> can only have one listed problem at a time.</p>
-          <button onClick={ this.handleClick }>Go to my profile</button>
+        <p className='info-message'>You can only have one listed problem at a time.</p>
+          <button className='nav-button' onClick={ this.handleClick }>Go to my profile</button>
       </div>
     );
   }
