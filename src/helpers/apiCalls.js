@@ -3,7 +3,7 @@ import firebase from '../firebase/firebase';
 
 export const gitHubLogin = async () => {
   const provider = new firebase.auth.GithubAuthProvider()
-  // provider.addScope('repo');
+  provider.addScope('public_repo');
   const response = await firebase.auth().signInWithPopup(provider);
   const token = response.credential.accessToken;
   const user = response.user;
