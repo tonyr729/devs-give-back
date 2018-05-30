@@ -4,7 +4,7 @@ import { Splash } from './components/Stateless/Splash/Splash';
 import { Choice } from './components/Stateless/Choice/Choice';
 import { SplitLogin } from './components/Stateless/SplitLogin/SplitLogin';
 import ClientLogin from './containers/ClientLogin/ClientLogin';
-import { DevLogin } from './components/Stateless/DevLogin/DevLogin';
+import DevLogin from './containers/DevLogin/DevLogin';
 import ProblemTitle from './containers/ProblemTitle/ProblemTitle';
 import ProblemBody from './containers/ProblemBody/ProblemBody';
 import { ProblemCreated } from './components/Stateless/ProblemCreated/ProblemCreated';
