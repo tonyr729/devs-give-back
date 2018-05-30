@@ -31,9 +31,16 @@ class DevLogin extends Component {
     });
   }
 
+  renderCheck = (dev) => {
+    const value = Object.keys(dev).length;
+    console.log(value);
+    if ( value !== 0 ) {
+      this.props.history.push('/dev-profile')
+    }
+  }
+
   render() {
-    const value = Object.keys(this.props.dev);
-    value.length === 0|| this.props.history.push('/dev-profile');
+    this.renderCheck(this.props.dev)
     return (
       <div>
         <p className='login-message'>Please login</p>
