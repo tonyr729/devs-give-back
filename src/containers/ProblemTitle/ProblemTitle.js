@@ -15,12 +15,14 @@ class ProblemTitle extends Component {
   }
 
   componentDidMount(){
-    this.renderCheck(this.props.user)
+    this.problemCheck(this.props.client)
+    this.logInCheck(this.props.client);
   }
 
-  renderCheck = async (user) =>{
-    user.name || this.props.history.push("/client-login")
-    const existingProblem = await findMatchingProblem(user.id);
+  problemCheck = async (client) =>{
+    console.log(client)
+    client.name || this.props.history.push("/client-login")
+    const existingProblem = await findMatchingProblem(client.id);
     !existingProblem || this.props.history.push("/prior-problem");
   }
 
@@ -33,17 +35,23 @@ class ProblemTitle extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.createProblemTitle(this.state.input);
-    this.props.createProblemClient(this.props.user.id);
+    this.props.createProblemClient(this.props.client.id);
     this.props.history.push("/problem-body")
+  }
+
+  logInCheck = (client) => {
+    const value = Object.keys(client).length;
+    if ( value === 0 ) {
+      this.props.history.push('/client-login')
+    }
   }
 
 
   render() {
-    const name = this.props.user.name || 'user unknown';
+    const name = this.props.client.name || 'client unknown';
     const firstName = name.split(' ')[0];
-
     return (
-      <div>
+      <div className='client-background'>
         <p className='welcome'>Hi {firstName},</p>
         <p className='title-instructions'>Briefly describe your problem...</p>
         <p className='example'>Ex: Looking for a solution to help an afterschool program</p> 
@@ -55,11 +63,11 @@ class ProblemTitle extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  user: state.user
+  client: state.client
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  createProblemClient: (user) => dispatch(createProblemClient(user)),
+  createProblemClient: (client) => dispatch(createProblemClient(client)),
   createProblemTitle: (title) => dispatch(createProblemTitle(title))
 });
 

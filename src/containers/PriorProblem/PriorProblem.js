@@ -14,7 +14,7 @@ class PriorProblem extends Component {
   }
 
   componentDidMount = async () => {
-    const problem = await findMatchingProblem(this.props.user.id);
+    const problem = await findMatchingProblem(this.props.client.id);
     console.log(problem)
     this.setState({
       problem: problem
@@ -34,7 +34,7 @@ class PriorProblem extends Component {
 
   render() {
     return (
-      <div>
+      <div className='client-background'>
         <p className='sorry-text'>Sorry,</p>
         <p className='info-message'>You can only have one listed problem at a time.</p>
           <button className='nav-button' onClick={ this.handleClick }>Go to my profile</button>
@@ -44,7 +44,7 @@ class PriorProblem extends Component {
 };
 
 const mapStateToProps = (state) => ({
-  user: state.user 
+  client: state.client 
 });
 
 const mapDispatchToProps = (dispatch) => ({
