@@ -1,0 +1,32 @@
+.client-login {
+  color: #f5f5f5;
+  background-color: #607d8b;
+  height: 50vh;
+  a {
+    p {
+      font-size: 5rem;
+      padding: 12rem;
+      &:hover {
+        color: #29bbff;
+      }
+    }
+    
+  }
+  
+}
+
+.dev-login {
+  color: #f5f5f5;
+  background-color: #03a9f4;
+  height: 50vh;
+  a {
+    p {
+      font-size: 5rem;
+      padding: 12rem;
+      &:hover {
+        color: #607d8b;
+      }
+    }
+  }
+}
+
