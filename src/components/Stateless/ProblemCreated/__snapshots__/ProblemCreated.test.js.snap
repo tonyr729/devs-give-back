@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProblemCreated should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          className="thanks-text"
+>
+          Thank you!
+</p>,
+        <p
+          className="info-message"
+>
+          Your problem has been created.
+</p>,
+        <NavLink
+          activeClassName="active"
+          ariaCurrent="true"
+          to="/client-profile"
+>
+          <p>
+                    Go to my profile
+          </p>
+</NavLink>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Thank you!",
+          "className": "thanks-text",
+        },
+        "ref": null,
+        "rendered": "Thank you!",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Your problem has been created.",
+          "className": "info-message",
+        },
+        "ref": null,
+        "rendered": "Your problem has been created.",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "ariaCurrent": "true",
+          "children": <p>
+            Go to my profile
+</p>,
+          "to": "/client-profile",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Go to my profile",
+          },
+          "ref": null,
+          "rendered": "Go to my profile",
+          "type": "p",
+        },
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            className="thanks-text"
+>
+            Thank you!
+</p>,
+          <p
+            className="info-message"
+>
+            Your problem has been created.
+</p>,
+          <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            to="/client-profile"
+>
+            <p>
+                        Go to my profile
+            </p>
+</NavLink>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Thank you!",
+            "className": "thanks-text",
+          },
+          "ref": null,
+          "rendered": "Thank you!",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Your problem has been created.",
+            "className": "info-message",
+          },
+          "ref": null,
+          "rendered": "Your problem has been created.",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "ariaCurrent": "true",
+            "children": <p>
+              Go to my profile
+</p>,
+            "to": "/client-profile",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Go to my profile",
+            },
+            "ref": null,
+            "rendered": "Go to my profile",
+            "type": "p",
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
