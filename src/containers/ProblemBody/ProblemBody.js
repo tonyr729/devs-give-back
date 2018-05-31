@@ -26,7 +26,7 @@ class ProblemBody extends Component {
     event.preventDefault();
     this.props.createProblemBody(this.state.input);
     const {title, client} = this.props;
-    this.writeToDatabase(title, this.state.input, client)
+    this.writeToDatabase(title, this.state.input, client.id)
     this.props.history.push("/problem-created")
   }
 
@@ -37,15 +37,23 @@ class ProblemBody extends Component {
       clientID
     });
   }
+
+  logInCheck = (client) => {
+    const value = Object.keys(client).length;
+    if ( value === 0 ) {
+      this.props.history.push("/client-login");
+    }
+  }
   
 
   render() {
-    let name;
-    !this.props.user.name ? this.props.history.push("/client-login") : name = this.props.user.name.split(' ')[0];
+    this.logInCheck(this.props.client)
+    const name = this.props.client.name || 'client unknown';
+    const firstName = name.split(' ')[0];
 
     return (
-      <div>
-        <p className='welcome'>Sounds great {name},</p>
+      <div className='client-background'>
+        <p className='welcome'>Sounds great {firstName},</p>
         <p className='body-instructions'>Now give us some more detail</p>
         <textarea className='body-input' placeholder='Looking for ...' maxLength='400' value={this.state.input} onChange={this.handleInputChange}/>
         <div className="button-container">
@@ -58,8 +66,8 @@ class ProblemBody extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  user: state.user,
-  client: state.problemClient,
+  client: state.client,
+  clientID: state.problemClient,
   title: state.problemTitle,
   body: state.problemBody
 });

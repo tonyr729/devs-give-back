@@ -12,7 +12,7 @@ export class ClientLogin extends Component {
   
   googleLogin = async () => {
     try {
-      const user = googleLogin();
+      const user = await googleLogin();
       const client = cleaner.cleanClientLogin(user)
       this.props.signInClient(client);
       this.writeToDatabase(client);
@@ -40,7 +40,7 @@ export class ClientLogin extends Component {
   render() {
     this.logInCheck(this.props.client);
     return (
-      <div>
+      <div className='client-background'>
         <p className='login-message'>Please login</p>
         <button className='login-button'onClick={()=> this.googleLogin()}>Login with Google</button>
       </div>

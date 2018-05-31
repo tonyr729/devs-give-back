@@ -25,7 +25,8 @@
 .button-container {
   display: flex;
   width: 10rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background-color: #607d8b; }
 
 .next-button,
 .previous-button {
