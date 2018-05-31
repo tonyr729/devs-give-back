@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import { SplitLogin } from './SplitLogin'
+import { SplitLogin } from './SplitLogin';
 
 describe('SplitLogin', () => {
   it('should match snapshot', () => {
