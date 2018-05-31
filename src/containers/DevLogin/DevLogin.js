@@ -15,11 +15,12 @@ class DevLogin extends Component {
     try {
       const result = await gitHubLogin();
       const cleanDev = cleaner.cleanDevLogin(result.user, result.token);
-      this.writeToDatabase(cleanDev)
       this.props.signInDev(cleanDev);
+      this.writeToDatabase(cleanDev)
     } catch (error) {
       const cleanError = cleaner.cleanError(error);
       this.props.devError(cleanError);
+      this.props.history.push("/error-page")
     };
   };
 
@@ -31,7 +32,7 @@ class DevLogin extends Component {
     });
   }
 
-  renderCheck = (dev) => {
+  logInCheck = (dev) => {
     const value = Object.keys(dev).length;
     console.log(value);
     if ( value !== 0 ) {
@@ -40,7 +41,7 @@ class DevLogin extends Component {
   }
 
   render() {
-    this.renderCheck(this.props.dev)
+    this.logInCheck(this.props.dev)
     return (
       <div>
         <p className='login-message'>Please login</p>

@@ -14,7 +14,7 @@ class ClientProfile extends Component {
     console.log(data)
   }
 
-  renderCheck = (dev) => {
+  logInCheck = (dev) => {
     const value = Object.keys(dev).length;
     if ( value === 0 ) {
       this.props.history.push('/dev-login')
@@ -22,7 +22,7 @@ class ClientProfile extends Component {
   }
 
   render() {
-    this.renderCheck(this.props.dev)
+    this.logInCheck(this.props.dev)
     return (
       <div>
         <p>This is the DevProfile</p>

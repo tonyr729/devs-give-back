@@ -10,6 +10,12 @@ export const gitHubLogin = async () => {
   return {user, token}
 }
 
+export const googleLogin = async () => {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  const response = await firebase.auth().signInWithPopup(provider);
+  return response.user;
+}
+
 
 export const findMatchingProblem = async (userID) => {
   const response = await firebase.database().ref('/Problems/').once('value');
