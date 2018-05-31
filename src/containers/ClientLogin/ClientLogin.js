@@ -3,6 +3,7 @@ import firebase from '../../firebase/firebase';
 import './ClientLogin.css';
 import { connect } from 'react-redux';
 import { signInClient, clientError } from '../../actions/actions';
+import { googleLogin } from '../../helpers/apiCalls';
 import DataCleaner from '../../helpers/DataCleaner';
 
 const cleaner = new DataCleaner();
@@ -11,31 +12,33 @@ export class ClientLogin extends Component {
   
   googleLogin = async () => {
     try {
-      const provider = new firebase.auth.GoogleAuthProvider();
-      const response = await firebase.auth().signInWithPopup(provider);
-      const cleanUser = cleaner.cleanClientLogin(response.user)
-      this.handleUser(cleanUser)
-      this.props.history.push("/problem-title");
+      const user = googleLogin();
+      const client = cleaner.cleanClientLogin(user)
+      this.props.signInClient(client);
+      this.writeToDatabase(client);
     } catch (error) {
-      const errorCode = error.code;
-      const errorMessage = error.message
-      const email = error.email;
-      const credential = error.credential;
-      const errorInfo = { errorCode, errorMessage, email, credential};
-      this.props.clientError(errorInfo);
+      const cleanError = cleaner.cleanError(error)
+      this.props.clientError(cleanError);
       this.props.history.push("/error-page")
     }
   };
   
-  handleUser = (user) => {
-    this.props.signInClient(user);
-    firebase.database().ref('users/' + user.id).set({
-      username: user.name,
-      picture: user.photoURL
+  writeToDatabase = (client) => {
+    firebase.database().ref('clients/' + client.id).set({
+      username: client.name,
+      picture: client.photoURL
     });
   }
   
+  logInCheck = (client) => {
+    const value = Object.keys(client).length;
+    if ( value !== 0 ) {
+      this.props.history.push("/problem-title");
+    }
+  }
+  
   render() {
+    this.logInCheck(this.props.client);
     return (
       <div>
         <p className='login-message'>Please login</p>
@@ -46,12 +49,12 @@ export class ClientLogin extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  user: state.client,
+  client: state.client,
   clientError: state.clientError
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  signInClient: (user) => dispatch(signInClient(user)),
+  signInClient: (client) => dispatch(signInClient(client)),
   clientError: (error) => dispatch(clientError(error))
 });
 
