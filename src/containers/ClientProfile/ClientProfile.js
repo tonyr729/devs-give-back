@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
-import './ClientProfile.css';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
+
 import firebase from '../../firebase/firebase';
 import { findMatchingProblem } from '../../helpers/apiCalls';
+import './ClientProfile.css';
 
+export class ClientProfile extends Component {
 
-class ClientProfile extends Component {
-
+  logInCheck = (client) => {
+    const value = Object.keys(client).length;
+    if ( value !== 0 ) {
+      return <Redirect to='/client-login'/>
+    }
+  }
 
   render() {
-    let name;
-    !this.props.client.name ? this.props.history.push("/client-login") : name = this.props.client.name.split(' ')[0];
+    const redirect = this.logInCheck(this.props.client);
     return (
       <div className="frame-container">
         <div className="header">
