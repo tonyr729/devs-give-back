@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
+
 import { signInDev, devError } from '../../actions/actions';
 import firebase from '../../firebase/firebase';
 import DataCleaner from '../../helpers/DataCleaner';
-import { gitHubLogin } from '../../helpers/apiCalls';
+import ApiHelper from '../../helpers/apiCalls';
 import './DevLogin.css'
 
 const cleaner = new DataCleaner();
 
-class DevLogin extends Component {
+export class DevLogin extends Component {
+  constructor() {
+    super();
+    this.api = new ApiHelper();
+  }
 
 
-  login = async () => {
+  handleLogin = async () => {
     try {
-      const result = await gitHubLogin();
+      const result = await this.api.gitHubLogin();
       const cleanDev = cleaner.cleanDevLogin(result.user, result.token);
       this.props.signInDev(cleanDev);
       this.writeToDatabase(cleanDev)
@@ -33,19 +39,20 @@ class DevLogin extends Component {
   }
 
   logInCheck = (dev) => {
+    console.log(dev)
     const value = Object.keys(dev).length;
-    console.log(value);
     if ( value !== 0 ) {
-      this.props.history.push('/dev-profile')
+      return (<Redirect to='/dev-profile'/>);
     }
   }
 
   render() {
-    this.logInCheck(this.props.dev)
+    const redirect = this.logInCheck(this.props.dev);
     return (
       <div>
+        { redirect }
         <p className='login-message'>Please login</p>
-        <button className='login-button-github'onClick={()=> this.login()}>Login with GitHub</button>
+        <button className='login-button-github'onClick={()=> this.handleLogin()}>Login with GitHub</button>
       </div>
     );
   }
