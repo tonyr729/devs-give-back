@@ -4,7 +4,16 @@ exports[`ClientLogin should match snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ClientLogin />,
+  Symbol(enzyme.__unrendered__): <ClientLogin
+    client={Object {}}
+    clientError={[Function]}
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
+    signInClient={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,6 +27,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        undefined,
         <p
           className="login-message"
 >
@@ -30,9 +40,11 @@ ShallowWrapper {
           Login with Google
 </button>,
       ],
+      "className": "client-background",
     },
     "ref": null,
     "rendered": Array [
+      undefined,
       Object {
         "instance": null,
         "key": undefined,
@@ -68,6 +80,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          undefined,
           <p
             className="login-message"
 >
@@ -80,9 +93,11 @@ ShallowWrapper {
             Login with Google
 </button>,
         ],
+        "className": "client-background",
       },
       "ref": null,
       "rendered": Array [
+        undefined,
         Object {
           "instance": null,
           "key": undefined,
