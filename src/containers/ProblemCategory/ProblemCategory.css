@@ -1,6 +1,6 @@
 .categories-instructions {
   font-size: 4rem;
-  padding-top: 4rem;
+  padding-top: 2rem;
   color: #f8f8ff;
   line-height: 4rem;
   margin-bottom: .6rem; }
@@ -8,14 +8,31 @@
 .categories {
   display: block;
   background-color: #607d8b;
-  margin: 0 auto;
+  margin: 2rem auto;
   width: 60%;
-  height: 22rem; }
+  height: 22rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
 
 .category-button {
   border-radius: 1rem;
   background-color: #03a9f4;
   color: #f8f8ff;
+  border: none;
+  height: 2rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+  margin: .4rem; }
+  .category-button:hover {
+    background-color: #005983; }
+  .category-button:active {
+    background-color: #00364e; }
+
+.selected {
+  border-radius: 1rem;
+  background-color: #494949;
+  color: #8a8a8a;
   border: none;
   height: 2rem;
   padding: 0 1rem;

@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import { addCategories, selectCategories } from '../../actions/actions';
+import CategoryButton from '../../components/Statefull/CategoryButton/CategoryButton';
 import rightArrow from '../../images/right_arrow.svg';
 import leftArrow from '../../images/left_arrow.svg';
 
@@ -29,18 +30,25 @@ class ProblemCategory extends Component {
   displayCategories = () => {
     let display = null;
     if (this.props.categories) {
-      display = this.props.categories.map((category, index) => (
-        <button key={index} onClick={this.handleSelectCategory} className="category-button">{category}</button>
+      display = this.props.categories.map((category, index) => ( 
+        <CategoryButton key={index} selectCategory={this.selectCategory} category={category} />
       ));
     }
     return display;
   }
 
-  handleSelectCategory= (event) => {
-    const category = event.target.innerText;
-    this.setState({
-      categories: [...this.state.categories, category]
-    })
+  selectCategory= (category) => {
+    let match = this.state.categories.includes(category);
+    if (!match) {
+      this.setState({
+        categories: [...this.state.categories, category]
+      });
+    } else {
+      let newState = this.state.categories.filter(currCategory => currCategory !== category);
+      this.setState({
+        categories: newState
+      });
+    }
   }
 
   handleSubmit = (event) => {
@@ -71,7 +79,7 @@ class ProblemCategory extends Component {
           {categories}
         </div>
         <div className="button-container">
-          <button className='previous-button' onClick={()=> this.props.history.push("/problem-title")} ><img className='left-arrow-img' src={leftArrow} /></button>
+          <button className='previous-button' onClick={()=> this.props.history.push("/problem-body")} ><img className='left-arrow-img' src={leftArrow} /></button>
           <button className='next-button' onClick={this.handleSubmit} ><img className='right-arrow-img' src={rightArrow} /></button>
         </div>
       </div>
