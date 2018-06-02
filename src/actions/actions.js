@@ -33,3 +33,8 @@ export const createProblemBody = (body) => ({
   body
 });
 
+export const createProblemCategories = (categories) => ({
+  type: 'CREATE_PROBLEM_CATEGORIES',
+  categories
+})
+
