@@ -38,8 +38,15 @@ class DatabaseHelper {
     return categories;
   }
 
+  writeClientToDatabase = (client) => {
+    firebase.database().ref('/Clients/' + client.id).set({
+      username: client.name,
+      picture: client.photoURL
+    });
+  }
+
   writeProblemToDatabase = (title, body, categories, clientID) => {
-    firebase.database().ref('/Problems').set({
+    firebase.database().ref('/Problems/' + clientID).set({
       title,
       body,
       categories,
