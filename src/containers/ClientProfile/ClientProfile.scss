@@ -1,17 +1,18 @@
 .header {
   height: 20vh;
   width: 100vw;
-  // background-color: #536c79;
-  background: linear-gradient(#96c0d6, #536c79);
-
+  background-color: #607d8b;
 }
 
 .header-container {
   height:100%;
-  width:64rem;
+  width:80rem;
   display: block;
   margin: 0 auto;
   background-color: #607d8b;
+  // box-shadow: 0px -12px 400px 100px #1d1d1d;
+  border-left: 2px solid rgba(255, 255, 255, 0.219);
+  border-right: 2px solid rgba(255, 255, 255, 0.219);;
   img {
     border-radius: 3rem;
     width: 9rem;
@@ -22,8 +23,7 @@
     text-align: -webkit-auto; 
     position: relative; 
     font-weight: 100;
-    top: 7rem; 
-    left: 8rem; 
+    top: 9rem; 
   };
   ul {
     list-style: none;
@@ -42,16 +42,18 @@
 .problem {
   height: 40vh;
   width: 100vw;
-  // background-color: rgba(0, 0, 0, 0.712);
-  background: radial-gradient(#000,#181717);
+  background-color: rgba(0, 0, 0, 0.712);
 }
 
 .problem-container {
   height:100%;
-  width:64rem;
+  width:80rem;
   display: block;
   margin: 0 auto;
-  background-color: rgb(0, 0, 0)
+  background-color: rgb(0, 0, 0);
+  // box-shadow: 0px -12px 400px 100px #1d1d1d;
+  border-left: 2px solid rgba(255, 255, 255, 0.219);;
+  border-right: 2px solid rgba(255, 255, 255, 0.219);;
 }
 
 .section-title {
@@ -61,7 +63,7 @@
 
 .problem-title {
   font-size: 1.6rem;
-  padding: 4rem 6rem 0;
+  padding: 4rem 6rem 0 6.2rem;
   text-align: -webkit-auto;
 }
 
@@ -70,28 +72,47 @@
   width: 50rem;
   text-align: left;
   color: grey;
-  margin: 0 0 0 6.2rem;
+  margin: 0 0 0 12rem;
   font-weight: 100;
 }
 
 .stats {
   height: 40vh;
   width: 100vw;
-  // background-color: #1471c9;
-  background: linear-gradient(#0d4d88,#1471c9);
+  background-color: #1471c9;
 }
 
 .stats-container {
   height:100%;
-  width:64rem;
+  width:80rem;
   display: block;
   margin: 0 auto;
-  background-color: rgb(24, 131, 231);
-  
+  background-color: #1471c9;
+  // box-shadow: 0px -12px 400px 100px #1d1d1d;
+  border-left: 2px solid rgba(255, 255, 255, 0.219);;
+  border-right: 2px solid rgba(255, 255, 255, 0.219);;
 }
 
 .stats-title {
   font-size: 2rem;
   padding: 4rem 6rem 0;
   text-align: -webkit-auto;
+}
+
+.category-tags {
+  width: 56.2rem;
+  height: 2.4rem;
+  margin: 0 auto;
+  background-color: #000000;
+
+}
+
+.display-category {
+  height: 2rem;
+  font-size: 1rem;
+  padding: 0 1rem;
+  margin: 0 .2rem;
+  color: #f8f8ff;
+  border: none;
+  background-color: #1b9b1b;
 }
