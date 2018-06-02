@@ -33,8 +33,12 @@ export const createProblemBody = (body) => ({
   body
 });
 
-export const createProblemCategories = (categories) => ({
-  type: 'CREATE_PROBLEM_CATEGORIES',
+export const addCategories = (categories) => ({
+  type: 'ADD_CATEGORIES',
   categories
 })
 
+export const selectCategories = (categories) => ({
+  type: 'SELECT_CATEGORIES',
+  categories
+})

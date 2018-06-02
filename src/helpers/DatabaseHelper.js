@@ -30,7 +30,7 @@ class DatabaseHelper {
   }
 
   pullCategoriesFromDatabase = async () => {
-    const response = await firebase.database().ref('/Categories/').once('value');
+    const response = await firebase.database().ref('/Categories/categories').once('value');
     let categories = null;
     if (response.val()) {
       categories = response.val();
