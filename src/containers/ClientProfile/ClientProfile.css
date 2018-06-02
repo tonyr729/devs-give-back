@@ -8,9 +8,7 @@
   width: 80rem;
   display: block;
   margin: 0 auto;
-  background-color: #607d8b;
-  border-left: 2px solid rgba(255, 255, 255, 0.219);
-  border-right: 2px solid rgba(255, 255, 255, 0.219); }
+  background-color: #465b65; }
   .header-container img {
     border-radius: 3rem;
     width: 9rem;
@@ -35,20 +33,19 @@
 .problem {
   height: 40vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.712); }
+  background-color: #607d8b; }
 
 .problem-container {
   height: 100%;
   width: 80rem;
   display: block;
   margin: 0 auto;
-  background-color: black;
-  border-left: 2px solid rgba(255, 255, 255, 0.219);
-  border-right: 2px solid rgba(255, 255, 255, 0.219); }
+  background-color: #000; }
 
 .section-title {
   font-size: 3rem;
-  padding-top: 2rem; }
+  padding-top: 2rem;
+  font-weight: 100; }
 
 .problem-title {
   font-size: 1.6rem;
@@ -66,16 +63,14 @@
 .stats {
   height: 40vh;
   width: 100vw;
-  background-color: #1471c9; }
+  background-color: #607d8b; }
 
 .stats-container {
   height: 100%;
   width: 80rem;
   display: block;
   margin: 0 auto;
-  background-color: #1471c9;
-  border-left: 2px solid rgba(255, 255, 255, 0.219);
-  border-right: 2px solid rgba(255, 255, 255, 0.219); }
+  background-color: #1471c9; }
 
 .stats-title {
   font-size: 2rem;

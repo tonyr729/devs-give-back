@@ -1,0 +1,64 @@
+.profile-background {
+  background-color: #1db6fc;
+  width: 100vw;
+  height: 100vh; }
+
+.dev-header {
+  height: 20vh;
+  width: 100vw;
+  background-color: #1db6fc; }
+
+.dev-header-container {
+  height: 100%;
+  width: 80rem;
+  display: block;
+  margin: 0 auto;
+  background-color: #03a9f4;
+  border-left: 2px solid rgba(255, 255, 255, 0.219);
+  border-right: 2px solid rgba(255, 255, 255, 0.219); }
+  .dev-header-container img {
+    border-radius: 3rem;
+    width: 9rem;
+    margin: 3rem 2rem 0; }
+  .dev-header-container p {
+    font-size: 2rem;
+    text-align: -webkit-auto;
+    position: relative;
+    font-weight: 100;
+    top: 9rem; }
+  .dev-header-container ul {
+    list-style: none; }
+  .dev-header-container li {
+    display: inline;
+    margin-right: 1rem;
+    font-size: .8rem;
+    color: #f8f8ff;
+    position: relative;
+    top: 7.5rem;
+    left: 9.9rem; }
+
+.main {
+  height: 40vh;
+  width: 100vw;
+  background-color: #1db6fc; }
+
+.main-container {
+  height: 80vh;
+  width: 80rem;
+  display: block;
+  margin: 0 auto;
+  background-color: #fff;
+  border-left: 2px solid rgba(255, 255, 255, 0.219);
+  border-right: 2px solid rgba(255, 255, 255, 0.219); }
+
+.main-section-titles {
+  font-size: 3rem;
+  padding-top: 2rem;
+  font-weight: 100;
+  margin-left: 14rem;
+  width: 60rem;
+  color: #000; }
+  .main-section-titles a {
+    color: #7c7c7c; }
+    .main-section-titles a:hover {
+      color: #03a9f4; }

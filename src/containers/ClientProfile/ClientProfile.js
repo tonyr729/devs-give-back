@@ -6,13 +6,7 @@ import './ClientProfile.css';
 
 export class ClientProfile extends Component {
 
-  logInCheck = (client) => {
-    const value = Object.keys(client).length;
-    if ( value === 0 ) {
-      return <Redirect to='/client-login'/>
-    }
-  }
-
+  
   displayCategories = (categories) => {
     let display = null;
     if (categories) {
@@ -24,7 +18,14 @@ export class ClientProfile extends Component {
     }
     return display;
   }
-
+  
+  logInCheck = (client) => {
+    const value = Object.keys(client).length;
+    if ( value === 0 ) {
+      return <Redirect to='/client-login'/>
+    }
+  }
+  
   render() {
     const redirect = this.logInCheck(this.props.client);
     const categories = this.displayCategories(this.props.categories);
