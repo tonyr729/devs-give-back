@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './DevProfile.css';
 import { connect } from 'react-redux';
-import firebase from '../../firebase/firebase';
-import { findMatchingProblem } from '../../helpers/apiCalls';
 
 
 class ClientProfile extends Component {

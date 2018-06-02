@@ -4,20 +4,20 @@ import './ClientLogin.css';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { signInClient, clientError } from '../../actions/actions';
-import ApiHelper from '../../helpers/apiCalls';
+import DatabaseHelper from '../../helpers/DatabaseHelper';
 import DataCleaner from '../../helpers/DataCleaner';
 
 
 export class ClientLogin extends Component {
   constructor() {
     super();
-    this.api = new ApiHelper();
+    this.database = new DatabaseHelper();
     this.cleaner = new DataCleaner();
   }
   
   handleLogin = async () => {
     try {
-      const user = await this.api.googleLogin();
+      const user = await this.database.googleLogin();
       const client = this.cleaner.cleanClientLogin(user)
       this.props.signInClient(client);
       this.writeToDatabase(client);

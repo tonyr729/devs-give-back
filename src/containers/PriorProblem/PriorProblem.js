@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import ApiHelper from '../../helpers/apiCalls';
+import DatabaseHelper from '../../helpers/DatabaseHelper';
 import { connect } from 'react-redux';
 import {createProblemTitle, createProblemBody, createProblemClient } from '../../actions/actions';
 import './PriorProblem.css'
@@ -11,13 +11,13 @@ export class PriorProblem extends Component {
     this.state = {
       problem: {}
     }
-    this.api = new ApiHelper();
+    this.database = new DatabaseHelper();
   }
 
   componentDidMount = async () => {
     if (this.props.client) {
       const clientID = this.props.client.id 
-      const problem = await this.api.findMatchingProblem(clientID);
+      const problem = await this.database.findMatchingProblem(clientID);
       this.setState({
         problem: problem
       })

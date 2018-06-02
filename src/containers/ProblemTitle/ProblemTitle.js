@@ -3,7 +3,7 @@ import './ProblemTitle.css';
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux';
 import {createProblemTitle, createProblemClient } from '../../actions/actions';
-import ApiHelper from '../../helpers/apiCalls';
+import DatabaseHelper from '../../helpers/DatabaseHelper';
 import rightArrow from '../../images/right_arrow.svg';
 
 class ProblemTitle extends Component {
@@ -13,7 +13,7 @@ class ProblemTitle extends Component {
       input: ''
     }
 
-    this.api = new ApiHelper();
+    this.database = new DatabaseHelper();
   }
 
   componentDidMount(){
@@ -22,9 +22,8 @@ class ProblemTitle extends Component {
   }
 
   problemCheck = async (client) =>{
-    console.log(client)
     client.name || this.props.history.push("/client-login")
-    const existingProblem = await this.api.findMatchingProblem(client.id);
+    const existingProblem = await this.database.findMatchingProblem(client.id);
     !existingProblem || this.props.history.push("/prior-problem");
   }
 
