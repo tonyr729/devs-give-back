@@ -1,6 +1,6 @@
 import firebase from '../firebase/firebase';
 
-class ApiHelper {
+class DatabaseHelper {
 
   gitHubLogin = async () => {
     const provider = new firebase.auth.GithubAuthProvider()
@@ -19,7 +19,7 @@ class ApiHelper {
   
   
   findMatchingProblem = async (userID) => {
-    const response = await firebase.database().ref('/Problems/').once('value');
+    const response = await firebase.database().ref('/Problems').once('value');
     let problem = null;
     if (response.val()) {
       const problems = response.val();
@@ -28,6 +28,31 @@ class ApiHelper {
     }
     return problem;
   }
+
+  pullCategoriesFromDatabase = async () => {
+    const response = await firebase.database().ref('/Categories/').once('value');
+    let categories = null;
+    if (response.val()) {
+      categories = response.val();
+    }
+    return categories;
+  }
+
+  writeProblemToDatabase = (title, body, categories, clientID) => {
+    firebase.database().ref('/Problems').set({
+      title,
+      body,
+      categories,
+      clientID
+    });
+  }
+
+  setCategoriesInDatabase = (categories) => {
+    firebase.database().ref('/Categories').set({
+      categories
+    })
+  }
+
 }
 
-export default ApiHelper;
+export default DatabaseHelper;

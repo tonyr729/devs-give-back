@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom';
 import { signInDev, devError } from '../../actions/actions';
 import firebase from '../../firebase/firebase';
 import DataCleaner from '../../helpers/DataCleaner';
-import ApiHelper from '../../helpers/apiCalls';
+import DatabaseHelper from '../../helpers/DatabaseHelper';
 import './DevLogin.css'
 
 const cleaner = new DataCleaner();
@@ -13,13 +13,13 @@ const cleaner = new DataCleaner();
 export class DevLogin extends Component {
   constructor() {
     super();
-    this.api = new ApiHelper();
+    this.database = new DatabaseHelper();
   }
 
 
   handleLogin = async () => {
     try {
-      const result = await this.api.gitHubLogin();
+      const result = await this.database.gitHubLogin();
       const cleanDev = cleaner.cleanDevLogin(result.user, result.token);
       this.props.signInDev(cleanDev);
       this.writeToDatabase(cleanDev)

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-import firebase from '../../firebase/firebase';
-import { findMatchingProblem } from '../../helpers/apiCalls';
 import './ClientProfile.css';
 
 export class ClientProfile extends Component {
