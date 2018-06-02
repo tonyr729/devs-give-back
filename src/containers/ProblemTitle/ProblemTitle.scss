@@ -15,13 +15,13 @@
   color: #a0a0a0;
 }
 
-input {
+.title-input {
   background-color: rgba(0, 0, 0, 0);
   color: #ffaaaa;
   border: none;
   margin: 4rem auto;
   display: block;
-  width: 54rem;
+  width: 58rem;
   font-size: 2rem;
   height: 4rem;
   text-align: center;
@@ -33,14 +33,17 @@ input {
   }
 }
 
-.next-button {
+.title-next-button {
   width: 6rem;
   height: 6rem;
   background: none;
   border: none;
   display: block;
-  margin: 12rem auto;
+  margin: 18.5rem auto 0;
   img {
     width: 4rem;
+  }
+  &:hover {
+    color: #03a9f4
   }
 }
