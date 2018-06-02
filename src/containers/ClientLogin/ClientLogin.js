@@ -20,7 +20,7 @@ export class ClientLogin extends Component {
       const user = await this.database.googleLogin();
       const client = this.cleaner.cleanClientLogin(user)
       this.props.signInClient(client);
-      this.writeToDatabase(client);
+      this.database.writeClientToDatabase(client);
       console.log('success')
     } catch (error) {
       const cleanError = this.cleaner.cleanError(error)
@@ -29,13 +29,6 @@ export class ClientLogin extends Component {
       console.log(error)
     }
   };
-  
-  writeToDatabase = (client) => {
-    firebase.database().ref('clients/' + client.id).set({
-      username: client.name,
-      picture: client.photoURL
-    });
-  }
   
   logInCheck = (client) => {
     const value = Object.keys(client).length;
