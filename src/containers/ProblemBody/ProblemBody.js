@@ -25,17 +25,7 @@ class ProblemBody extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.createProblemBody(this.state.input);
-    const {title, client} = this.props;
-    this.writeToDatabase(title, this.state.input, client.id)
-    this.props.history.push("/problem-created")
-  }
-
-  writeToDatabase = (title, body, clientID) => {
-    firebase.database().ref('Problems').push({
-      title,
-      body,
-      clientID
-    });
+    this.props.history.push("/problem-category")
   }
 
   logInCheck = (client) => {
