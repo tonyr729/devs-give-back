@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { findMatchingProblem } from '../../helpers/apiCalls';
+import ApiHelper from '../../helpers/apiCalls';
 import { connect } from 'react-redux';
 import {createProblemTitle, createProblemBody, createProblemClient } from '../../actions/actions';
 import './PriorProblem.css'
 
-class PriorProblem extends Component {
+export class PriorProblem extends Component {
   constructor() {
     super();
     this.state = {
       problem: {}
     }
+    this.api = new ApiHelper();
   }
 
   componentDidMount = async () => {
-    const problem = await findMatchingProblem(this.props.client.id);
-    console.log(problem)
-    this.setState({
-      problem: problem
-    })
+    if (this.props.client) {
+      const clientID = this.props.client.id 
+      const problem = await this.api.findMatchingProblem(clientID);
+      this.setState({
+        problem: problem
+      })
+    }
   }
   
   handleClick = () => {

@@ -30,6 +30,10 @@ const signInWithPopup = jest.fn(() => {
   return Promise.resolve('result of signInWithPopup');
 })
 
+
+
+const set = jest.fn()
+
 const initializeApp = jest
   .spyOn(firebase, 'initializeApp')
   .mockImplementation(() => {
@@ -55,6 +59,16 @@ jest.spyOn(firebase, 'auth').mockImplementation(() => {
       emailVerified: true
     },
     signInWithPopup
+  };
+});
+
+jest.spyOn(firebase, 'database').mockImplementation(() => {
+  return {
+    ref: () => {
+      return {
+        set
+      }
+    }
   };
 });
 

@@ -8,6 +8,7 @@ import ClientLogin from './containers/ClientLogin/ClientLogin';
 import DevLogin from './containers/DevLogin/DevLogin';
 import ProblemTitle from './containers/ProblemTitle/ProblemTitle';
 import ProblemBody from './containers/ProblemBody/ProblemBody';
+import ProblemCategory from './containers/ProblemCategory/ProblemCategory';
 import { ProblemCreated } from './components/Stateless/ProblemCreated/ProblemCreated';
 import PriorProblem from './containers/PriorProblem/PriorProblem';
 import ClientProfile from './containers/ClientProfile/ClientProfile';
@@ -27,6 +28,7 @@ class App extends Component {
         <Route path='/client-login' component={ ClientLogin } />
         <Route path='/problem-title' component={ ProblemTitle } />
         <Route path='/problem-body' component={ ProblemBody } />
+        <Route path='/problem-category' component={ ProblemCategory } />
         <Route path='/problem-created' component={ ProblemCreated } />
         <Route path='/prior-problem' component={ PriorProblem } />
         <Route path='/client-profile' component={ ClientProfile } />

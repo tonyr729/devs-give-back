@@ -4,23 +4,26 @@ import './ClientLogin.css';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { signInClient, clientError } from '../../actions/actions';
-import { googleLogin } from '../../helpers/apiCalls';
+import ApiHelper from '../../helpers/apiCalls';
 import DataCleaner from '../../helpers/DataCleaner';
 
-const cleaner = new DataCleaner();
 
 export class ClientLogin extends Component {
+  constructor() {
+    super();
+    this.api = new ApiHelper();
+    this.cleaner = new DataCleaner();
+  }
   
   handleLogin = async () => {
     try {
-      const user = await googleLogin();
-      console.log(user)
-      const client = cleaner.cleanClientLogin(user)
+      const user = await this.api.googleLogin();
+      const client = this.cleaner.cleanClientLogin(user)
       this.props.signInClient(client);
       this.writeToDatabase(client);
-      console.log('working')
+      console.log('success')
     } catch (error) {
-      const cleanError = cleaner.cleanError(error)
+      const cleanError = this.cleaner.cleanError(error)
       this.props.clientError(cleanError);
       this.props.history.push("/error-page")
       console.log(error)

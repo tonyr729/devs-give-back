@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PriorProblem should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PriorProblem />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          className="sorry-text"
+>
+          Sorry,
+</p>,
+        <p
+          className="info-message"
+>
+          You can only have one listed problem at a time.
+</p>,
+        <button
+          className="nav-button"
+          onClick={[Function]}
+>
+          Go to my profile
+</button>,
+      ],
+      "className": "client-background",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Sorry,",
+          "className": "sorry-text",
+        },
+        "ref": null,
+        "rendered": "Sorry,",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "You can only have one listed problem at a time.",
+          "className": "info-message",
+        },
+        "ref": null,
+        "rendered": "You can only have one listed problem at a time.",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Go to my profile",
+          "className": "nav-button",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Go to my profile",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            className="sorry-text"
+>
+            Sorry,
+</p>,
+          <p
+            className="info-message"
+>
+            You can only have one listed problem at a time.
+</p>,
+          <button
+            className="nav-button"
+            onClick={[Function]}
+>
+            Go to my profile
+</button>,
+        ],
+        "className": "client-background",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Sorry,",
+            "className": "sorry-text",
+          },
+          "ref": null,
+          "rendered": "Sorry,",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "You can only have one listed problem at a time.",
+            "className": "info-message",
+          },
+          "ref": null,
+          "rendered": "You can only have one listed problem at a time.",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Go to my profile",
+            "className": "nav-button",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Go to my profile",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
