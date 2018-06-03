@@ -80,7 +80,8 @@
   background-color: #d2effd;
   width: 59rem;
   padding-top: .8rem;
-  height: 5rem; }
+  height: 5rem;
+  margin-top: 1rem; }
 
 .dev-project-title {
   color: #737373;

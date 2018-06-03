@@ -1,0 +1,28 @@
+.under-construction {
+  background-image: url("../../images/09.svg");
+  background-repeat: no-repeat; }
+  .under-construction a {
+    color: white;
+    font-size: 2rem;
+    text-align: right;
+    clear: right;
+    display: block;
+    margin: 19rem 18rem 0 0; }
+    .under-construction a:hover {
+      color: #6a5acd; }
+
+.warning {
+  font-size: 3rem;
+  text-align: right; }
+
+.blah {
+  font-size: 2rem;
+  margin: 0 4rem;
+  float: right;
+  width: 40rem; }
+
+.home {
+  font-size: 2rem;
+  margin: 0 4rem;
+  float: right;
+  width: 40rem; }
