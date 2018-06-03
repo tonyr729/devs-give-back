@@ -3,10 +3,20 @@ import './DevProfile.css';
 import { connect } from 'react-redux';
 import { Redirect, NavLink } from 'react-router-dom';
 import { addProjects } from '../../actions/actions';
+import DatabaseHelper from '../../helpers/DatabaseHelper';
 
 
 
 class DevProfile extends Component {
+  constructor() {
+    super();
+    this.database = new DatabaseHelper();
+  }
+
+  async componentDidMount() {
+    const projects = await this.database.pullProjectsFromDatabase(this.props.dev.id);
+    await this.props.addProjects(projects);
+  }
 
   displayProjects = (projects) => {
     if (projects) {
@@ -80,5 +90,9 @@ const mapStateToProps = (state) => ({
   projects: state.projects
 });
 
+const mapDispatchToProps = (dispatch) => ({
+  addProjects: (projects) => dispatch(addProjects(projects))
+});
 
-export default connect(mapStateToProps)(DevProfile);
+
+export default connect(mapStateToProps, mapDispatchToProps)(DevProfile);

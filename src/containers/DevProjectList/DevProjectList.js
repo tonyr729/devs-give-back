@@ -115,7 +115,7 @@ const mapDispatchToProps = (dispatch) => ({
   addAllProblems: (problems) => dispatch(addAllProblems(problems)),
   addProjects: (projects) => dispatch(addProjects(projects)),
   handleSignup: (status, problemID) => dispatch(handleSignup(status, problemID))
-})
+});
 
 
 
