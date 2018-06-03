@@ -64,5 +64,7 @@ export const handleSignup = (signup, problemID) => ({
   problemID
 });
 
-
-
+export const addRepoStats = (stats) => ({
+  type: 'ADD_REPO_STATS',
+  stats
+});
