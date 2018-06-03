@@ -27,6 +27,7 @@ class SignUp extends Component {
     const { name, id } = this.props.dev;
     const { status, problemID} = this.props.signup;
     this.database.writeContributerToDatabase(repo, contact, name, id, problemID);
+    this.database.writeDevProjectToDatabase(id, problemID);
     this.props.handleSignup(!status);
   }
 

@@ -43,6 +43,11 @@ export const addAllProblems = (problems) => ({
   problems
 });
 
+export const addProjects = (projects) => ({
+  type: 'ADD_PROJECTS',
+  projects
+});
+
 export const selectCategories = (categories) => ({
   type: 'SELECT_CATEGORIES',
   categories
@@ -53,3 +58,6 @@ export const handleSignup = (signup, problemID) => ({
   signup,
   problemID
 });
+
+
+
