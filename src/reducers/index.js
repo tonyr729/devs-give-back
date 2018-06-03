@@ -7,6 +7,7 @@ import { allProblemsReducer } from './allProblemsReducer';
 import { signupReducer } from './signupReducer';
 import { projectsReducer } from './projectsReducer';
 import { completedProblemReducer } from './completedProblemReducer';
+import { repoStatsReducer } from './repoStatsReducer';
 
 
 export const rootReducer = combineReducers({
@@ -19,5 +20,6 @@ export const rootReducer = combineReducers({
   problem: problemReducer,
   clientsProblem: completedProblemReducer,
   categories: categoriesReducer,
+  repoStats: repoStatsReducer,
   allProblems: allProblemsReducer
 }); 

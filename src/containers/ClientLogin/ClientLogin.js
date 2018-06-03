@@ -21,12 +21,10 @@ export class ClientLogin extends Component {
       const client = this.cleaner.cleanClientLogin(user)
       this.props.signInClient(client);
       this.database.writeClientToDatabase(client);
-      console.log('success')
     } catch (error) {
       const cleanError = this.cleaner.cleanError(error)
       this.props.clientError(cleanError);
       this.props.history.push("/error-page")
-      console.log(error)
     }
   };
   

@@ -21,6 +21,14 @@ class DataCleaner {
     credential: error.credential
   })
 
+  cleanRepoURL = (repoURL) => {
+    const repoInfo = repoURL.split('/');
+    const devID = repoInfo[3];
+    const projectName = repoInfo[4];
+    const apiURL = `https://api.github.com/repos/${devID}/${projectName}`;
+    return apiURL;
+  }
+
 }
 
 export default DataCleaner;
