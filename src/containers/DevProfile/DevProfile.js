@@ -4,19 +4,16 @@ import { connect } from 'react-redux';
 import { Redirect, NavLink } from 'react-router-dom';
 
 
-class ClientProfile extends Component {
 
-  runFetch = async () => {
-    const url = `https://api.github.com/repos/tonyr729/movie-tracker/stats/contributors?access_token=${this.props.dev.token}`;
-    const response = await fetch(url);
-    const data = response.json();
-    console.log(data)
-  }
-
+class DevProfile extends Component {
+  
   logInCheck = (dev) => {
     const value = Object.keys(dev).length;
     if ( value === 0 ) {
-      return <Redirect to='/dev-login'/>
+      return <Redirect to='/dev-login'/>;
+    }
+    if (!dev.projects) {
+      return <Redirect to='/dev-project-list' />;
     }
   }
 
@@ -55,5 +52,4 @@ const mapStateToProps = (state) => ({
   dev: state.dev
 });
 
-
-export default connect(mapStateToProps)(ClientProfile);
+export default connect(mapStateToProps)(DevProfile);

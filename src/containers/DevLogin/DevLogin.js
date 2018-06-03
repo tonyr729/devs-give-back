@@ -39,7 +39,6 @@ export class DevLogin extends Component {
   }
 
   logInCheck = (dev) => {
-    console.log(dev)
     const value = Object.keys(dev).length;
     if ( value !== 0 ) {
       return (<Redirect to='/dev-profile'/>);

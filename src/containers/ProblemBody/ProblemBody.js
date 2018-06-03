@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './ProblemBody.css';
-import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux';
-import firebase from '../../firebase/firebase'
 import { createProblemBody } from '../../actions/actions';
 import rightArrow from '../../images/right_arrow.svg'
 import leftArrow from '../../images/left_arrow.svg'
