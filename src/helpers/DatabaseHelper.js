@@ -1,4 +1,5 @@
 import firebase from '../firebase/firebase';
+import { log } from 'util';
 
 class DatabaseHelper {
 
@@ -28,6 +29,7 @@ class DatabaseHelper {
     }
     return problem;
   }
+
   
   pullProblemsFromDatabase = async () => {
     const response = await firebase.database().ref('/Problems/').once('value');
@@ -37,7 +39,7 @@ class DatabaseHelper {
     }
     return problems;
   }
-
+  
   pullCategoriesFromDatabase = async () => {
     const response = await firebase.database().ref('/Categories/categories').once('value');
     let categories = null;
@@ -46,11 +48,47 @@ class DatabaseHelper {
     }
     return categories;
   }
+  
+  pullProjectsFromDatabase = async (devID) => {
+    const response = await firebase.database().ref('/devs/' + devID).once('value');
+    let projects = null;
+    if (response.val()) {
+      let dev = response.val();
+      projects = await this.matchProjects(dev.projects);
+    }
+    return projects;
+  }
+
+  matchProjects = async (projects) => {
+    if (projects) {
+      const projectIDs = Object.values(projects);
+      const matchingProblems = projectIDs.map(async projectID => {
+        const response = await firebase.database().ref('/Problems/' + projectID).once('value');
+        if (response.val()) {
+          return response.val();
+        }
+      });
+      return Promise.all(matchingProblems);
+    }
+  }
 
   writeClientToDatabase = (client) => {
     firebase.database().ref('/Clients/' + client.id).set({
       username: client.name,
       picture: client.photoURL
+    });
+  }
+
+  writeDevToDatabase = (dev) => {
+    firebase.database().ref('devs/' + dev.id + '/info').set({
+      name: dev.name,
+      photo: dev.photoURL,
+      token: dev.token
+    });
+  }
+  writeDevProjectToDatabase = (devID, projectID) => {
+    firebase.database().ref('/devs/' + devID + '/projects').set({
+      projectID
     });
   }
   //Pass in clientName and clientPicture in ProblemCategory.js
@@ -64,7 +102,7 @@ class DatabaseHelper {
   }
 
   writeContributerToDatabase = (repo, contact, devName, devID, clientID) => {
-    firebase.database().ref('/Problems/' + clientID).push({
+    firebase.database().ref('/Problems/' + clientID  + '/dev').set({
       repo,
       contact,
       devName,

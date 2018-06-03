@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-import { signInDev, devError } from '../../actions/actions';
+import { signInDev, devError} from '../../actions/actions';
 import firebase from '../../firebase/firebase';
 import DataCleaner from '../../helpers/DataCleaner';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
@@ -22,21 +22,13 @@ export class DevLogin extends Component {
       const result = await this.database.gitHubLogin();
       const cleanDev = cleaner.cleanDevLogin(result.user, result.token);
       this.props.signInDev(cleanDev);
-      this.writeToDatabase(cleanDev)
+      this.database.writeDevToDatabase(cleanDev)
     } catch (error) {
       const cleanError = cleaner.cleanError(error);
       this.props.devError(cleanError);
       this.props.history.push("/error-page")
     };
   };
-
-  writeToDatabase = (dev) => {
-    firebase.database().ref('devs/' + dev.id).set({
-      name: dev.name,
-      photo: dev.photoURL,
-      token: dev.token
-    });
-  }
 
   logInCheck = (dev) => {
     const value = Object.keys(dev).length;
