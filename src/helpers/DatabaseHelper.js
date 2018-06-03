@@ -28,6 +28,15 @@ class DatabaseHelper {
     }
     return problem;
   }
+  
+  pullProblemsFromDatabase = async () => {
+    const response = await firebase.database().ref('/Problems/').once('value');
+    let problems = null;
+    if (response.val()) {
+      problems = response.val();
+    }
+    return problems;
+  }
 
   pullCategoriesFromDatabase = async () => {
     const response = await firebase.database().ref('/Categories/categories').once('value');
@@ -44,13 +53,22 @@ class DatabaseHelper {
       picture: client.photoURL
     });
   }
-
+  //Pass in clientName and clientPicture in ProblemCategory.js
   writeProblemToDatabase = (title, body, categories, clientID) => {
     firebase.database().ref('/Problems/' + clientID).set({
       title,
       body,
       categories,
       clientID
+    });
+  }
+
+  writeContributerToDatabase = (repo, contact, devName, devID, clientID) => {
+    firebase.database().ref('/Problems/' + clientID).push({
+      repo,
+      contact,
+      devName,
+      devID
     });
   }
 
