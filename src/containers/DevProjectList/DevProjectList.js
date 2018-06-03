@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Redirect, NavLink } from 'react-router-dom';
 
 import DatabaseHelper from '../../helpers/DatabaseHelper';
-import { addAllProblems, handleSignup } from '../../actions/actions';
+import { addAllProblems, addProjects, handleSignup } from '../../actions/actions';
 import SignUp from '../SignUp/SignUp';
 
 
@@ -19,10 +19,16 @@ class DevProjectList extends Component {
   }
 
   async componentDidMount() {
+    const projects = await this.database.pullProjectsFromDatabase(this.props.dev.id);
     const problems = await this.database.pullProblemsFromDatabase();
     const problemsList = Object.values(problems);
     this.props.addAllProblems(problemsList);
+    if (projects) {
+      this.props.addProjects(projects);
+    }
   }
+
+  componentDidUpdate() {}
 
 
   displayAllProblems = (problems) => {
@@ -63,7 +69,7 @@ class DevProjectList extends Component {
 
   render() {
     const redirect = this.logInCheck(this.props.dev);
-    const problems = this.displayAllProblems(this.props.allProblems)
+    const problems = this.displayAllProblems(this.props.allProblems);
     return (
       <div className="profile-background">
         {redirect}
@@ -106,6 +112,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   addAllProblems: (problems) => dispatch(addAllProblems(problems)),
+  addProjects: (projects) => dispatch(addProjects(projects)),
   handleSignup: (status, problemID) => dispatch(handleSignup(status, problemID))
 })
 
