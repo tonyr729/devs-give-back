@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import { connect } from 'react-redux';
-import {createProblemTitle, createProblemBody, createProblemClient, selectCategories } from '../../actions/actions';
+import { createCompletedProblem } from '../../actions/actions';
+
 import './PriorProblem.css'
 
 export class PriorProblem extends Component {
   constructor() {
     super();
-    this.state = {
-      problem: {}
-    }
     this.database = new DatabaseHelper();
   }
 
@@ -18,21 +16,18 @@ export class PriorProblem extends Component {
     if (this.props.client) {
       const clientID = this.props.client.id 
       const problem = await this.database.findMatchingProblem(clientID);
-      this.setState({
-        problem: problem
-      })
+      if (problem) {
+        await this.props.createCompletedProblem(problem)
+      }
     }
   }
   
   handleClick = () => {
-    if (this.state.problem){
-      this.props.createProblemClient(this.state.problem.clientID)
-      this.props.createProblemTitle(this.state.problem.title)
-      this.props.createProblemBody(this.state.problem.body)
-      this.props.selectCategories(this.state.problem.categories)
-      this.props.history.push("/client-profile");
-    } else {
+    const value = Object.keys(this.props.clientsProblem)
+    if (value === 0){
       this.props.history.push("/client-login")
+    } else{
+      this.props.history.push("/client-profile");
     }
   }
 
@@ -48,14 +43,12 @@ export class PriorProblem extends Component {
 };
 
 const mapStateToProps = (state) => ({
-  client: state.client 
+  client: state.client,
+  clientsProblem: state.clientsProblem
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  createProblemClient: (client) => dispatch(createProblemClient(client)),
-  createProblemTitle: (title) => dispatch(createProblemTitle(title)),
-  createProblemBody: (body) => dispatch(createProblemBody(body)),
-  selectCategories: (categories) => dispatch(selectCategories(categories))
+  createCompletedProblem: (problem) => dispatch(createCompletedProblem(problem))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PriorProblem);
