@@ -1,66 +1,56 @@
 .header {
   height: 20vh;
   width: 100vw;
-  background-color: #607d8b;
-}
+  background-color: #607d8b; }
 
 .header-container {
-  height:100%;
-  width:80rem;
+  height: 100%;
+  width: 80rem;
   display: block;
   margin: 0 auto;
-  background-color: #465b65;
-  img {
+  background-color: #465b65; }
+  .header-container img {
     border-radius: 3rem;
     width: 9rem;
-    margin: 3rem 2rem 0;
-  };
-  p {
-    font-size: 2rem; 
-    text-align: -webkit-auto; 
-    position: relative; 
+    margin: 3rem 2rem 0; }
+  .header-container p {
+    font-size: 2rem;
+    text-align: -webkit-auto;
+    position: relative;
     font-weight: 100;
-    top: 9rem; 
-  };
-  ul {
-    list-style: none;
-  };
-  li {
+    top: 9rem; }
+  .header-container ul {
+    list-style: none; }
+  .header-container li {
     display: inline;
     margin-right: 1rem;
     font-size: .8rem;
     color: #f8f8ff;
     position: relative;
     top: 7.5rem;
-    left: 9.9rem;
-  };
-}
+    left: 9.9rem; }
 
 .problem {
   height: 40vh;
   width: 100vw;
-  background-color: #607d8b;
-}
+  background-color: #607d8b; }
 
 .problem-container {
-  height:100%;
-  width:80rem;
+  height: 100%;
+  width: 80rem;
   display: block;
   margin: 0 auto;
-  background-color: #000;
-}
+  background-color: #000; }
 
 .section-title {
   font-size: 3rem;
   padding-top: 2rem;
-  font-weight: 100;
-}
+  font-weight: 100; }
 
 .problem-title {
   font-size: 1.6rem;
   padding: 4rem 6rem 0 6.2rem;
-  text-align: -webkit-auto;
-}
+  text-align: -webkit-auto; }
 
 .problem-body {
   font-size: 1rem;
@@ -68,49 +58,30 @@
   text-align: left;
   color: grey;
   margin: 0 0 0 12rem;
-  font-weight: 100;
-}
+  font-weight: 100; }
 
 .stats {
   height: 40vh;
   width: 100vw;
-  background-color: #607d8b;
-}
-
-.stats-section {
-  height: 20rem;
-  width: 80rem;
-  display: block;
-  margin: 0 auto;
-  background-color: #1471c9;
-}
+  background-color: #607d8b; }
 
 .stats-container {
-  height: height: 19rem;
+  height: 100%;
   width: 80rem;
   display: block;
   margin: 0 auto;
-  background-color: #1471c9;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
+  background-color: #1471c9; }
 
 .stats-title {
   font-size: 2rem;
-  padding: 4rem 0 2rem;
-  text-align: -webkit-auto;
-  width: 25rem;
-  margin: 0 0 0 10rem;
-}
+  padding: 4rem 6rem 0;
+  text-align: -webkit-auto; }
 
 .category-tags {
   width: 56.2rem;
   height: 2.4rem;
   margin: 0 auto;
-  background-color: #000000;
-
-}
+  background-color: #000000; }
 
 .display-category {
   height: 2rem;
@@ -119,5 +90,4 @@
   margin: 0 .2rem;
   color: #f8f8ff;
   border: none;
-  background-color: #1b9b1b;
-}
+  background-color: #1b9b1b; }

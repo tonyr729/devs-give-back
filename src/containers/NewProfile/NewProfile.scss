@@ -77,31 +77,18 @@
   background-color: #607d8b;
 }
 
-.stats-section {
-  height: 20rem;
-  width: 80rem;
-  display: block;
-  margin: 0 auto;
-  background-color: #1471c9;
-}
-
 .stats-container {
-  height: height: 19rem;
-  width: 80rem;
+  height:100%;
+  width:80rem;
   display: block;
   margin: 0 auto;
   background-color: #1471c9;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .stats-title {
   font-size: 2rem;
-  padding: 4rem 0 2rem;
+  padding: 4rem 6rem 0;
   text-align: -webkit-auto;
-  width: 25rem;
-  margin: 0 0 0 10rem;
 }
 
 .category-tags {

@@ -61,7 +61,6 @@ class DatabaseHelper {
 
   matchProjects = async (data) => {
     if (data) {
-      console.log(projects)
       const projects = Object.values(data);
       const matchingProblems = projects.map(async project => {
         const id = project.projectID;

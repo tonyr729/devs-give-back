@@ -6,6 +6,9 @@ import { categoriesReducer } from './categoriesReducer';
 import { allProblemsReducer } from './allProblemsReducer';
 import { signupReducer } from './signupReducer';
 import { projectsReducer } from './projectsReducer';
+import { completedProblemReducer } from './completedProblemReducer';
+import { repoStatsReducer } from './repoStatsReducer';
+
 
 export const rootReducer = combineReducers({
   client: clientLoginReducer,
@@ -15,6 +18,8 @@ export const rootReducer = combineReducers({
   signup: signupReducer,
   devError: devErrorReducer,
   problem: problemReducer,
+  clientsProblem: completedProblemReducer,
   categories: categoriesReducer,
+  repoStats: repoStatsReducer,
   allProblems: allProblemsReducer
 }); 

@@ -3,10 +3,20 @@ import './DevProfile.css';
 import { connect } from 'react-redux';
 import { Redirect, NavLink } from 'react-router-dom';
 import { addProjects } from '../../actions/actions';
+import DatabaseHelper from '../../helpers/DatabaseHelper';
 
 
 
 class DevProfile extends Component {
+  constructor() {
+    super();
+    this.database = new DatabaseHelper();
+  }
+
+  async componentDidMount() {
+    const projects = await this.database.pullProjectsFromDatabase(this.props.dev.id);
+    await this.props.addProjects(projects);
+  }
 
   displayProjects = (projects) => {
     if (projects) {
@@ -31,7 +41,12 @@ class DevProfile extends Component {
       return <Redirect to='/dev-login'/>;
     }
     if (!this.props.projects) {
-      return <Redirect to='/dev-project-list' />;
+      return (
+        <div className="info-text">
+          <p>You currently have no open projects.</p>
+          <p>Click "New Project" to see avalible projects.</p>
+        </div>
+      );
     }
   }
 
@@ -40,7 +55,6 @@ class DevProfile extends Component {
     const currentProjects = this.displayProjects(this.props.projects);
     return (
       <div className="profile-background">
-        {redirect}
         <div className="dev-header">
           <div className="dev-header-container">
             <p>{this.props.dev.name}</p>
@@ -61,6 +75,7 @@ class DevProfile extends Component {
               </NavLink>
             </p>
             <div className="current-projects">
+              {redirect}
               {currentProjects}
             </div>
           </div>
@@ -75,5 +90,9 @@ const mapStateToProps = (state) => ({
   projects: state.projects
 });
 
+const mapDispatchToProps = (dispatch) => ({
+  addProjects: (projects) => dispatch(addProjects(projects))
+});
 
-export default connect(mapStateToProps)(DevProfile);
+
+export default connect(mapStateToProps, mapDispatchToProps)(DevProfile);

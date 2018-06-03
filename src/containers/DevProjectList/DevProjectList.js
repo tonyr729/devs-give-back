@@ -23,6 +23,7 @@ class DevProjectList extends Component {
     const problems = await this.database.pullProblemsFromDatabase();
     const problemsList = Object.values(problems);
     this.props.addAllProblems(problemsList);
+    console.log(projects)
     if (projects) {
       this.props.addProjects(projects);
     }
@@ -114,7 +115,7 @@ const mapDispatchToProps = (dispatch) => ({
   addAllProblems: (problems) => dispatch(addAllProblems(problems)),
   addProjects: (projects) => dispatch(addProjects(projects)),
   handleSignup: (status, problemID) => dispatch(handleSignup(status, problemID))
-})
+});
 
 
 

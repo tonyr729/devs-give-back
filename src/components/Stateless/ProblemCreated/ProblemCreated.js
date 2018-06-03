@@ -7,7 +7,7 @@ export const ProblemCreated = () => {
     <div>
       <p className='thanks-text'>Thank you!</p>
       <p className='info-message'>Your problem has been created.</p>
-      <NavLink to='/client-profile'>
+      <NavLink to='/new-profile'>
         <p>Go to my profile</p>
       </NavLink>
     </div>
