@@ -13,6 +13,7 @@ import { ProblemCreated } from './components/Stateless/ProblemCreated/ProblemCre
 import PriorProblem from './containers/PriorProblem/PriorProblem';
 import ClientProfile from './containers/ClientProfile/ClientProfile';
 import DevProfile from './containers/DevProfile/DevProfile';
+import DevProjectList from './containers/DevProjectList/DevProjectList';
 import './App.css';
 
 class App extends Component {
@@ -33,6 +34,7 @@ class App extends Component {
         <Route path='/prior-problem' component={ PriorProblem } />
         <Route path='/client-profile' component={ ClientProfile } />
         <Route path='/dev-profile' component={ DevProfile } />
+        <Route path='/dev-project-list' component={ DevProjectList } />
       </div>
     );
   }

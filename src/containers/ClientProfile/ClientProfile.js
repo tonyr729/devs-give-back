@@ -6,17 +6,33 @@ import './ClientProfile.css';
 
 export class ClientProfile extends Component {
 
+  
+  displayCategories = (categories) => {
+    let display = null;
+    if (categories) {
+      display = categories.map(category => {
+        return (
+          <button className="display-category">{category}</button>
+        );
+      });
+    }
+    return display;
+  }
+  
   logInCheck = (client) => {
     const value = Object.keys(client).length;
-    if ( value !== 0 ) {
+    if ( value === 0 ) {
       return <Redirect to='/client-login'/>
     }
   }
-
+  
   render() {
     const redirect = this.logInCheck(this.props.client);
+    const categories = this.displayCategories(this.props.categories);
+    
     return (
       <div className="frame-container">
+        {redirect}
         <div className="header">
           <div className="header-container">
             <p>{this.props.client.name}</p>
@@ -28,6 +44,9 @@ export class ClientProfile extends Component {
             <p className="section-title">Heres your problem</p>
             <p className="problem-title">{this.props.title}</p>
             <p className="problem-body">{this.props.body}</p>
+            <div className="category-tags">
+              {categories}
+            </div>
           </div>
         </div>
         <div className="stats">
@@ -44,8 +63,9 @@ export class ClientProfile extends Component {
 
 const mapStateToProps = (state) => ({
   client: state.client,
-  title: state.problemTitle,
-  body: state.problemBody
+  title: state.problem.title,
+  body: state.problem.body,
+  categories: state.problem.categories
 });
 
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import { connect } from 'react-redux';
-import {createProblemTitle, createProblemBody, createProblemClient } from '../../actions/actions';
+import {createProblemTitle, createProblemBody, createProblemClient, selectCategories } from '../../actions/actions';
 import './PriorProblem.css'
 
 export class PriorProblem extends Component {
@@ -29,6 +29,7 @@ export class PriorProblem extends Component {
       this.props.createProblemClient(this.state.problem.clientID)
       this.props.createProblemTitle(this.state.problem.title)
       this.props.createProblemBody(this.state.problem.body)
+      this.props.selectCategories(this.state.problem.categories)
       this.props.history.push("/client-profile");
     } else {
       this.props.history.push("/client-login")
@@ -53,7 +54,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   createProblemClient: (client) => dispatch(createProblemClient(client)),
   createProblemTitle: (title) => dispatch(createProblemTitle(title)),
-  createProblemBody: (body) => dispatch(createProblemBody(body))
+  createProblemBody: (body) => dispatch(createProblemBody(body)),
+  selectCategories: (categories) => dispatch(selectCategories(categories))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PriorProblem);
