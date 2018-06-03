@@ -59,11 +59,13 @@ class DatabaseHelper {
     return projects;
   }
 
-  matchProjects = async (projects) => {
-    if (projects) {
-      const projectIDs = Object.values(projects);
-      const matchingProblems = projectIDs.map(async projectID => {
-        const response = await firebase.database().ref('/Problems/' + projectID).once('value');
+  matchProjects = async (data) => {
+    if (data) {
+      console.log(projects)
+      const projects = Object.values(data);
+      const matchingProblems = projects.map(async project => {
+        const id = project.projectID;
+        const response = await firebase.database().ref('/Problems/' + id).once('value');
         if (response.val()) {
           return response.val();
         }
@@ -87,7 +89,7 @@ class DatabaseHelper {
     });
   }
   writeDevProjectToDatabase = (devID, projectID) => {
-    firebase.database().ref('/devs/' + devID + '/projects').set({
+    firebase.database().ref('/devs/' + devID + '/projects').push({
       projectID
     });
   }

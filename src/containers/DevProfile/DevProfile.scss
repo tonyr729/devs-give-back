@@ -48,7 +48,7 @@
 .main {
   height: 40vh;
   width: 100vw;
-  background-color: #1db6fc
+  background-color: #1db6fc;
 }
 
 .main-container {
@@ -75,4 +75,39 @@
       color: #03a9f4;
     }
   }   
+}
+
+.current-projects {
+  background-color: #fff;
+  width: 59rem;
+  height: 37rem;
+  margin: 4rem auto 0 14.5rem;
+  overflow: scroll;
+  button {
+    border: 1px solid;
+    font-size: .8rem;
+    padding: .2rem .8rem;
+    &:hover {
+      background-color: #1db6fc;
+    }
+  }
+}
+
+.project-card {
+  background-color: #d2effd;
+  width: 59rem;
+  padding-top: .8rem;
+  height: 5rem;
+
+}
+
+.dev-project-title {
+  color: #737373;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.project-button {
+  margin-left: 1.5rem;
 }

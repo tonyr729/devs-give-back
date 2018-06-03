@@ -11,15 +11,13 @@ class DevProfile extends Component {
   displayProjects = (projects) => {
     if (projects) {
       const display = projects.map((project, index) => {
-        const categories = project.categories.map((category, index) => (
-          <button key={index} className="category-display">{category}</button>
-        ));
         return (
           <div key={index} className="project-card">
             <p className="dev-project-title">{project.title}</p>
-            <div className="dev-category-container">
-              {categories}
-            </div>
+            <button className="project-button">Project Page</button>
+            <button className="client-button">Client</button>
+            <button className="contributors-button">Contributors</button>
+            <button className="resign-button">Resign</button>
           </div>
         );
       });
