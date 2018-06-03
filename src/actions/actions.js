@@ -36,9 +36,20 @@ export const createProblemBody = (body) => ({
 export const addCategories = (categories) => ({
   type: 'ADD_CATEGORIES',
   categories
-})
+});
+
+export const addAllProblems = (problems) => ({
+  type: 'ADD_ALL_PROBLEMS',
+  problems
+});
 
 export const selectCategories = (categories) => ({
   type: 'SELECT_CATEGORIES',
   categories
-})
+});
+
+export const handleSignup = (signup, problemID) => ({
+  type: 'HANDLE_SIGNUP',
+  signup,
+  problemID
+});
