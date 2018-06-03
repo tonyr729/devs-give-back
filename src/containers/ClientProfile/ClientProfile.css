@@ -73,7 +73,7 @@
   background-color: #1471c9; }
 
 .stats-container {
-  height: 100%;
+  height: 19rem;
   width: 80rem;
   display: block;
   margin: 0 auto;
@@ -86,7 +86,7 @@
   font-size: 2rem;
   padding: 4rem 0 2rem;
   text-align: -webkit-auto;
-  width: 30rem;
+  width: 25rem;
   margin: 0 0 0 10rem; }
 
 .category-tags {
