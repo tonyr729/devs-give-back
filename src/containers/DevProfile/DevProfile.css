@@ -13,9 +13,7 @@
   width: 80rem;
   display: block;
   margin: 0 auto;
-  background-color: #03a9f4;
-  border-left: 2px solid rgba(255, 255, 255, 0.219);
-  border-right: 2px solid rgba(255, 255, 255, 0.219); }
+  background-color: #03a9f4; }
   .dev-header-container img {
     border-radius: 3rem;
     width: 9rem;
@@ -47,9 +45,7 @@
   width: 80rem;
   display: block;
   margin: 0 auto;
-  background-color: #fff;
-  border-left: 2px solid rgba(255, 255, 255, 0.219);
-  border-right: 2px solid rgba(255, 255, 255, 0.219); }
+  background-color: #fff; }
 
 .main-section-titles {
   font-size: 3rem;
@@ -62,6 +58,16 @@
     color: #7c7c7c; }
     .main-section-titles a:hover {
       color: #03a9f4; }
+
+.info-text {
+  background-color: #fff;
+  width: 100%;
+  height: 100%; }
+  .info-text p {
+    font-size: 3rem;
+    padding-top: 3rem;
+    line-height: 3rem;
+    color: #de5858; }
 
 .current-projects {
   background-color: #fff;

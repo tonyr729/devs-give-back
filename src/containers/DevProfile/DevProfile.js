@@ -31,7 +31,12 @@ class DevProfile extends Component {
       return <Redirect to='/dev-login'/>;
     }
     if (!this.props.projects) {
-      return <Redirect to='/dev-project-list' />;
+      return (
+        <div className="info-text">
+          <p>You currently have no open projects.</p>
+          <p>Click "New Project" to see avalible projects.</p>
+        </div>
+      );
     }
   }
 
@@ -40,7 +45,6 @@ class DevProfile extends Component {
     const currentProjects = this.displayProjects(this.props.projects);
     return (
       <div className="profile-background">
-        {redirect}
         <div className="dev-header">
           <div className="dev-header-container">
             <p>{this.props.dev.name}</p>
@@ -61,6 +65,7 @@ class DevProfile extends Component {
               </NavLink>
             </p>
             <div className="current-projects">
+              {redirect}
               {currentProjects}
             </div>
           </div>
