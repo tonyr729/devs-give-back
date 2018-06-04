@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import DataCleaner from '../../helpers/DataCleaner';
 import APIHelper from '../../helpers/APIHelper';
-import { addRepoStats } from '../../actions/actions';
+import { addRepoStats, signInClient } from '../../actions/actions';
 
 import './ClientProfile.css';
 
@@ -94,6 +94,7 @@ export class ClientProfile extends Component {
           <div className="header-container">
             <p>{this.props.client.name}</p>
             <img className='profile-picture' src={this.props.client.photoURL} alt="user profile picture"/>
+            <button onClick={() => this.props.signInClient('')} className="signout-button">Sign Out</button>
           </div>
         </div>
         <div className="problem">
@@ -125,6 +126,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
+  signInClient: (client) => dispatch(signInClient(client)),
   addRepoStats: (stats) => dispatch(addRepoStats(stats))
 })
 
