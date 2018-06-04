@@ -106,11 +106,25 @@
   width: 7rem;
   height: 3rem;
   border-radius: 1rem;
-  background-color: darkslategray;
-  color: white;
+  background-color: #2f4f4f;
+  color: #fff;
   font-size: 1rem; }
   .signup-button:hover {
     background-color: #03a9f4; }
+  .signup-button:disabled {
+    background-color: #c6d5da; }
+
+.selected {
+  border: none;
+  float: right;
+  margin: -5rem 5rem 0 0;
+  width: 7rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background-color: #c6d5da;
+  color: white;
+  font-size: 1rem;
+  outline: none; }
 
 .dev-category-container {
   width: 74rem;

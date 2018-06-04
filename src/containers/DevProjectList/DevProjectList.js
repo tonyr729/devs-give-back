@@ -6,15 +6,13 @@ import { Redirect, NavLink } from 'react-router-dom';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import { addAllProblems, addProjects, handleSignup } from '../../actions/actions';
 import SignUp from '../SignUp/SignUp';
+import SignupButton from '../../components/Statefull/SignupButton/SignupButton';
 
 
 
 class DevProjectList extends Component {
   constructor() {
     super();
-    this.state = {
-      signup: false
-    }
     this.database = new DatabaseHelper();
   }
 
@@ -23,7 +21,6 @@ class DevProjectList extends Component {
     const problems = await this.database.pullProblemsFromDatabase();
     const problemsList = Object.values(problems);
     this.props.addAllProblems(problemsList);
-    console.log(projects)
     if (projects) {
       this.props.addProjects(projects);
     }
@@ -34,17 +31,21 @@ class DevProjectList extends Component {
 
   displayAllProblems = (problems) => {
     let display = null;
+    let matchingDev = false;
     if (problems) {
       display = problems.map((problem, index) => {
         const categories = problem.categories.map((category, index) => (
           <button key={index} className="category-display">{category}</button>
         ));
+        if (problem.dev) {
+          matchingDev = problem.dev.devID === this.props.dev.id;
+        }
 
         return (
           <div key={index} className="problem-card">
             <p className="dev-problem-title">{problem.title}</p>
             <p className="dev-problem-body">{problem.body}</p>
-            <button onClick={() => this.props.handleSignup(!this.props.signup.status, problem.clientID)} className="signup-button">Sign Up!</button>
+            <SignupButton handleSignup={ this.props.handleSignup } clientID={ problem.clientID } matchingDev={ matchingDev } />
             <div className="dev-category-container">
               {categories}
             </div>
@@ -53,12 +54,6 @@ class DevProjectList extends Component {
       });
     }
     return display;
-  }
-
-  handleSignup = () => {
-    this.setState({
-      signup: true
-    })
   }
 
   logInCheck = (dev) => {
