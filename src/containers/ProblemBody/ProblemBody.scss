@@ -13,18 +13,20 @@
 .body-input {
   background-color: rgba(0, 0, 0, 0);
   color: #ffaaaa;
-  border: none;
+  border: 1px solid #ffaaaa
   margin: 4rem auto 0;
   display: block;
   width: 54rem;
   font-size: 2rem;
   height: 20rem;
   text-align: center;
+  resize: none;
   &::placeholder {
-    color: #ffaaaa91;
+    color: #ffaaaa;
   }
   &:focus {
     outline: none;
+    border: none;
   }
 }
 

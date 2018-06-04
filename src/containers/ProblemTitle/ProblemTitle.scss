@@ -19,6 +19,7 @@
   background-color: rgba(0, 0, 0, 0);
   color: #ffaaaa;
   border: none;
+  border-bottom: 1px solid #ffaaaa;
   margin: 4rem auto;
   display: block;
   width: 58rem;
@@ -26,9 +27,10 @@
   height: 4rem;
   text-align: center;
   &::placeholder {
-    color: #ffaaaa91;
+    color: #ff5990;
   }
   &:focus {
+    border-bottom: none;
     outline: none;
   }
 }
