@@ -43,7 +43,7 @@ class ProblemBody extends Component {
       <div className='client-background'>
         <p className='welcome'>Sounds great {firstName},</p>
         <p className='body-instructions'>Now give us some more detail</p>
-        <textarea className='body-input' placeholder='Looking for ...' maxLength='400' value={this.state.input} onChange={this.handleInputChange}/>
+        <textarea className='body-input' placeholder='Looking for ...' maxLength='400' value={this.state.input} onChange={this.handleInputChange} autoFocus/>
         <div className="button-container">
           <button className='previous-button' onClick={()=> this.props.history.push("/problem-title")} ><img className='left-arrow-img' src={leftArrow} /></button>
           <button className='next-button' onClick={this.handleSubmit} ><img className='right-arrow-img' src={rightArrow} /></button>
