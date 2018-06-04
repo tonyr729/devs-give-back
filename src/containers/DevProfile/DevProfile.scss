@@ -117,3 +117,14 @@
 .project-button {
   margin-left: 1.5rem;
 }
+
+.signout-button {
+  background: none;
+  display: block;
+  margin: .5rem 0 0 4.2rem;
+  font-size: 1rem;
+  color: #07a8f4;
+  &:hover {
+    color: #800080
+  }
+}

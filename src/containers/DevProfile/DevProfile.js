@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './DevProfile.css';
 import { connect } from 'react-redux';
 import { Redirect, NavLink } from 'react-router-dom';
-import { addProjects } from '../../actions/actions';
+import { addProjects, signInDev } from '../../actions/actions';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 
 
@@ -61,6 +61,9 @@ class DevProfile extends Component {
           <div className="dev-header-container">
             <p>{this.props.dev.name}</p>
             <img className='profile-picture' src={this.props.dev.photoURL} alt="developer profile picture"/>
+            <NavLink to='/'>
+                <button onClick={() => this.props.signInDev('')} className="signout-button">Sign Out</button>
+            </NavLink>
           </div>
         </div>
         <div className="main">
@@ -93,7 +96,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addProjects: (projects) => dispatch(addProjects(projects))
+  addProjects: (projects) => dispatch(addProjects(projects)),
+  signInDev: (user, token) => dispatch(signInDev(user, token))
 });
 
 
