@@ -56,7 +56,7 @@ class ProblemTitle extends Component {
         <p className='welcome'>Hi {firstName},</p>
         <p className='title-instructions'>Briefly describe your problem...</p>
         <p className='example'>Ex: Looking for a solution to help an afterschool program</p> 
-        <input className='title-input' placeholder='Looking for ...' maxLength='70' value={this.state.input} onChange={this.handleInputChange}/>
+        <input className='title-input' placeholder='Looking for ...' maxLength='70' value={this.state.input} onChange={this.handleInputChange} autoFocus/>
         <button className='title-next-button' onClick={this.handleSubmit} ><img className='right-arrow-img' src={rightArrow} /></button>
       </div>
     );
