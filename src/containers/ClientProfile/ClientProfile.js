@@ -48,7 +48,7 @@ export class ClientProfile extends Component {
           <p className="stats-title">{stats.contributers} {contributer}!</p>
           <p className="stats-title">{stats.lines} lines of code created!</p>
           <p className="stats-title">{stats.updates} updates!</p>
-          <p className="stats-title">Roughly {stats.lines} hours spent on your project!</p>
+          <p className="stats-title">Roughly {stats.hours} hours spent on your project!</p>
         </div>
       )
     } else {
