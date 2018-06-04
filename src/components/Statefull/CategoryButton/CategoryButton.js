@@ -16,7 +16,7 @@ class CategoryButton extends Component {
   }
 
   render() {
-    let cardClass = this.state.selected ? "selected" : "category-button";
+    let cardClass = this.state.selected ? "selected-category" : "category-button";
     return(
       <button onClick={this.handleClick} className={cardClass}>{this.props.category}</button>
     )
