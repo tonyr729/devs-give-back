@@ -103,7 +103,7 @@ class DatabaseHelper {
   }
 
   writeContributerToDatabase = (repo, contact, devName, devID, clientID) => {
-    firebase.database().ref('/Problems/' + clientID  + '/dev').set({
+    firebase.database().ref('/Problems/' + clientID  + '/dev/' + devID).set({
       repo,
       contact,
       devName,
