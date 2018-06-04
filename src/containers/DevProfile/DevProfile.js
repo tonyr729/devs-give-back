@@ -15,7 +15,9 @@ class DevProfile extends Component {
 
   async componentDidMount() {
     const projects = await this.database.pullProjectsFromDatabase(this.props.dev.id);
-    await this.props.addProjects(projects);
+    if (projects) {
+      await this.props.addProjects(projects);
+    }
   }
 
   displayProjects = (projects) => {
