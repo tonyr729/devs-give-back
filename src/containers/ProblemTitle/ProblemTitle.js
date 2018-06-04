@@ -30,7 +30,7 @@ class ProblemTitle extends Component {
   handleInputChange= (event) => {
     this.setState({
       input: event.target.value
-    })
+    });
   }
 
   handleSubmit = (event) => {
@@ -38,6 +38,12 @@ class ProblemTitle extends Component {
     this.props.createProblemTitle(this.state.input);
     this.props.createProblemClient(this.props.client.id);
     this.props.history.push("/problem-body")
+  }
+
+  addInput = (event) => {
+    if (event.keyCode === 13 && event.shiftKey === false) {
+      this.handleSubmit(event);
+    }
   }
 
   logInCheck = (client) => {
@@ -56,7 +62,7 @@ class ProblemTitle extends Component {
         <p className='welcome'>Hi {firstName},</p>
         <p className='title-instructions'>Briefly describe your problem...</p>
         <p className='example'>Ex: Looking for a solution to help an afterschool program</p> 
-        <input className='title-input' placeholder='Looking for ...' maxLength='70' value={this.state.input} onChange={this.handleInputChange} autoFocus/>
+        <input className='title-input' onKeyDown={this.addInput}  onChange={this.handleInputChange} maxLength='70' value={this.state.input} autoFocus/>
         <button className='title-next-button' onClick={this.handleSubmit} ><img className='right-arrow-img' src={rightArrow} /></button>
       </div>
     );

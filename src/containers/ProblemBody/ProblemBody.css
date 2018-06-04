@@ -16,11 +16,13 @@
   width: 54rem;
   font-size: 2rem;
   height: 20rem;
-  text-align: center; }
+  text-align: center;
+  resize: none; }
   .body-input::placeholder {
-    color: #ffaaaa91; }
+    color: #ffaaaa; }
   .body-input:focus {
-    outline: none; }
+    outline: none;
+    border: 1px solid #ffaaaa; }
 
 .button-container {
   display: flex;
