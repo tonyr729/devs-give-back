@@ -21,8 +21,10 @@ class DevProfile extends Component {
   }
 
   displayProjects = (projects) => {
-    if (projects) {
-      const display = projects.map((project, index) => {
+    console.log(projects)
+    const goodProjects = projects && projects.filter(problems => problems !== undefined)
+    if (goodProjects && goodProjects.length !== 0) {
+      const display = goodProjects.map((project, index) => {
         return (
           <div key={index} className="project-card">
             <p className="dev-project-title">{project.title}</p>
