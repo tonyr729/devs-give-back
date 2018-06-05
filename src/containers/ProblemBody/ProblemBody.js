@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './ProblemBody.css';
 import { connect } from 'react-redux';
 import { createProblemBody } from '../../actions/actions';
-import rightArrow from '../../images/right_arrow.svg'
-import leftArrow from '../../images/left_arrow.svg'
+import rightArrow from '../../images/right_arrow.svg';
+import leftArrow from '../../images/left_arrow.svg';
 
 
 class ProblemBody extends Component {
