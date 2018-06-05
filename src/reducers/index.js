@@ -13,13 +13,13 @@ import { repoStatsReducer } from './repoStatsReducer';
 export const rootReducer = combineReducers({
   client: clientLoginReducer,
   clientError: clientErrorReducer,
-  dev: devLoginReducer,
-  projects: projectsReducer,
-  signup: signupReducer,
-  devError: devErrorReducer,
+  categories: categoriesReducer,
   problem: problemReducer,
   clientsProblem: completedProblemReducer,
-  categories: categoriesReducer,
-  repoStats: repoStatsReducer,
-  allProblems: allProblemsReducer
+  allProblems: allProblemsReducer,
+  dev: devLoginReducer,
+  devError: devErrorReducer,
+  projects: projectsReducer,
+  signup: signupReducer,
+  repoStats: repoStatsReducer
 }); 

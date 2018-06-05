@@ -58,9 +58,9 @@ export const selectCategories = (categories) => ({
   categories
 });
 
-export const handleSignup = (signup, problemID) => ({
+export const handleSignup = (status, problemID) => ({
   type: 'HANDLE_SIGNUP',
-  signup,
+  status,
   problemID
 });
 
