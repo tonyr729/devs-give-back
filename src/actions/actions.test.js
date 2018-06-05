@@ -1,4 +1,19 @@
-import { signInClient, clientError, signInDev, devError, createProblemClient, createProblemTitle, createProblemBody} from "./actions";
+import { 
+  signInClient, 
+  clientError, 
+  signInDev, 
+  devError, 
+  createProblemClient, 
+  createProblemTitle, 
+  createProblemBody,
+  createCompletedProblem,
+  addCategories,
+  addAllProblems,
+  addProjects,
+  selectCategories,
+  handleSignup,
+  addRepoStats
+} from "./actions";
 
 describe('signInClient', () => {
   it('should return expected object based on params', () => {
@@ -70,3 +85,72 @@ describe('createProblemBody', () => {
   });
 });
 
+describe('createCompletedProblem', () => {
+  it('should return expected object based on params', () => {
+    const expected = {type: 'CREATE_COMPLETED_PROBLEM', problem: {body: 'problem body'}};
+    
+    const actual = createCompletedProblem({body: 'problem body'});
+
+    expect(actual).toEqual(expected);
+  });
+});
+
+describe('addCategories', () => {
+  it('should return expected object based on params', () => {
+    const expected = {type: 'ADD_CATEGORIES', categories: {category: 'category'}};
+    
+    const actual = addCategories({category: 'category'});
+
+    expect(actual).toEqual(expected);
+  });
+});
+
+describe('addAllProblems', () => {
+  it('should return expected object based on params', () => {
+    const expected = {type: 'ADD_ALL_PROBLEMS', problems: {problem: 'problem'}};
+    
+    const actual = addAllProblems({problem: 'problem'});
+
+    expect(actual).toEqual(expected);
+  });
+});
+
+describe('addProjects', () => {
+  it('should return expected object based on params', () => {
+    const expected = {type: 'ADD_PROJECTS', projects: {project: 'project'}};
+    
+    const actual = addProjects({project: 'project'});
+
+    expect(actual).toEqual(expected);
+  });
+});
+
+describe('selectCategories', () => {
+  it('should return expected object based on params', () => {
+    const expected = {type: 'SELECT_CATEGORIES', categories: {category: 'category'}};
+    
+    const actual = selectCategories({category: 'category'});
+
+    expect(actual).toEqual(expected);
+  });
+});
+
+describe('handleSignup', () => {
+  it('should return expected object based on params', () => {
+    const expected = {type: 'HANDLE_SIGNUP', signup: true, problemID: 34};
+    
+    const actual = handleSignup(true, 34);
+
+    expect(actual).toEqual(expected);
+  });
+});
+
+describe('addRepoStats', () => {
+  it('should return expected object based on params', () => {
+    const expected = {type: 'ADD_REPO_STATS', stats: {stuff: 'junk'}};
+    
+    const actual = addRepoStats({stuff: 'junk'});
+
+    expect(actual).toEqual(expected);
+  });
+});
