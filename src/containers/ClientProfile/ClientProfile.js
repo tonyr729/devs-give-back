@@ -31,11 +31,15 @@ export class ClientProfile extends Component {
     if (problem.dev) {
       const repoURL = problem.dev.repo;
       const apiURL = this.cleaner.cleanRepoURL(repoURL);
-      const lines = await this.api.fetchLinesOfCode(apiURL);
-      const contributers = await this.api.fetchNumberOfContributers(apiURL);
-      const updates = await this.api.fetchNumberOfUpdates(apiURL);
-      const hours = await this.api.fetchNumberofHours(apiURL);
-      stats = { lines, contributers, updates, hours }
+      try {
+        const lines = await this.api.fetchLinesOfCode(apiURL);
+        const contributers = await this.api.fetchNumberOfContributers(apiURL);
+        const updates = await this.api.fetchNumberOfUpdates(apiURL);
+        const hours = await this.api.fetchNumberOfHours(apiURL);
+        stats = { lines, contributers, updates, hours };
+      } catch (error) {
+        throw new Error('Failed to fetch data');
+      }
     }
     return stats;
   }
