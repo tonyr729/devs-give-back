@@ -25,7 +25,9 @@ class DatabaseHelper {
     if (response.val()) {
       const problems = response.val();
       const matchingID = Object.keys(problems).find(problem => problems[problem].clientID === userID)
-      problem = problems[matchingID];
+      if (matchingID) {
+        problem = problems[matchingID];
+      }
     }
     return problem;
   }
