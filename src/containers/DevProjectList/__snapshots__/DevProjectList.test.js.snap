@@ -1,0 +1,1574 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DevProjectList should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DevProjectList
+    addAllProblems={[Function]}
+    addProjects={[Function]}
+    allProblems={
+        Array [
+            Object {
+              "categories": Array [
+                "category",
+              ],
+            },
+            Object {
+              "categories": Array [
+                "category",
+              ],
+            },
+          ]
+    }
+    dev={
+        Object {
+            "name": "Tony",
+          }
+    }
+    signup={
+        Object {
+            "status": true,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        undefined,
+        <Connect(SignUp)
+          history={undefined}
+/>,
+        <div
+          className="dev-header"
+>
+          <div
+                    className="dev-header-container"
+          >
+                    <p>
+                              Tony
+                    </p>
+                    <img
+                              alt="developer profile picture"
+                              className="profile-picture"
+                              src={undefined}
+                    />
+          </div>
+</div>,
+        <div
+          className="main"
+>
+          <div
+                    className="main-container"
+          >
+                    <p
+                              className="main-section-titles"
+                    >
+                              <NavLink
+                                        activeClassName="active"
+                                        ariaCurrent="true"
+                                        to="/dev-project-list"
+                              >
+                                        New Project
+                              </NavLink>
+                               |  
+                              <NavLink
+                                        activeClassName="active"
+                                        ariaCurrent="true"
+                                        to="/dev-profile"
+                              >
+                                        Open Projects
+                              </NavLink>
+                               |  
+                              <NavLink
+                                        activeClassName="active"
+                                        ariaCurrent="true"
+                                        to="/dev-closed-projects"
+                              >
+                                        Closed Projects
+                              </NavLink>
+                    </p>
+                    <p
+                              className="main-section-choice"
+                    >
+                              Choose from a problem below
+                    </p>
+                    <div
+                              className="main-section"
+                    >
+                              <div
+                                        className="problem-card"
+                              >
+                                        <p
+                                                  className="dev-problem-title"
+                                        />
+                                        <p
+                                                  className="dev-problem-body"
+                                        />
+                                        <CategoryButton
+                                                  clientID={undefined}
+                                                  handleSignup={undefined}
+                                                  matchingDev={false}
+                                        />
+                                        <div
+                                                  className="dev-category-container"
+                                        >
+                                                  <button
+                                                            className="category-display"
+                                                  >
+                                                            category
+                                                  </button>
+                                        </div>
+                              </div>
+                              <div
+                                        className="problem-card"
+                              >
+                                        <p
+                                                  className="dev-problem-title"
+                                        />
+                                        <p
+                                                  className="dev-problem-body"
+                                        />
+                                        <CategoryButton
+                                                  clientID={undefined}
+                                                  handleSignup={undefined}
+                                                  matchingDev={false}
+                                        />
+                                        <div
+                                                  className="dev-category-container"
+                                        >
+                                                  <button
+                                                            className="category-display"
+                                                  >
+                                                            category
+                                                  </button>
+                                        </div>
+                              </div>
+                    </div>
+          </div>
+</div>,
+      ],
+      "className": "profile-background",
+    },
+    "ref": null,
+    "rendered": Array [
+      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "history": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="dev-header-container"
+>
+            <p>
+                        Tony
+            </p>
+            <img
+                        alt="developer profile picture"
+                        className="profile-picture"
+                        src={undefined}
+            />
+</div>,
+          "className": "dev-header",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Tony
+</p>,
+              <img
+                alt="developer profile picture"
+                className="profile-picture"
+                src={undefined}
+/>,
+            ],
+            "className": "dev-header-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Tony",
+              },
+              "ref": null,
+              "rendered": "Tony",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "developer profile picture",
+                "className": "profile-picture",
+                "src": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="main-container"
+>
+            <p
+                        className="main-section-titles"
+            >
+                        <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/dev-project-list"
+                        >
+                                    New Project
+                        </NavLink>
+                         |  
+                        <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/dev-profile"
+                        >
+                                    Open Projects
+                        </NavLink>
+                         |  
+                        <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/dev-closed-projects"
+                        >
+                                    Closed Projects
+                        </NavLink>
+            </p>
+            <p
+                        className="main-section-choice"
+            >
+                        Choose from a problem below
+            </p>
+            <div
+                        className="main-section"
+            >
+                        <div
+                                    className="problem-card"
+                        >
+                                    <p
+                                                className="dev-problem-title"
+                                    />
+                                    <p
+                                                className="dev-problem-body"
+                                    />
+                                    <CategoryButton
+                                                clientID={undefined}
+                                                handleSignup={undefined}
+                                                matchingDev={false}
+                                    />
+                                    <div
+                                                className="dev-category-container"
+                                    >
+                                                <button
+                                                            className="category-display"
+                                                >
+                                                            category
+                                                </button>
+                                    </div>
+                        </div>
+                        <div
+                                    className="problem-card"
+                        >
+                                    <p
+                                                className="dev-problem-title"
+                                    />
+                                    <p
+                                                className="dev-problem-body"
+                                    />
+                                    <CategoryButton
+                                                clientID={undefined}
+                                                handleSignup={undefined}
+                                                matchingDev={false}
+                                    />
+                                    <div
+                                                className="dev-category-container"
+                                    >
+                                                <button
+                                                            className="category-display"
+                                                >
+                                                            category
+                                                </button>
+                                    </div>
+                        </div>
+            </div>
+</div>,
+          "className": "main",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="main-section-titles"
+>
+                <NavLink
+                                activeClassName="active"
+                                ariaCurrent="true"
+                                to="/dev-project-list"
+                >
+                                New Project
+                </NavLink>
+                 |  
+                <NavLink
+                                activeClassName="active"
+                                ariaCurrent="true"
+                                to="/dev-profile"
+                >
+                                Open Projects
+                </NavLink>
+                 |  
+                <NavLink
+                                activeClassName="active"
+                                ariaCurrent="true"
+                                to="/dev-closed-projects"
+                >
+                                Closed Projects
+                </NavLink>
+</p>,
+              <p
+                className="main-section-choice"
+>
+                Choose from a problem below
+</p>,
+              <div
+                className="main-section"
+>
+                <div
+                                className="problem-card"
+                >
+                                <p
+                                                className="dev-problem-title"
+                                />
+                                <p
+                                                className="dev-problem-body"
+                                />
+                                <CategoryButton
+                                                clientID={undefined}
+                                                handleSignup={undefined}
+                                                matchingDev={false}
+                                />
+                                <div
+                                                className="dev-category-container"
+                                >
+                                                <button
+                                                                className="category-display"
+                                                >
+                                                                category
+                                                </button>
+                                </div>
+                </div>
+                <div
+                                className="problem-card"
+                >
+                                <p
+                                                className="dev-problem-title"
+                                />
+                                <p
+                                                className="dev-problem-body"
+                                />
+                                <CategoryButton
+                                                clientID={undefined}
+                                                handleSignup={undefined}
+                                                matchingDev={false}
+                                />
+                                <div
+                                                className="dev-category-container"
+                                >
+                                                <button
+                                                                className="category-display"
+                                                >
+                                                                category
+                                                </button>
+                                </div>
+                </div>
+</div>,
+            ],
+            "className": "main-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    to="/dev-project-list"
+>
+                    New Project
+</NavLink>,
+                  " |  ",
+                  <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    to="/dev-profile"
+>
+                    Open Projects
+</NavLink>,
+                  " |  ",
+                  <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    to="/dev-closed-projects"
+>
+                    Closed Projects
+</NavLink>,
+                ],
+                "className": "main-section-titles",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "ariaCurrent": "true",
+                    "children": "New Project",
+                    "to": "/dev-project-list",
+                  },
+                  "ref": null,
+                  "rendered": "New Project",
+                  "type": [Function],
+                },
+                " |  ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "ariaCurrent": "true",
+                    "children": "Open Projects",
+                    "to": "/dev-profile",
+                  },
+                  "ref": null,
+                  "rendered": "Open Projects",
+                  "type": [Function],
+                },
+                " |  ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "ariaCurrent": "true",
+                    "children": "Closed Projects",
+                    "to": "/dev-closed-projects",
+                  },
+                  "ref": null,
+                  "rendered": "Closed Projects",
+                  "type": [Function],
+                },
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Choose from a problem below",
+                "className": "main-section-choice",
+              },
+              "ref": null,
+              "rendered": "Choose from a problem below",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="problem-card"
+>
+                    <p
+                                        className="dev-problem-title"
+                    />
+                    <p
+                                        className="dev-problem-body"
+                    />
+                    <CategoryButton
+                                        clientID={undefined}
+                                        handleSignup={undefined}
+                                        matchingDev={false}
+                    />
+                    <div
+                                        className="dev-category-container"
+                    >
+                                        <button
+                                                            className="category-display"
+                                        >
+                                                            category
+                                        </button>
+                    </div>
+</div>,
+                  <div
+                    className="problem-card"
+>
+                    <p
+                                        className="dev-problem-title"
+                    />
+                    <p
+                                        className="dev-problem-body"
+                    />
+                    <CategoryButton
+                                        clientID={undefined}
+                                        handleSignup={undefined}
+                                        matchingDev={false}
+                    />
+                    <div
+                                        className="dev-category-container"
+                    >
+                                        <button
+                                                            className="category-display"
+                                        >
+                                                            category
+                                        </button>
+                    </div>
+</div>,
+                ],
+                "className": "main-section",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="dev-problem-title"
+/>,
+                      <p
+                        className="dev-problem-body"
+/>,
+                      <CategoryButton
+                        clientID={undefined}
+                        handleSignup={undefined}
+                        matchingDev={false}
+/>,
+                      <div
+                        className="dev-category-container"
+>
+                        <button
+                                                className="category-display"
+                        >
+                                                category
+                        </button>
+</div>,
+                    ],
+                    "className": "problem-card",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": undefined,
+                        "className": "dev-problem-title",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": undefined,
+                        "className": "dev-problem-body",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "clientID": undefined,
+                        "handleSignup": undefined,
+                        "matchingDev": false,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <button
+                            className="category-display"
+>
+                            category
+</button>,
+                        ],
+                        "className": "dev-category-container",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": "0",
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "category",
+                            "className": "category-display",
+                          },
+                          "ref": null,
+                          "rendered": "category",
+                          "type": "button",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="dev-problem-title"
+/>,
+                      <p
+                        className="dev-problem-body"
+/>,
+                      <CategoryButton
+                        clientID={undefined}
+                        handleSignup={undefined}
+                        matchingDev={false}
+/>,
+                      <div
+                        className="dev-category-container"
+>
+                        <button
+                                                className="category-display"
+                        >
+                                                category
+                        </button>
+</div>,
+                    ],
+                    "className": "problem-card",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": undefined,
+                        "className": "dev-problem-title",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": undefined,
+                        "className": "dev-problem-body",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "clientID": undefined,
+                        "handleSignup": undefined,
+                        "matchingDev": false,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <button
+                            className="category-display"
+>
+                            category
+</button>,
+                        ],
+                        "className": "dev-category-container",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": "0",
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "category",
+                            "className": "category-display",
+                          },
+                          "ref": null,
+                          "rendered": "category",
+                          "type": "button",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          undefined,
+          <Connect(SignUp)
+            history={undefined}
+/>,
+          <div
+            className="dev-header"
+>
+            <div
+                        className="dev-header-container"
+            >
+                        <p>
+                                    Tony
+                        </p>
+                        <img
+                                    alt="developer profile picture"
+                                    className="profile-picture"
+                                    src={undefined}
+                        />
+            </div>
+</div>,
+          <div
+            className="main"
+>
+            <div
+                        className="main-container"
+            >
+                        <p
+                                    className="main-section-titles"
+                        >
+                                    <NavLink
+                                                activeClassName="active"
+                                                ariaCurrent="true"
+                                                to="/dev-project-list"
+                                    >
+                                                New Project
+                                    </NavLink>
+                                     |  
+                                    <NavLink
+                                                activeClassName="active"
+                                                ariaCurrent="true"
+                                                to="/dev-profile"
+                                    >
+                                                Open Projects
+                                    </NavLink>
+                                     |  
+                                    <NavLink
+                                                activeClassName="active"
+                                                ariaCurrent="true"
+                                                to="/dev-closed-projects"
+                                    >
+                                                Closed Projects
+                                    </NavLink>
+                        </p>
+                        <p
+                                    className="main-section-choice"
+                        >
+                                    Choose from a problem below
+                        </p>
+                        <div
+                                    className="main-section"
+                        >
+                                    <div
+                                                className="problem-card"
+                                    >
+                                                <p
+                                                            className="dev-problem-title"
+                                                />
+                                                <p
+                                                            className="dev-problem-body"
+                                                />
+                                                <CategoryButton
+                                                            clientID={undefined}
+                                                            handleSignup={undefined}
+                                                            matchingDev={false}
+                                                />
+                                                <div
+                                                            className="dev-category-container"
+                                                >
+                                                            <button
+                                                                        className="category-display"
+                                                            >
+                                                                        category
+                                                            </button>
+                                                </div>
+                                    </div>
+                                    <div
+                                                className="problem-card"
+                                    >
+                                                <p
+                                                            className="dev-problem-title"
+                                                />
+                                                <p
+                                                            className="dev-problem-body"
+                                                />
+                                                <CategoryButton
+                                                            clientID={undefined}
+                                                            handleSignup={undefined}
+                                                            matchingDev={false}
+                                                />
+                                                <div
+                                                            className="dev-category-container"
+                                                >
+                                                            <button
+                                                                        className="category-display"
+                                                            >
+                                                                        category
+                                                            </button>
+                                                </div>
+                                    </div>
+                        </div>
+            </div>
+</div>,
+        ],
+        "className": "profile-background",
+      },
+      "ref": null,
+      "rendered": Array [
+        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "history": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="dev-header-container"
+>
+              <p>
+                            Tony
+              </p>
+              <img
+                            alt="developer profile picture"
+                            className="profile-picture"
+                            src={undefined}
+              />
+</div>,
+            "className": "dev-header",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Tony
+</p>,
+                <img
+                  alt="developer profile picture"
+                  className="profile-picture"
+                  src={undefined}
+/>,
+              ],
+              "className": "dev-header-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Tony",
+                },
+                "ref": null,
+                "rendered": "Tony",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "developer profile picture",
+                  "className": "profile-picture",
+                  "src": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+            ],
+            "type": "div",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="main-container"
+>
+              <p
+                            className="main-section-titles"
+              >
+                            <NavLink
+                                          activeClassName="active"
+                                          ariaCurrent="true"
+                                          to="/dev-project-list"
+                            >
+                                          New Project
+                            </NavLink>
+                             |  
+                            <NavLink
+                                          activeClassName="active"
+                                          ariaCurrent="true"
+                                          to="/dev-profile"
+                            >
+                                          Open Projects
+                            </NavLink>
+                             |  
+                            <NavLink
+                                          activeClassName="active"
+                                          ariaCurrent="true"
+                                          to="/dev-closed-projects"
+                            >
+                                          Closed Projects
+                            </NavLink>
+              </p>
+              <p
+                            className="main-section-choice"
+              >
+                            Choose from a problem below
+              </p>
+              <div
+                            className="main-section"
+              >
+                            <div
+                                          className="problem-card"
+                            >
+                                          <p
+                                                        className="dev-problem-title"
+                                          />
+                                          <p
+                                                        className="dev-problem-body"
+                                          />
+                                          <CategoryButton
+                                                        clientID={undefined}
+                                                        handleSignup={undefined}
+                                                        matchingDev={false}
+                                          />
+                                          <div
+                                                        className="dev-category-container"
+                                          >
+                                                        <button
+                                                                      className="category-display"
+                                                        >
+                                                                      category
+                                                        </button>
+                                          </div>
+                            </div>
+                            <div
+                                          className="problem-card"
+                            >
+                                          <p
+                                                        className="dev-problem-title"
+                                          />
+                                          <p
+                                                        className="dev-problem-body"
+                                          />
+                                          <CategoryButton
+                                                        clientID={undefined}
+                                                        handleSignup={undefined}
+                                                        matchingDev={false}
+                                          />
+                                          <div
+                                                        className="dev-category-container"
+                                          >
+                                                        <button
+                                                                      className="category-display"
+                                                        >
+                                                                      category
+                                                        </button>
+                                          </div>
+                            </div>
+              </div>
+</div>,
+            "className": "main",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p
+                  className="main-section-titles"
+>
+                  <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/dev-project-list"
+                  >
+                                    New Project
+                  </NavLink>
+                   |  
+                  <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/dev-profile"
+                  >
+                                    Open Projects
+                  </NavLink>
+                   |  
+                  <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/dev-closed-projects"
+                  >
+                                    Closed Projects
+                  </NavLink>
+</p>,
+                <p
+                  className="main-section-choice"
+>
+                  Choose from a problem below
+</p>,
+                <div
+                  className="main-section"
+>
+                  <div
+                                    className="problem-card"
+                  >
+                                    <p
+                                                      className="dev-problem-title"
+                                    />
+                                    <p
+                                                      className="dev-problem-body"
+                                    />
+                                    <CategoryButton
+                                                      clientID={undefined}
+                                                      handleSignup={undefined}
+                                                      matchingDev={false}
+                                    />
+                                    <div
+                                                      className="dev-category-container"
+                                    >
+                                                      <button
+                                                                        className="category-display"
+                                                      >
+                                                                        category
+                                                      </button>
+                                    </div>
+                  </div>
+                  <div
+                                    className="problem-card"
+                  >
+                                    <p
+                                                      className="dev-problem-title"
+                                    />
+                                    <p
+                                                      className="dev-problem-body"
+                                    />
+                                    <CategoryButton
+                                                      clientID={undefined}
+                                                      handleSignup={undefined}
+                                                      matchingDev={false}
+                                    />
+                                    <div
+                                                      className="dev-category-container"
+                                    >
+                                                      <button
+                                                                        className="category-display"
+                                                      >
+                                                                        category
+                                                      </button>
+                                    </div>
+                  </div>
+</div>,
+              ],
+              "className": "main-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <NavLink
+                      activeClassName="active"
+                      ariaCurrent="true"
+                      to="/dev-project-list"
+>
+                      New Project
+</NavLink>,
+                    " |  ",
+                    <NavLink
+                      activeClassName="active"
+                      ariaCurrent="true"
+                      to="/dev-profile"
+>
+                      Open Projects
+</NavLink>,
+                    " |  ",
+                    <NavLink
+                      activeClassName="active"
+                      ariaCurrent="true"
+                      to="/dev-closed-projects"
+>
+                      Closed Projects
+</NavLink>,
+                  ],
+                  "className": "main-section-titles",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "ariaCurrent": "true",
+                      "children": "New Project",
+                      "to": "/dev-project-list",
+                    },
+                    "ref": null,
+                    "rendered": "New Project",
+                    "type": [Function],
+                  },
+                  " |  ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "ariaCurrent": "true",
+                      "children": "Open Projects",
+                      "to": "/dev-profile",
+                    },
+                    "ref": null,
+                    "rendered": "Open Projects",
+                    "type": [Function],
+                  },
+                  " |  ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "ariaCurrent": "true",
+                      "children": "Closed Projects",
+                      "to": "/dev-closed-projects",
+                    },
+                    "ref": null,
+                    "rendered": "Closed Projects",
+                    "type": [Function],
+                  },
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Choose from a problem below",
+                  "className": "main-section-choice",
+                },
+                "ref": null,
+                "rendered": "Choose from a problem below",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="problem-card"
+>
+                      <p
+                                            className="dev-problem-title"
+                      />
+                      <p
+                                            className="dev-problem-body"
+                      />
+                      <CategoryButton
+                                            clientID={undefined}
+                                            handleSignup={undefined}
+                                            matchingDev={false}
+                      />
+                      <div
+                                            className="dev-category-container"
+                      >
+                                            <button
+                                                                  className="category-display"
+                                            >
+                                                                  category
+                                            </button>
+                      </div>
+</div>,
+                    <div
+                      className="problem-card"
+>
+                      <p
+                                            className="dev-problem-title"
+                      />
+                      <p
+                                            className="dev-problem-body"
+                      />
+                      <CategoryButton
+                                            clientID={undefined}
+                                            handleSignup={undefined}
+                                            matchingDev={false}
+                      />
+                      <div
+                                            className="dev-category-container"
+                      >
+                                            <button
+                                                                  className="category-display"
+                                            >
+                                                                  category
+                                            </button>
+                      </div>
+</div>,
+                  ],
+                  "className": "main-section",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": "0",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <p
+                          className="dev-problem-title"
+/>,
+                        <p
+                          className="dev-problem-body"
+/>,
+                        <CategoryButton
+                          clientID={undefined}
+                          handleSignup={undefined}
+                          matchingDev={false}
+/>,
+                        <div
+                          className="dev-category-container"
+>
+                          <button
+                                                    className="category-display"
+                          >
+                                                    category
+                          </button>
+</div>,
+                      ],
+                      "className": "problem-card",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": undefined,
+                          "className": "dev-problem-title",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": undefined,
+                          "className": "dev-problem-body",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "clientID": undefined,
+                          "handleSignup": undefined,
+                          "matchingDev": false,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <button
+                              className="category-display"
+>
+                              category
+</button>,
+                          ],
+                          "className": "dev-category-container",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": "0",
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "category",
+                              "className": "category-display",
+                            },
+                            "ref": null,
+                            "rendered": "category",
+                            "type": "button",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "1",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <p
+                          className="dev-problem-title"
+/>,
+                        <p
+                          className="dev-problem-body"
+/>,
+                        <CategoryButton
+                          clientID={undefined}
+                          handleSignup={undefined}
+                          matchingDev={false}
+/>,
+                        <div
+                          className="dev-category-container"
+>
+                          <button
+                                                    className="category-display"
+                          >
+                                                    category
+                          </button>
+</div>,
+                      ],
+                      "className": "problem-card",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": undefined,
+                          "className": "dev-problem-title",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": undefined,
+                          "className": "dev-problem-body",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "clientID": undefined,
+                          "handleSignup": undefined,
+                          "matchingDev": false,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <button
+                              className="category-display"
+>
+                              category
+</button>,
+                          ],
+                          "className": "dev-category-container",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": "0",
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "category",
+                              "className": "category-display",
+                            },
+                            "ref": null,
+                            "rendered": "category",
+                            "type": "button",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

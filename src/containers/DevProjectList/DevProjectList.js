@@ -10,7 +10,7 @@ import SignupButton from '../../components/Statefull/SignupButton/SignupButton';
 
 
 
-class DevProjectList extends Component {
+export class DevProjectList extends Component {
   constructor() {
     super();
     this.database = new DatabaseHelper();
