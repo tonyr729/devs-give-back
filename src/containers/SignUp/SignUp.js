@@ -39,7 +39,9 @@ export class SignUp extends Component {
         <div className="signup-form">
           <p className="signup-title">Awesome!</p>
           <p className="signup-info">
-            Please create a GitHub Repo for this project and prefered contact info for the client and other developers regarding this project. 
+            Please create a GitHub Repo for this project 
+            and prefered contact info for the client and 
+            other developers regarding this project. 
           </p>
           <input type="text" 
             name="repo" 

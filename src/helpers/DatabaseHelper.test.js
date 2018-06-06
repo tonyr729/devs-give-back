@@ -1,6 +1,5 @@
 import firebase from '../firebase/firebase';
 import DatabaseHelper from './DatabaseHelper';
-import { listenerCount } from 'cluster';
 jest.mock('../firebase/firebase.js');
 
 describe('Database Helper', () => {
@@ -161,7 +160,7 @@ describe('Database Helper', () => {
     it('should call matchProjects', async () => {
       database.matchProjects = jest.fn();
 
-      const actual = await database.pullProjectsFromDatabase();
+      await database.pullProjectsFromDatabase();
 
       expect(database.matchProjects).toHaveBeenCalled();
     });

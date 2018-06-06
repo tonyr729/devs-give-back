@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './ProblemTitle.css';
-import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {createProblemTitle, createProblemClient } from '../../actions/actions';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
@@ -62,8 +61,16 @@ export class ProblemTitle extends Component {
         <p className='welcome'>Hi {firstName},</p>
         <p className='title-instructions'>Briefly describe your problem...</p>
         <p className='example'>Ex: Looking for a solution to help an afterschool program</p> 
-        <input className='title-input' onKeyDown={this.submitInput}  onChange={this.handleInputChange} maxLength='70' value={this.state.input} autoFocus/>
-        <button className='title-next-button' onClick={this.handleSubmit} ><img className='right-arrow-img' src={rightArrow} /></button>
+        <input 
+          className='title-input' 
+          onKeyDown={this.submitInput}  
+          onChange={this.handleInputChange} 
+          maxLength='70' value={this.state.input} 
+          autoFocus
+        />
+        <button className='title-next-button' onClick={this.handleSubmit} >
+          <img className='right-arrow-img' src={rightArrow}/>
+        </button>
       </div>
     );
   }

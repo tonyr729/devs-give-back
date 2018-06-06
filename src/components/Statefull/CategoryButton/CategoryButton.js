@@ -8,7 +8,7 @@ class CategoryButton extends Component {
     };
   }
 
-  handleClick = (event) => {
+  handleClick = () => {
     this.props.selectCategory(this.props.category);
     this.setState({
       selected: !this.state.selected

@@ -50,7 +50,7 @@ export class ProblemCategory extends Component {
     }
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = () => {
     const {title, body, clientID} = this.props;
     this.props.selectCategories(this.state.categories);
     this.database.writeProblemToDatabase(title, body, this.state.categories, clientID);
@@ -78,8 +78,12 @@ export class ProblemCategory extends Component {
           {categories}
         </div>
         <div className="button-container">
-          <button className='previous-button' onClick={()=> this.props.history.push("/problem-body")} ><img className='left-arrow-img' src={leftArrow} /></button>
-          <button className='next-button' onClick={this.handleSubmit} ><img className='right-arrow-img' src={rightArrow} /></button>
+          <button className='previous-button' onClick={()=> this.props.history.push("/problem-body")} >
+            <img className='left-arrow-img' src={leftArrow} />
+          </button>
+          <button className='next-button' onClick={this.handleSubmit} >
+            <img className='right-arrow-img' src={rightArrow} />
+          </button>
         </div>
       </div>
     );

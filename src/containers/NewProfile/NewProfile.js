@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import DatabaseHelper from '../../helpers/DatabaseHelper';
-import DataCleaner from '../../helpers/DataCleaner';
-import APIHelper from '../../helpers/APIHelper';
 
 import './NewProfile.css';
 
@@ -12,9 +9,9 @@ export class NewProfile extends Component {
   displayCategories = (categories) => {
     let display = null;
     if (categories) {
-      display = categories.map(category => {
+      display = categories.map((category, index) => {
         return (
-          <button className="display-category">{category}</button>
+          <button key = {index} className="display-category">{category}</button>
         );
       });
     }
@@ -29,7 +26,6 @@ export class NewProfile extends Component {
   }
   
   render() {
-    console.log(this.props.problem.categories);
     const redirect = this.logInCheck(this.props.client);
     const categories = this.displayCategories(this.props.problem.categories);
     return (

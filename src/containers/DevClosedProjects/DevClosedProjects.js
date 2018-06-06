@@ -7,7 +7,10 @@ export const DevClosedProjects = () => {
     <div className="under-construction">
       <h1 className="warning">UNDER CONSTRUCTION!</h1>
       <p className="blah">
-        Yayyy thanks for clicking that link but... this isn't done yet. Probably because I'm sitting here making this message when I could be coding it... but whatever!
+        Yayyy thanks for clicking that link but... 
+        this isn't done yet. Probably because I'm 
+        sitting here making this message when I could be coding it... 
+        but whatever!
       </p>
       <NavLink to='/'>
         Uhh... take me back to the start?

@@ -45,7 +45,11 @@ export class DevProjectList extends Component {
           <div key={index} className="problem-card">
             <p className="dev-problem-title">{problem.title}</p>
             <p className="dev-problem-body">{problem.body}</p>
-            <SignupButton handleSignup={ this.props.handleSignup } clientID={ problem.clientID } matchingDev={ matchingDev } />
+            <SignupButton 
+              handleSignup={ this.props.handleSignup } 
+              clientID={ problem.clientID } 
+              matchingDev={ matchingDev } 
+            />
             <div className="dev-category-container">
               {categories}
             </div>

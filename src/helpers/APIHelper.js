@@ -13,7 +13,7 @@ class APIHelper {
       }, 0);
       return numberOfHours;
     } else {
-      throw Error(response.statusText)
+      throw Error(response.statusText);
     }
 
   }
@@ -28,7 +28,7 @@ class APIHelper {
       }, 0);
       return numberOfUpdates;
     } else {
-      throw Error(response.statusText)
+      throw Error(response.statusText);
     }
   }
   
@@ -39,7 +39,7 @@ class APIHelper {
       const numberOfContributers = data.length;
       return numberOfContributers;
     } else {
-      throw Error(response.statusText)
+      throw Error(response.statusText);
     }
   }
   
@@ -53,7 +53,7 @@ class APIHelper {
       }, 0);
       return linesOfCode;
     } else {
-      throw Error(response.statusText)
+      throw Error(response.statusText);
     }
   }
 }

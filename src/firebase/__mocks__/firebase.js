@@ -2,18 +2,6 @@ import * as firebase from 'firebase';
 
 const onAuthStateChanged = jest.fn();
 
-const sendEmailVerification = jest.fn(() => {
-  return Promise.resolve('result of sendEmailVerification');
-});
-
-const createUserWithEmailAndPassword = jest.fn(() => {
-  return Promise.resolve('result of createUserWithEmailAndPassword');
-});
-
-const signInWithEmailAndPassword = jest.fn(() => {
-  return Promise.resolve('result of signInWithEmailAndPassword');
-});
-
 const signInWithPopup = jest.fn(() => {
   return Promise.resolve({
     user: 'tony',
@@ -43,22 +31,6 @@ let once = jest.fn(() => {
     })
   });
 });
-
-const initializeApp = jest
-  .spyOn(firebase, 'initializeApp')
-  .mockImplementation(() => {
-    return {
-      auth: () => {
-        return {
-          createUserWithEmailAndPassword,
-          signInWithEmailAndPassword,
-          currentUser: {
-            sendEmailVerification
-          }
-        };
-      }
-    };
-  });
 
 jest.spyOn(firebase, 'auth').mockImplementation(() => {
   return {
