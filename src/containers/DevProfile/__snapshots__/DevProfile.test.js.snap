@@ -91,7 +91,7 @@ ShallowWrapper {
                                                   You currently have no open projects.
                                         </p>
                                         <p>
-                                                  Click "New Project" to see avalible projects.
+                                                  Click New Project to see avalible projects.
                                         </p>
                               </div>
                     </div>
@@ -241,7 +241,7 @@ ShallowWrapper {
                                                 You currently have no open projects.
                                     </p>
                                     <p>
-                                                Click "New Project" to see avalible projects.
+                                                Click New Project to see avalible projects.
                                     </p>
                         </div>
             </div>
@@ -292,7 +292,7 @@ ShallowWrapper {
                                                 You currently have no open projects.
                                 </p>
                                 <p>
-                                                Click "New Project" to see avalible projects.
+                                                Click New Project to see avalible projects.
                                 </p>
                 </div>
 </div>,
@@ -394,7 +394,7 @@ ShallowWrapper {
                                     You currently have no open projects.
                   </p>
                   <p>
-                                    Click "New Project" to see avalible projects.
+                                    Click New Project to see avalible projects.
                   </p>
 </div>,
                 "className": "current-projects",
@@ -410,7 +410,7 @@ ShallowWrapper {
                       You currently have no open projects.
 </p>,
                     <p>
-                      Click "New Project" to see avalible projects.
+                      Click New Project to see avalible projects.
 </p>,
                   ],
                   "className": "info-text",
@@ -433,10 +433,10 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Click \\"New Project\\" to see avalible projects.",
+                      "children": "Click New Project to see avalible projects.",
                     },
                     "ref": null,
-                    "rendered": "Click \\"New Project\\" to see avalible projects.",
+                    "rendered": "Click New Project to see avalible projects.",
                     "type": "p",
                   },
                 ],
@@ -525,7 +525,7 @@ ShallowWrapper {
                                                             You currently have no open projects.
                                                 </p>
                                                 <p>
-                                                            Click "New Project" to see avalible projects.
+                                                            Click New Project to see avalible projects.
                                                 </p>
                                     </div>
                         </div>
@@ -675,7 +675,7 @@ ShallowWrapper {
                                                         You currently have no open projects.
                                           </p>
                                           <p>
-                                                        Click "New Project" to see avalible projects.
+                                                        Click New Project to see avalible projects.
                                           </p>
                             </div>
               </div>
@@ -726,7 +726,7 @@ ShallowWrapper {
                                                       You currently have no open projects.
                                     </p>
                                     <p>
-                                                      Click "New Project" to see avalible projects.
+                                                      Click New Project to see avalible projects.
                                     </p>
                   </div>
 </div>,
@@ -828,7 +828,7 @@ ShallowWrapper {
                                         You currently have no open projects.
                     </p>
                     <p>
-                                        Click "New Project" to see avalible projects.
+                                        Click New Project to see avalible projects.
                     </p>
 </div>,
                   "className": "current-projects",
@@ -844,7 +844,7 @@ ShallowWrapper {
                         You currently have no open projects.
 </p>,
                       <p>
-                        Click "New Project" to see avalible projects.
+                        Click New Project to see avalible projects.
 </p>,
                     ],
                     "className": "info-text",
@@ -867,10 +867,10 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "Click \\"New Project\\" to see avalible projects.",
+                        "children": "Click New Project to see avalible projects.",
                       },
                       "ref": null,
-                      "rendered": "Click \\"New Project\\" to see avalible projects.",
+                      "rendered": "Click New Project to see avalible projects.",
                       "type": "p",
                     },
                   ],

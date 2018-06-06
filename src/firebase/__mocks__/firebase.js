@@ -11,6 +11,22 @@ const signInWithPopup = jest.fn(() => {
   });
 });
 
+const initializeApp = jest	
+  .spyOn(firebase, 'initializeApp')	
+  .mockImplementation(() => {	
+    return {	
+      auth: () => {	
+        return {	
+          createUserWithEmailAndPassword,	
+          signInWithEmailAndPassword,	
+          currentUser: {	
+            sendEmailVerification	
+          }	
+        };	
+      }	
+    };	
+  });
+
 const set = jest.fn();
 
 const push = jest.fn();

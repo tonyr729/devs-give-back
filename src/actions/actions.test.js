@@ -152,7 +152,7 @@ describe('selectCategories', () => {
 
 describe('handleSignup', () => {
   it('should return expected object based on params', () => {
-    const expected = {type: 'HANDLE_SIGNUP', signup: true, problemID: 34};
+    const expected = {type: 'HANDLE_SIGNUP', status: true, problemID: 34};
     
     const actual = handleSignup(true, 34);
 

@@ -26,7 +26,7 @@ ShallowWrapper {
         <p
           className="blah"
 >
-          Yayyy thanks for clicking that link but... this isn't done yet. Probably because I'm sitting here making this message when I could be coding it... but whatever!
+          Yayyy thanks for clicking that link but... this isnt done yet. Probably because Im sitting here making this message when I could be coding it... but whatever!
 </p>,
         <NavLink
           activeClassName="active"
@@ -57,11 +57,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Yayyy thanks for clicking that link but... this isn't done yet. Probably because I'm sitting here making this message when I could be coding it... but whatever!",
+          "children": "Yayyy thanks for clicking that link but... this isnt done yet. Probably because Im sitting here making this message when I could be coding it... but whatever!",
           "className": "blah",
         },
         "ref": null,
-        "rendered": "Yayyy thanks for clicking that link but... this isn't done yet. Probably because I'm sitting here making this message when I could be coding it... but whatever!",
+        "rendered": "Yayyy thanks for clicking that link but... this isnt done yet. Probably because Im sitting here making this message when I could be coding it... but whatever!",
         "type": "p",
       },
       Object {
@@ -96,7 +96,7 @@ ShallowWrapper {
           <p
             className="blah"
 >
-            Yayyy thanks for clicking that link but... this isn't done yet. Probably because I'm sitting here making this message when I could be coding it... but whatever!
+            Yayyy thanks for clicking that link but... this isnt done yet. Probably because Im sitting here making this message when I could be coding it... but whatever!
 </p>,
           <NavLink
             activeClassName="active"
@@ -127,11 +127,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Yayyy thanks for clicking that link but... this isn't done yet. Probably because I'm sitting here making this message when I could be coding it... but whatever!",
+            "children": "Yayyy thanks for clicking that link but... this isnt done yet. Probably because Im sitting here making this message when I could be coding it... but whatever!",
             "className": "blah",
           },
           "ref": null,
-          "rendered": "Yayyy thanks for clicking that link but... this isn't done yet. Probably because I'm sitting here making this message when I could be coding it... but whatever!",
+          "rendered": "Yayyy thanks for clicking that link but... this isnt done yet. Probably because Im sitting here making this message when I could be coding it... but whatever!",
           "type": "p",
         },
         Object {
