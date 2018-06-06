@@ -28,7 +28,7 @@ export class ClientProfile extends Component {
   
   getRepoStats = async (problem) => {
     let stats = null;
-    if (problem.dev) {
+    if (problem && problem.dev) {
       const repoURL = problem.dev.repo;
       const apiURL = this.cleaner.cleanRepoURL(repoURL);
       try {
@@ -87,7 +87,12 @@ export class ClientProfile extends Component {
   
   render() {
     const redirect = this.logInCheck(this.props.client);
-    const categories = this.displayCategories(this.props.clientsProblem.categories);
+    let clientsProblem = {title: '', body: ''};
+    let categories = '';
+    if (this.props.clientsProblem) {
+      clientsProblem = this.props.clientsProblem;
+      categories = this.displayCategories(this.props.clientsProblem.categories);
+    }
     const displayStats = this.displayStats(this.props.repoStats)
     
 
@@ -104,8 +109,8 @@ export class ClientProfile extends Component {
         <div className="problem">
           <div className="problem-container">
             <p className="section-title">Heres your problem</p>
-            <p className="problem-title">{this.props.clientsProblem.title}</p>
-            <p className="problem-body">{this.props.clientsProblem.body}</p>
+            <p className="problem-title">{clientsProblem.title}</p>
+            <p className="problem-body">{clientsProblem.body}</p>
             <div className="category-tags">
               {categories}
             </div>
@@ -123,13 +128,13 @@ export class ClientProfile extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   client: state.client,
   clientsProblem: state.clientsProblem,
   repoStats: state.repoStats
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   signInClient: (client) => dispatch(signInClient(client)),
   addRepoStats: (stats) => dispatch(addRepoStats(stats))
 })

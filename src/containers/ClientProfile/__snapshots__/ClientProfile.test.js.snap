@@ -24,6 +24,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        undefined,
         <div
           className="header"
 >
@@ -38,6 +39,12 @@ ShallowWrapper {
                               className="profile-picture"
                               src={undefined}
                     />
+                    <button
+                              className="signout-button"
+                              onClick={[Function]}
+                    >
+                              Sign Out
+                    </button>
           </div>
 </div>,
         <div
@@ -57,24 +64,31 @@ ShallowWrapper {
                     <p
                               className="problem-body"
                     />
+                    <div
+                              className="category-tags"
+                    />
           </div>
 </div>,
         <div
           className="stats"
 >
           <div
-                    className="stats-container"
+                    className="stats-section"
           >
                     <p
                               className="section-title"
                     >
                               Heres whats happening
                     </p>
-                    <p
-                              className="stats-title"
+                    <div
+                              className="stats-container"
                     >
-                              Nothing at this time :(
-                    </p>
+                              <p
+                                        className="stats-title"
+                              >
+                                        Nothing at this time :(
+                              </p>
+                    </div>
           </div>
 </div>,
       ],
@@ -82,6 +96,7 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      undefined,
       Object {
         "instance": null,
         "key": undefined,
@@ -98,6 +113,12 @@ ShallowWrapper {
                         className="profile-picture"
                         src={undefined}
             />
+            <button
+                        className="signout-button"
+                        onClick={[Function]}
+            >
+                        Sign Out
+            </button>
 </div>,
           "className": "header",
         },
@@ -116,6 +137,12 @@ ShallowWrapper {
                 className="profile-picture"
                 src={undefined}
 />,
+              <button
+                className="signout-button"
+                onClick={[Function]}
+>
+                Sign Out
+</button>,
             ],
             "className": "header-container",
           },
@@ -145,6 +172,19 @@ ShallowWrapper {
               "rendered": null,
               "type": "img",
             },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Sign Out",
+                "className": "signout-button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Sign Out",
+              "type": "button",
+            },
           ],
           "type": "div",
         },
@@ -169,6 +209,9 @@ ShallowWrapper {
             <p
                         className="problem-body"
             />
+            <div
+                        className="category-tags"
+            />
 </div>,
           "className": "problem",
         },
@@ -189,6 +232,9 @@ ShallowWrapper {
 />,
               <p
                 className="problem-body"
+/>,
+              <div
+                className="category-tags"
 />,
             ],
             "className": "problem-container",
@@ -212,11 +258,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "",
                 "className": "problem-title",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "",
               "type": "p",
             },
             Object {
@@ -224,12 +270,24 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "",
                 "className": "problem-body",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "",
               "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "",
+                "className": "category-tags",
+              },
+              "ref": null,
+              "rendered": "",
+              "type": "div",
             },
           ],
           "type": "div",
@@ -242,18 +300,22 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="stats-container"
+            className="stats-section"
 >
             <p
                         className="section-title"
             >
                         Heres whats happening
             </p>
-            <p
-                        className="stats-title"
+            <div
+                        className="stats-container"
             >
-                        Nothing at this time :(
-            </p>
+                        <p
+                                    className="stats-title"
+                        >
+                                    Nothing at this time :(
+                        </p>
+            </div>
 </div>,
           "className": "stats",
         },
@@ -269,13 +331,17 @@ ShallowWrapper {
 >
                 Heres whats happening
 </p>,
-              <p
-                className="stats-title"
+              <div
+                className="stats-container"
 >
-                Nothing at this time :(
-</p>,
+                <p
+                                className="stats-title"
+                >
+                                Nothing at this time :(
+                </p>
+</div>,
             ],
-            "className": "stats-container",
+            "className": "stats-section",
           },
           "ref": null,
           "rendered": Array [
@@ -296,12 +362,27 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Nothing at this time :(",
-                "className": "stats-title",
+                "children": <p
+                  className="stats-title"
+>
+                  Nothing at this time :(
+</p>,
+                "className": "stats-container",
               },
               "ref": null,
-              "rendered": "Nothing at this time :(",
-              "type": "p",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Nothing at this time :(",
+                  "className": "stats-title",
+                },
+                "ref": null,
+                "rendered": "Nothing at this time :(",
+                "type": "p",
+              },
+              "type": "div",
             },
           ],
           "type": "div",
@@ -318,6 +399,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          undefined,
           <div
             className="header"
 >
@@ -332,6 +414,12 @@ ShallowWrapper {
                                     className="profile-picture"
                                     src={undefined}
                         />
+                        <button
+                                    className="signout-button"
+                                    onClick={[Function]}
+                        >
+                                    Sign Out
+                        </button>
             </div>
 </div>,
           <div
@@ -351,24 +439,31 @@ ShallowWrapper {
                         <p
                                     className="problem-body"
                         />
+                        <div
+                                    className="category-tags"
+                        />
             </div>
 </div>,
           <div
             className="stats"
 >
             <div
-                        className="stats-container"
+                        className="stats-section"
             >
                         <p
                                     className="section-title"
                         >
                                     Heres whats happening
                         </p>
-                        <p
-                                    className="stats-title"
+                        <div
+                                    className="stats-container"
                         >
-                                    Nothing at this time :(
-                        </p>
+                                    <p
+                                                className="stats-title"
+                                    >
+                                                Nothing at this time :(
+                                    </p>
+                        </div>
             </div>
 </div>,
         ],
@@ -376,6 +471,7 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        undefined,
         Object {
           "instance": null,
           "key": undefined,
@@ -392,6 +488,12 @@ ShallowWrapper {
                             className="profile-picture"
                             src={undefined}
               />
+              <button
+                            className="signout-button"
+                            onClick={[Function]}
+              >
+                            Sign Out
+              </button>
 </div>,
             "className": "header",
           },
@@ -410,6 +512,12 @@ ShallowWrapper {
                   className="profile-picture"
                   src={undefined}
 />,
+                <button
+                  className="signout-button"
+                  onClick={[Function]}
+>
+                  Sign Out
+</button>,
               ],
               "className": "header-container",
             },
@@ -439,6 +547,19 @@ ShallowWrapper {
                 "rendered": null,
                 "type": "img",
               },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Sign Out",
+                  "className": "signout-button",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Sign Out",
+                "type": "button",
+              },
             ],
             "type": "div",
           },
@@ -463,6 +584,9 @@ ShallowWrapper {
               <p
                             className="problem-body"
               />
+              <div
+                            className="category-tags"
+              />
 </div>,
             "className": "problem",
           },
@@ -483,6 +607,9 @@ ShallowWrapper {
 />,
                 <p
                   className="problem-body"
+/>,
+                <div
+                  className="category-tags"
 />,
               ],
               "className": "problem-container",
@@ -506,11 +633,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": undefined,
+                  "children": "",
                   "className": "problem-title",
                 },
                 "ref": null,
-                "rendered": null,
+                "rendered": "",
                 "type": "p",
               },
               Object {
@@ -518,12 +645,24 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": undefined,
+                  "children": "",
                   "className": "problem-body",
                 },
                 "ref": null,
-                "rendered": null,
+                "rendered": "",
                 "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "",
+                  "className": "category-tags",
+                },
+                "ref": null,
+                "rendered": "",
+                "type": "div",
               },
             ],
             "type": "div",
@@ -536,18 +675,22 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <div
-              className="stats-container"
+              className="stats-section"
 >
               <p
                             className="section-title"
               >
                             Heres whats happening
               </p>
-              <p
-                            className="stats-title"
+              <div
+                            className="stats-container"
               >
-                            Nothing at this time :(
-              </p>
+                            <p
+                                          className="stats-title"
+                            >
+                                          Nothing at this time :(
+                            </p>
+              </div>
 </div>,
             "className": "stats",
           },
@@ -563,13 +706,17 @@ ShallowWrapper {
 >
                   Heres whats happening
 </p>,
-                <p
-                  className="stats-title"
+                <div
+                  className="stats-container"
 >
-                  Nothing at this time :(
-</p>,
+                  <p
+                                    className="stats-title"
+                  >
+                                    Nothing at this time :(
+                  </p>
+</div>,
               ],
-              "className": "stats-container",
+              "className": "stats-section",
             },
             "ref": null,
             "rendered": Array [
@@ -590,12 +737,27 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Nothing at this time :(",
-                  "className": "stats-title",
+                  "children": <p
+                    className="stats-title"
+>
+                    Nothing at this time :(
+</p>,
+                  "className": "stats-container",
                 },
                 "ref": null,
-                "rendered": "Nothing at this time :(",
-                "type": "p",
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Nothing at this time :(",
+                    "className": "stats-title",
+                  },
+                  "ref": null,
+                  "rendered": "Nothing at this time :(",
+                  "type": "p",
+                },
+                "type": "div",
               },
             ],
             "type": "div",
