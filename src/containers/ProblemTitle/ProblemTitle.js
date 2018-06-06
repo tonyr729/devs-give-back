@@ -6,7 +6,7 @@ import {createProblemTitle, createProblemClient } from '../../actions/actions';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import rightArrow from '../../images/right_arrow.svg';
 
-class ProblemTitle extends Component {
+export class ProblemTitle extends Component {
   constructor() {
     super();
     this.state = {
@@ -40,7 +40,7 @@ class ProblemTitle extends Component {
     this.props.history.push("/problem-body")
   }
 
-  addInput = (event) => {
+  submitInput = (event) => {
     if (event.keyCode === 13 && event.shiftKey === false) {
       this.handleSubmit(event);
     }
@@ -62,18 +62,18 @@ class ProblemTitle extends Component {
         <p className='welcome'>Hi {firstName},</p>
         <p className='title-instructions'>Briefly describe your problem...</p>
         <p className='example'>Ex: Looking for a solution to help an afterschool program</p> 
-        <input className='title-input' onKeyDown={this.addInput}  onChange={this.handleInputChange} maxLength='70' value={this.state.input} autoFocus/>
+        <input className='title-input' onKeyDown={this.submitInput}  onChange={this.handleInputChange} maxLength='70' value={this.state.input} autoFocus/>
         <button className='title-next-button' onClick={this.handleSubmit} ><img className='right-arrow-img' src={rightArrow} /></button>
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   client: state.client
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   createProblemClient: (client) => dispatch(createProblemClient(client)),
   createProblemTitle: (title) => dispatch(createProblemTitle(title))
 });
