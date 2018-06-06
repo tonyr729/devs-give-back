@@ -1,7 +1,7 @@
 
 class APIHelper {
 
-  fetchNumberofHours = async (url) => {
+  fetchNumberOfHours = async (url) => {
     const response = await fetch(url + '/stats/punch_card');
     const data = await response.json();
     const numberOfHours = data.reduce((numberOfHours, day) => {

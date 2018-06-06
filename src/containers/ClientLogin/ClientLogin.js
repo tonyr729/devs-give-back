@@ -47,12 +47,12 @@ export class ClientLogin extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   client: state.client,
   clientError: state.clientError
 })
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   signInClient: (client) => dispatch(signInClient(client)),
   clientError: (error) => dispatch(clientError(error))
 });
