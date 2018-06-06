@@ -98,4 +98,67 @@ describe('DevProjectList', () => {
       expect(actual).toEqual(expected)
     });
   });
+
+  describe('mapStateToProps', () => {
+    it('returns an object with Dev info', () => {
+
+      const mockState = {
+        dev: {name: 'Tony'},
+        allProblems: [{problem: 'problem'}],
+        signup: {status: true}
+      }
+
+      const mappedProps = mapStateToProps(mockState);
+      expect(mappedProps).toEqual(mockState);
+      
+    })
+  })
+
+  describe('mapDispatchToProps', () => {
+    it('should call dispatch on addAllProblems the correct params', () => {
+
+      const mockDispatch = jest.fn();
+      const problems = {problem: 'problem'}
+      const mappedProps = mapDispatchToProps(mockDispatch);
+      const mockAction = {
+        type: 'ADD_ALL_PROBLEMS',
+        problems
+      };
+      
+      mappedProps.addAllProblems(problems);
+      expect(mockDispatch).toHaveBeenCalledWith(mockAction);
+    });
+
+    it('should call dispatch on addProjects with the correct params', () => {
+
+      const mockDispatch = jest.fn();
+      const projects = {projects: 'projects'}
+      const mappedProps = mapDispatchToProps(mockDispatch);
+      const mockAction = {
+        type: 'ADD_PROJECTS',
+        projects
+      };
+      
+      mappedProps.addProjects(projects);
+      expect(mockDispatch).toHaveBeenCalledWith(mockAction);
+      
+    });
+
+    it('should call dispatch on handleSignup with the correct params', () => {
+
+      const mockDispatch = jest.fn();
+      const status = {status: true}
+      const problemID = 123
+      const mappedProps = mapDispatchToProps(mockDispatch);
+      const mockAction = {
+        type: 'HANDLE_SIGNUP',
+        status,
+        problemID
+      };
+      
+      mappedProps.handleSignup(status, problemID);
+      expect(mockDispatch).toHaveBeenCalledWith(mockAction);
+      
+    });
+  });
 });

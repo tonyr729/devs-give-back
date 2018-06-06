@@ -100,13 +100,13 @@ export class DevProjectList extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   dev: state.dev,
   allProblems: state.allProblems,
   signup: state.signup
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   addAllProblems: (problems) => dispatch(addAllProblems(problems)),
   addProjects: (projects) => dispatch(addProjects(projects)),
   handleSignup: (status, problemID) => dispatch(handleSignup(status, problemID))

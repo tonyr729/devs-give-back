@@ -29,6 +29,7 @@ export class NewProfile extends Component {
   }
   
   render() {
+    console.log(this.props.problem.categories)
     const redirect = this.logInCheck(this.props.client);
     const categories = this.displayCategories(this.props.problem.categories);
     return (
@@ -62,7 +63,7 @@ export class NewProfile extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   client: state.client,
   problem: state.problem
 });
