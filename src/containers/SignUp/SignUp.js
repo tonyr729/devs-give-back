@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import { handleSignup } from '../../actions/actions';
@@ -72,6 +73,10 @@ export const mapDispatchToProps = (dispatch) => ({
   handleSignup: (status) => dispatch(handleSignup(status))
 });
 
-
+SignUp.propTypes = {
+  dev: PropTypes.object,
+  signup: PropTypes.object,
+  handleSignup: PropTypes.func
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

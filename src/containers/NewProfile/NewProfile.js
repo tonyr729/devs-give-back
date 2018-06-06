@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import './NewProfile.css';
 
@@ -63,6 +64,11 @@ export const mapStateToProps = (state) => ({
   client: state.client,
   problem: state.problem
 });
+
+NewProfile.propTypes = {
+  client: PropTypes.object,
+  problem: PropTypes.object
+};
 
 
 export default connect(mapStateToProps)(NewProfile);

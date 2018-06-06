@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
 import { createCompletedProblem } from '../../actions/actions';
 
 import './PriorProblem.css';
@@ -49,5 +51,13 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => ({
   createCompletedProblem: (problem) => dispatch(createCompletedProblem(problem))
 });
+
+PriorProblem.propTypes = {
+  clientsProblem: PropTypes.object,
+  history: PropTypes.object,
+  push: PropTypes.func,
+  client: PropTypes.object,
+  createCompletedProblem: PropTypes.func
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(PriorProblem);

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import './ProblemBody.css';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
 import { createProblemBody } from '../../actions/actions';
 import rightArrow from '../../images/right_arrow.svg';
 import leftArrow from '../../images/left_arrow.svg';
+import './ProblemBody.css';
 
 
 export class ProblemBody extends Component {
@@ -80,5 +82,10 @@ export const mapDispatchToProps = (dispatch) => ({
   createProblemBody: (body) => dispatch(createProblemBody(body))
 });
 
+ProblemBody.propTypes = {
+  createProblemBody: PropTypes.func,
+  history: PropTypes.object,
+  client: PropTypes.object
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProblemBody);

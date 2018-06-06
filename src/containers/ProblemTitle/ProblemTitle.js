@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import './ProblemTitle.css';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
 import {createProblemTitle, createProblemClient } from '../../actions/actions';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import rightArrow from '../../images/right_arrow.svg';
+import './ProblemTitle.css';
 
 export class ProblemTitle extends Component {
   constructor() {
@@ -84,6 +86,13 @@ export const mapDispatchToProps = (dispatch) => ({
   createProblemClient: (client) => dispatch(createProblemClient(client)),
   createProblemTitle: (title) => dispatch(createProblemTitle(title))
 });
+
+ProblemTitle.propTypes = {
+  client: PropTypes.object,
+  history: PropTypes.object,
+  createProblemClient: PropTypes.func,
+  createProblemTitle: PropTypes.func
+};
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProblemTitle);

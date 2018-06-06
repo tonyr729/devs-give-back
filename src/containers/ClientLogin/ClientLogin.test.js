@@ -144,7 +144,7 @@ describe('ClientLogin', () => {
     });
 
     it('should send client to database', () => {
-      clientLogin.instance().writeToDatabase(mockProps.client);
+      clientLogin.instance().database.writeClientToDatabase(mockProps.client);
 
 
       expect(firebase.database().ref().set).toHaveBeenCalled();

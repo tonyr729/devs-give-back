@@ -5,6 +5,7 @@ import { Redirect } from 'react-router-dom';
 import { signInClient, clientError } from '../../actions/actions';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import DataCleaner from '../../helpers/DataCleaner';
+import PropTypes from 'prop-types';
 
 
 export class ClientLogin extends Component {
@@ -55,5 +56,13 @@ export const mapDispatchToProps = (dispatch) => ({
   signInClient: (client) => dispatch(signInClient(client)),
   clientError: (error) => dispatch(clientError(error))
 });
+
+ClientLogin.propTypes = {
+  signInClient: PropTypes.func,
+  clientError: PropTypes.func,
+  history: PropTypes.object,
+  push: PropTypes.func,
+  client: PropTypes.object
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ClientLogin);

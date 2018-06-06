@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import './DevProfile.css';
 import { connect } from 'react-redux';
 import { Redirect, NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 import { addProjects, signInDev } from '../../actions/actions';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
+import './DevProfile.css';
 
 
 
@@ -39,7 +41,7 @@ export class DevProfile extends Component {
       return (
         <div className="info-text">
           <p>You currently have no open projects.</p>
-          <p>Click "New Project" to see avalible projects.</p>
+          <p>Click New Project to see avalible projects.</p>
         </div>
       );
     }
@@ -97,6 +99,13 @@ export const mapDispatchToProps = (dispatch) => ({
   addProjects: (projects) => dispatch(addProjects(projects)),
   signInDev: (user) => dispatch(signInDev(user))
 });
+
+DevProfile.propTypes = {
+  dev: PropTypes.object,
+  addProjects: PropTypes.func,
+  projects: PropTypes.array,
+  signInDev: PropTypes.func
+};
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(DevProfile);

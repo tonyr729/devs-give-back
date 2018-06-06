@@ -31,7 +31,7 @@ ShallowWrapper {
         <NavLink
           activeClassName="active"
           ariaCurrent="true"
-          to="/client-profile"
+          to="/new-profile"
 >
           <p>
                     Go to my profile
@@ -75,7 +75,7 @@ ShallowWrapper {
           "children": <p>
             Go to my profile
 </p>,
-          "to": "/client-profile",
+          "to": "/new-profile",
         },
         "ref": null,
         "rendered": Object {
@@ -114,7 +114,7 @@ ShallowWrapper {
           <NavLink
             activeClassName="active"
             ariaCurrent="true"
-            to="/client-profile"
+            to="/new-profile"
 >
             <p>
                         Go to my profile
@@ -158,7 +158,7 @@ ShallowWrapper {
             "children": <p>
               Go to my profile
 </p>,
-            "to": "/client-profile",
+            "to": "/new-profile",
           },
           "ref": null,
           "rendered": Object {

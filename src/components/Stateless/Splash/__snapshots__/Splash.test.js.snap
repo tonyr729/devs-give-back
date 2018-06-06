@@ -34,7 +34,7 @@ ShallowWrapper {
         <NavLink
           activeClassName="active"
           ariaCurrent="true"
-          to="/sort"
+          to="/choice"
 >
           <button
                     className="begin-button"
@@ -120,7 +120,7 @@ ShallowWrapper {
 >
             BEGIN
 </button>,
-          "to": "/sort",
+          "to": "/choice",
         },
         "ref": null,
         "rendered": Object {
@@ -178,7 +178,7 @@ ShallowWrapper {
           <NavLink
             activeClassName="active"
             ariaCurrent="true"
-            to="/sort"
+            to="/choice"
 >
             <button
                         className="begin-button"
@@ -264,7 +264,7 @@ ShallowWrapper {
 >
               BEGIN
 </button>,
-            "to": "/sort",
+            "to": "/choice",
           },
           "ref": null,
           "rendered": Object {
