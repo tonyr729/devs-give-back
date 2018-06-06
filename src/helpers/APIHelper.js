@@ -1,4 +1,3 @@
-
 class APIHelper {
 
   fetchNumberOfHours = async (url) => {
