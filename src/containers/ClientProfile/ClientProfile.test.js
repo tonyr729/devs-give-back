@@ -83,6 +83,38 @@ describe('ClientProfile', () => {
     });
   });
 
+  describe('getRepoStats', () => {
+    let wrapper;
+    let mockProps;
+
+    beforeEach(() => {
+      mockProps = {
+        client: {},
+        addRepoStats: jest.fn(),
+        clientsProblem: {
+          problem: 'problem', 
+          dev: {
+            isDKFKJdfj: {
+              repo: 'https://github.com/tonyr729/movie-tracker'
+            }
+          }
+        }
+      };
+      wrapper = shallow(<ClientProfile {...mockProps} />);
+    });
+    
+    it.only('should return stats object if problem is present', async () => {
+      const actual = await wrapper.instance().getRepoStats(mockProps.clientsProblem);
+      const expected = { 
+        lines: [ '2345', '-234' ],
+        contributers: [ 'person1', 'person2' ],
+        updates: [ 'commit1', 'commit2' ],
+        hours: [ 'hour1', 'hour2' ] 
+      }
+      expect(actual).toEqual(expected)
+    });
+  });
+
   describe('mapStateToProps', () => {
     it('returns an object with client info', () => {
 

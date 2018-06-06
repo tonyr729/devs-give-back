@@ -24,6 +24,7 @@ describe('APIHelper', () => {
 
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         status: 200,
+        ok: true,
         json: () => Promise.resolve(response)
       }));
     });
@@ -69,6 +70,7 @@ describe('APIHelper', () => {
 
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         status: 200,
+        ok: true,
         json: () => Promise.resolve(response)
       }));
     });
@@ -114,6 +116,7 @@ describe('APIHelper', () => {
 
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         status: 200,
+        ok: true,
         json: () => Promise.resolve(response)
       }));
     });
@@ -163,6 +166,7 @@ describe('APIHelper', () => {
 
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         status: 200,
+        ok: true,
         json: () => Promise.resolve(response)
       }));
     });
