@@ -7,7 +7,7 @@ export const clientLoginReducer = (state = initalState, action) => {
     default:
       return state;
   }
-}
+};
 
 export const clientErrorReducer = (state = initalState, action) => {
   switch (action.type) {
@@ -16,4 +16,4 @@ export const clientErrorReducer = (state = initalState, action) => {
     default:
       return state;
   }
-}
+};

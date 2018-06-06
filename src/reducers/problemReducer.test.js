@@ -24,7 +24,7 @@ describe('problem reducer', () => {
   it('returns state with new problem body when called', () => {
     let initialState = {};
     let body = 'Awesome body';
-    let expected = {body}
+    let expected = {body};
     let addProblemBody = {
       type: 'CREATE_PROBLEM_BODY',
       body
@@ -38,7 +38,7 @@ describe('problem reducer', () => {
   it('returns state with new problem repo when called', () => {
     let initialState = {};
     let repo = 'Awesome repo';
-    let expected = {repo}
+    let expected = {repo};
     let addProblemRepo = {
       type: 'CREATE_PROBLEM_REPO',
       repo
@@ -52,7 +52,7 @@ describe('problem reducer', () => {
   it('returns state with new problem client when called', () => {
     let initialState = {};
     let client = 'Awesome client';
-    let expected = {client}
+    let expected = {client};
     let addProblemClient = {
       type: 'CREATE_PROBLEM_CLIENT',
       client
@@ -66,7 +66,7 @@ describe('problem reducer', () => {
   it('returns state with new problem categories when called', () => {
     let initialState = {};
     let categories = 'Awesome categories';
-    let expected = {categories}
+    let expected = {categories};
     let addProblemCategories = {
       type: 'SELECT_CATEGORIES',
       categories

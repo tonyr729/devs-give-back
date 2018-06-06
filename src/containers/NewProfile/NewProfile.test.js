@@ -1,4 +1,4 @@
-import { NewProfile, mapStateToProps, mapDispatchToProps} from './NewProfile';
+import { NewProfile, mapStateToProps} from './NewProfile';
 import { shallow } from 'enzyme';
 import React from 'react';
 import { Redirect } from 'react-router-dom';
@@ -13,7 +13,7 @@ describe('NewProfile', () => {
       problem: {
         categories: ['category']
       }
-    }
+    };
     const wrapper = shallow(<NewProfile {...mockProps} />);
 
     expect(wrapper).toMatchSnapshot();
@@ -21,7 +21,7 @@ describe('NewProfile', () => {
 
   describe('logInCheck', () => {
     let wrapper;
-    let mockProps
+    let mockProps;
 
     beforeEach(() => {
       mockProps = {
@@ -30,13 +30,13 @@ describe('NewProfile', () => {
           categories: ['category']
         }
       };
-      wrapper = shallow(<NewProfile {...mockProps} />)
+      wrapper = shallow(<NewProfile {...mockProps} />);
     });
     
     it('should redirect if there is no client', () => {
       
-      const actual = wrapper.instance().logInCheck(mockProps.client)
-      expect(actual).toEqual(<Redirect to='/client-login'/>)
+      const actual = wrapper.instance().logInCheck(mockProps.client);
+      expect(actual).toEqual(<Redirect to='/client-login'/>);
     });
   });
 
@@ -48,7 +48,7 @@ describe('NewProfile', () => {
         problem: {
           categories: ['category']
         }
-      }
+      };
 
       const mappedProps = mapStateToProps(mockState);
       expect(mappedProps).toEqual(mockState);

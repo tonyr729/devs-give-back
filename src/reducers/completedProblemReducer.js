@@ -7,4 +7,4 @@ export const completedProblemReducer = (state = initalState, action) => {
     default:
       return state;
   }
-}
+};

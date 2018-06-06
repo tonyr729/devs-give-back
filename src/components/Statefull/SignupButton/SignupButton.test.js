@@ -8,8 +8,10 @@ describe('SignupButton', () => {
 
   beforeEach(() => {
     mockHandleSignup = jest.fn();
-    wrapper = shallow(<SignupButton handleSignup={mockHandleSignup} clientID={'clientID'}  />);
-  })
+    wrapper = shallow(<SignupButton 
+      handleSignup={mockHandleSignup} 
+      clientID={'clientID'}  />);
+  });
 
   it('should match snapshot', () => {
 
@@ -19,7 +21,7 @@ describe('SignupButton', () => {
   
   describe('handleClick', () => {
     it('should call prop methods and values', () => {
-      wrapper.instance().handleClick()
+      wrapper.instance().handleClick();
 
       expect(mockHandleSignup).toHaveBeenCalled();
     });
@@ -29,7 +31,7 @@ describe('SignupButton', () => {
         selected: true
       });
 
-      wrapper.instance().handleClick()
+      wrapper.instance().handleClick();
 
       expect(mockHandleSignup).not.toHaveBeenCalled();
       

@@ -26,14 +26,14 @@ describe('ProblemBody', () => {
         target: {
           value: 'input value'
         }
-      }
+      };
       wrapper = shallow(<ProblemBody {...mockProps} />);
     });
 
     it('should setState off the params', () => {
-      wrapper.instance().handleInputChange(mockEvent)
+      wrapper.instance().handleInputChange(mockEvent);
     
-      expect(wrapper.state('input')).toEqual(mockEvent.target.value)
+      expect(wrapper.state('input')).toEqual(mockEvent.target.value);
     });
   });
 
@@ -57,7 +57,7 @@ describe('ProblemBody', () => {
     });
 
     it('should call the given methods', () => {
-      wrapper.instance().handleSubmit(mockEvent)
+      wrapper.instance().handleSubmit(mockEvent);
     
       expect(wrapper.instance().props.createProblemBody).toHaveBeenCalled();
       expect(wrapper.instance().props.history.push).toHaveBeenCalled();
@@ -109,7 +109,6 @@ describe('ProblemBody', () => {
 
   describe('logInCheck', () => {
     let mockProps;
-    let mockEvent;
     let wrapper;
 
     beforeEach(() => {
@@ -124,7 +123,7 @@ describe('ProblemBody', () => {
     });
 
     it('should redirect to login if no client', () => {
-      wrapper.instance().logInCheck({})
+      wrapper.instance().logInCheck({});
       
       expect(wrapper.instance().props.history.push).toHaveBeenCalledWith("/client-login");
     });
@@ -138,25 +137,25 @@ describe('ProblemBody', () => {
         problemClient: 'value',
         problemTitle: 'value',
         problemBody: 'value'
-      }
+      };
 
       const expected = {
         body: "value", 
         client: "value", 
         clientID: "value", 
         title: "value"
-      }
+      };
       const mappedProps = mapStateToProps(mockState);
       expect(mappedProps).toEqual(expected);
       
-    })
-  })
+    });
+  });
 
   describe('mapDispatchToProps', () => {
     it('should call dispatch on createCompletedProblem with the correct params', () => {
 
       const mockDispatch = jest.fn();
-      const body = {prob: 'prob'}
+      const body = {prob: 'prob'};
       const mappedProps = mapDispatchToProps(mockDispatch);
       const mockAction = {
         type: 'CREATE_PROBLEM_BODY',

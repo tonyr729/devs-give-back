@@ -5,21 +5,21 @@ class CategoryButton extends Component {
     super();
     this.state = {
       selected: false
-    }
+    };
   }
 
   handleClick = (event) => {
-    this.props.selectCategory(this.props.category)
+    this.props.selectCategory(this.props.category);
     this.setState({
       selected: !this.state.selected
-    })
+    });
   }
 
   render() {
     let cardClass = this.state.selected ? "selected-category" : "category-button";
-    return(
+    return (
       <button onClick={this.handleClick} className={cardClass}>{this.props.category}</button>
-    )
+    );
   }
 }
 

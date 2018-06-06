@@ -1,6 +1,6 @@
 import React from 'react';
 import './DevClosedProjects.css';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
 export const DevClosedProjects = () => {
   return (
@@ -13,5 +13,5 @@ export const DevClosedProjects = () => {
         Uhh... take me back to the start?
       </NavLink>
     </div>
-  )
-}
+  );
+};

@@ -7,4 +7,4 @@ export const categoriesReducer = (state = initalState, action) => {
     default:
       return state;
   }
-}
+};

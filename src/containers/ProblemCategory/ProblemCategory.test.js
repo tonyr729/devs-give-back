@@ -1,4 +1,4 @@
-import { ProblemCategory, mapStateToProps, mapDispatchToProps} from './ProblemCategory';
+import { ProblemCategory} from './ProblemCategory';
 import React from 'react';
 import { shallow } from 'enzyme';
 jest.mock('../../helpers/DatabaseHelper.js', () => {
@@ -54,7 +54,7 @@ describe('ProblemCategory', () => {
     });
 
     it('should render categories if they exist', () => {
-      expect(wrapper.find("CategoryButton").length).toEqual(3)
+      expect(wrapper.find("CategoryButton").length).toEqual(3);
     });
   });
 
@@ -74,18 +74,18 @@ describe('ProblemCategory', () => {
     it('should add a category to state', () => {
       const expected = 'cat';
       wrapper.instance().selectCategory(expected);
-      expect(wrapper.state('categories')).toEqual([expected])
+      expect(wrapper.state('categories')).toEqual([expected]);
     });
 
     it('remove a category from state if it already exists in state', () => {
       const expected = ['cat'];
       wrapper.setState({
         categories: expected
-      })
+      });
 
       wrapper.instance().selectCategory(expected[0]);
 
-      expect(wrapper.state('categories')).toEqual([])
+      expect(wrapper.state('categories')).toEqual([]);
     });
   });
 
@@ -110,7 +110,7 @@ describe('ProblemCategory', () => {
     });
 
     it('should call the given functions ', () => {
-      wrapper.instance().handleSubmit()
+      wrapper.instance().handleSubmit();
 
       expect(wrapper.instance().props.selectCategories).toHaveBeenCalled();
       expect(wrapper.instance().database.writeProblemToDatabase).toHaveBeenCalled();
@@ -135,7 +135,7 @@ describe('ProblemCategory', () => {
     });
     
     it('should redirect if no user', () => {
-      wrapper.instance().logInCheck(mockProps.client)
+      wrapper.instance().logInCheck(mockProps.client);
       
       expect(wrapper.instance().props.history.push).toHaveBeenCalledWith("/client-login");
     });

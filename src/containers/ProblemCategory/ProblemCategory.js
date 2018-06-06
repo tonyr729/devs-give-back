@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './ProblemCategory.css';
-import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import DatabaseHelper from '../../helpers/DatabaseHelper';
@@ -15,7 +14,7 @@ export class ProblemCategory extends Component {
     super();
     this.state = {
       categories: []
-    }
+    };
     this.database = new DatabaseHelper();
   }
 
@@ -53,9 +52,9 @@ export class ProblemCategory extends Component {
 
   handleSubmit = (event) => {
     const {title, body, clientID} = this.props;
-    this.props.selectCategories(this.state.categories)
+    this.props.selectCategories(this.state.categories);
     this.database.writeProblemToDatabase(title, body, this.state.categories, clientID);
-    this.props.history.push("/problem-created")
+    this.props.history.push("/problem-created");
   }
 
   logInCheck = (client) => {
@@ -98,7 +97,7 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = dispatch => ({
   addCategories: categories => dispatch(addCategories(categories)),
   selectCategories: categories => dispatch(selectCategories(categories))
-})
+});
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProblemCategory);

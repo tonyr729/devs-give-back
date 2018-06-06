@@ -29,7 +29,7 @@ describe('clientError', () => {
   it('should return expected object based on params', () => {
     const expected = {type: 'CLIENT_ERROR', error: 'client error'};
     
-    const actual = clientError('client error')
+    const actual = clientError('client error');
 
     expect(actual).toEqual(expected);
   });
@@ -39,7 +39,7 @@ describe('signInDev', () => {
   it('should return expected object based on params', () => {
     const expected = {type: 'SIGN_IN_DEV', user: 'tony'};
     
-    const actual = signInDev('tony')
+    const actual = signInDev('tony');
 
     expect(actual).toEqual(expected);
   });
@@ -49,7 +49,7 @@ describe('devError', () => {
   it('should return expected object based on params', () => {
     const expected = {type: 'DEV_ERROR', error: 'dev error'};
     
-    const actual = devError('dev error')
+    const actual = devError('dev error');
 
     expect(actual).toEqual(expected);
   });
@@ -59,7 +59,7 @@ describe('createProblemClient', () => {
   it('should return expected object based on params', () => {
     const expected = {type: 'CREATE_PROBLEM_CLIENT', client: 'tony'};
     
-    const actual = createProblemClient('tony')
+    const actual = createProblemClient('tony');
 
     expect(actual).toEqual(expected);
   });
@@ -69,7 +69,7 @@ describe('createProblemTitle', () => {
   it('should return expected object based on params', () => {
     const expected = {type: 'CREATE_PROBLEM_TITLE', title: 'problem title'};
     
-    const actual = createProblemTitle('problem title')
+    const actual = createProblemTitle('problem title');
 
     expect(actual).toEqual(expected);
   });
@@ -87,7 +87,12 @@ describe('createProblemBody', () => {
 
 describe('createCompletedProblem', () => {
   it('should return expected object based on params', () => {
-    const expected = {type: 'CREATE_COMPLETED_PROBLEM', problem: {body: 'problem body'}};
+    const expected = {
+      type: 'CREATE_COMPLETED_PROBLEM', 
+      problem: {
+        body: 'problem body'
+      }
+    };
     
     const actual = createCompletedProblem({body: 'problem body'});
 
@@ -97,7 +102,12 @@ describe('createCompletedProblem', () => {
 
 describe('addCategories', () => {
   it('should return expected object based on params', () => {
-    const expected = {type: 'ADD_CATEGORIES', categories: {category: 'category'}};
+    const expected = {
+      type: 'ADD_CATEGORIES', 
+      categories: {
+        category: 'category'
+      }
+    };
     
     const actual = addCategories({category: 'category'});
 
@@ -127,7 +137,12 @@ describe('addProjects', () => {
 
 describe('selectCategories', () => {
   it('should return expected object based on params', () => {
-    const expected = {type: 'SELECT_CATEGORIES', categories: {category: 'category'}};
+    const expected = {
+      type: 'SELECT_CATEGORIES', 
+      categories: {
+        category: 'category'
+      }
+    };
     
     const actual = selectCategories({category: 'category'});
 

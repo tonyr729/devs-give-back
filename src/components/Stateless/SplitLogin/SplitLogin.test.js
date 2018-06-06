@@ -4,7 +4,7 @@ import { SplitLogin } from './SplitLogin';
 
 describe('SplitLogin', () => {
   it('should match snapshot', () => {
-    const splitLogin = shallow(<SplitLogin  />)
+    const splitLogin = shallow(<SplitLogin  />);
 
     expect(splitLogin).toMatchSnapshot();
   });

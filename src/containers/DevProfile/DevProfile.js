@@ -21,7 +21,7 @@ export class DevProfile extends Component {
   }
 
   displayProjects = (projects) => {
-    const goodProjects = projects && projects.filter(problems => problems !== undefined)
+    const goodProjects = projects && projects.filter(problems => problems !== undefined);
     if (goodProjects && goodProjects.length !== 0) {
       const display = goodProjects.map((project, index) => {
         return (
@@ -84,7 +84,7 @@ export class DevProfile extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

@@ -13,7 +13,7 @@ export class ClientProfile extends Component {
     super();
     this.state = {
       problem: ''
-    }
+    };
     this.database = new DatabaseHelper();
     this.cleaner = new DataCleaner();
     this.api = new APIHelper();
@@ -21,8 +21,8 @@ export class ClientProfile extends Component {
   
   async componentDidMount() {
     const stats = await this.getRepoStats(this.props.clientsProblem);
-    if(stats){
-      await this.props.addRepoStats(stats)
+    if (stats){
+      await this.props.addRepoStats(stats);
     }
   }
   
@@ -54,14 +54,14 @@ export class ClientProfile extends Component {
           <p className="stats-title">{stats.updates} updates!</p>
           <p className="stats-title">Roughly {stats.hours} hours spent on your project!</p>
         </div>
-      )
+      );
     } else {
       return (
         <div className="stats-container">
           <p className="stats-title">Nothing at this time :(</p>
         </div>
 
-      ) 
+      ); 
     }
   }
 
@@ -81,7 +81,7 @@ export class ClientProfile extends Component {
   logInCheck = (client) => {
     const value = Object.keys(client).length;
     if ( value === 0 ) {
-      return <Redirect to='/client-login'/>
+      return <Redirect to='/client-login'/>;
     }
   }
   
@@ -93,7 +93,7 @@ export class ClientProfile extends Component {
       clientsProblem = this.props.clientsProblem;
       categories = this.displayCategories(this.props.clientsProblem.categories);
     }
-    const displayStats = this.displayStats(this.props.repoStats)
+    const displayStats = this.displayStats(this.props.repoStats);
     
 
     return (
@@ -137,7 +137,7 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => ({
   signInClient: (client) => dispatch(signInClient(client)),
   addRepoStats: (stats) => dispatch(addRepoStats(stats))
-})
+});
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(ClientProfile);

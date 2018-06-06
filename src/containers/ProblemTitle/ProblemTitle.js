@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './ProblemTitle.css';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {createProblemTitle, createProblemClient } from '../../actions/actions';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
@@ -11,18 +11,18 @@ export class ProblemTitle extends Component {
     super();
     this.state = {
       input: ''
-    }
+    };
 
     this.database = new DatabaseHelper();
   }
 
   componentDidMount(){
-    this.problemCheck(this.props.client)
+    this.problemCheck(this.props.client);
     this.logInCheck(this.props.client);
   }
 
   problemCheck = async (client) =>{
-    client.name || this.props.history.push("/client-login")
+    client.name || this.props.history.push("/client-login");
     const existingProblem = await this.database.findMatchingProblem(client.id);
     !existingProblem || this.props.history.push("/prior-problem");
   }
@@ -37,7 +37,7 @@ export class ProblemTitle extends Component {
     event.preventDefault();
     this.props.createProblemTitle(this.state.input);
     this.props.createProblemClient(this.props.client.id);
-    this.props.history.push("/problem-body")
+    this.props.history.push("/problem-body");
   }
 
   submitInput = (event) => {
@@ -49,7 +49,7 @@ export class ProblemTitle extends Component {
   logInCheck = (client) => {
     const value = Object.keys(client).length;
     if ( value === 0 ) {
-      this.props.history.push('/client-login')
+      this.props.history.push('/client-login');
     }
   }
 

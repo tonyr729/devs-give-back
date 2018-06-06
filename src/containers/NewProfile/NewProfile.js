@@ -24,12 +24,12 @@ export class NewProfile extends Component {
   logInCheck = (client) => {
     const value = Object.keys(client).length;
     if ( value === 0 ) {
-      return <Redirect to='/client-login'/>
+      return <Redirect to='/client-login'/>;
     }
   }
   
   render() {
-    console.log(this.props.problem.categories)
+    console.log(this.props.problem.categories);
     const redirect = this.logInCheck(this.props.client);
     const categories = this.displayCategories(this.props.problem.categories);
     return (

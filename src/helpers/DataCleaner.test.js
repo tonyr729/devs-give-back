@@ -6,7 +6,7 @@ describe('DataCleaner', () => {
 
     beforeEach(() => {
       cleaner = new DataCleaner();
-    })
+    });
 
     it('should return clean client login info', () => {
       const mockClient = {
@@ -21,7 +21,7 @@ describe('DataCleaner', () => {
         id: 1, 
         name: 'tony', 
         photoURL: 'photo'
-      }
+      };
 
       const actual = cleaner.cleanClientLogin(mockClient);
 
@@ -34,7 +34,7 @@ describe('DataCleaner', () => {
 
     beforeEach(() => {
       cleaner = new DataCleaner();
-    })
+    });
 
     it('should return clean Dev login info', () => {
       const mockDev = {
@@ -48,7 +48,7 @@ describe('DataCleaner', () => {
         name: 'tony', 
         photoURL: 'photo', 
         token: 'token'
-      }
+      };
 
       const actual = cleaner.cleanDevLogin(mockDev, 'token');
 
@@ -61,7 +61,7 @@ describe('DataCleaner', () => {
 
     beforeEach(() => {
       cleaner = new DataCleaner();
-    })
+    });
 
     it('should return clean Error info', () => {
       const mockError = {
@@ -76,7 +76,7 @@ describe('DataCleaner', () => {
         credential: "cred", 
         email: "ton@msf.com", 
         message: "whaddup"
-      }
+      };
 
       const actual = cleaner.cleanError(mockError);
 
@@ -89,7 +89,7 @@ describe('DataCleaner', () => {
 
     beforeEach(() => {
       cleaner = new DataCleaner();
-    })
+    });
 
     it('should return clean Repo url', () => {
       const mockRepo = "https://github.com/tonyr729/movie-tracker";

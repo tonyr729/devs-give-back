@@ -1,4 +1,4 @@
-import { DevProfile, mapStateToProps, mapDispatchToProps} from './DevProfile';
+import { DevProfile, mapDispatchToProps} from './DevProfile';
 import { shallow } from 'enzyme';
 import React from 'react';
 import { Redirect } from 'react-router-dom';
@@ -11,7 +11,7 @@ describe('DevProfile', () => {
         name: 'Tony'
       },
       addProjects: jest.fn()
-    }
+    };
     const wrapper = shallow(<DevProfile {...mockProps} />);
 
     expect(wrapper).toMatchSnapshot();
@@ -30,10 +30,10 @@ describe('DevProfile', () => {
         addProjects: jest.fn()
       };
       wrapper = shallow(<DevProfile {...mockProps} />);
-    })
+    });
 
     it('should return project cards if projects exists', () => {
-      expect(wrapper.find('.project-card').length).toEqual(2)
+      expect(wrapper.find('.project-card').length).toEqual(2);
     });
 
     it('should return message if no projects exist', () => {
@@ -45,7 +45,7 @@ describe('DevProfile', () => {
         addProjects: jest.fn()
       };
       const wrapper = shallow(<DevProfile {...mockProps} />);
-      expect(wrapper.find('.info-text').length).toEqual(1)
+      expect(wrapper.find('.info-text').length).toEqual(1);
     });
   });
 
@@ -62,12 +62,12 @@ describe('DevProfile', () => {
         addProjects: jest.fn()
       };
       wrapper = shallow(<DevProfile {...mockProps} />);
-    })
+    });
 
     it('should redirect if there is no dev', () => {
-      const expected = (<Redirect to='/dev-login'/>)
-      const actual = wrapper.instance().statusCheck({})
-      expect(actual).toEqual(expected)
+      const expected = (<Redirect to='/dev-login'/>);
+      const actual = wrapper.instance().statusCheck({});
+      expect(actual).toEqual(expected);
     });
   });
 
@@ -75,7 +75,7 @@ describe('DevProfile', () => {
     it('should call dispatch on signInDev with the correct params', () => {
 
       const mockDispatch = jest.fn();
-      const user = {name: 'Tony'}
+      const user = {name: 'Tony'};
       const mappedProps = mapDispatchToProps(mockDispatch);
       const mockAction = {
         type: 'SIGN_IN_DEV',
@@ -90,7 +90,7 @@ describe('DevProfile', () => {
     it('should call dispatch on addProjects with the correct params', () => {
 
       const mockDispatch = jest.fn();
-      const projects = {projects: 'projects'}
+      const projects = {projects: 'projects'};
       const mappedProps = mapDispatchToProps(mockDispatch);
       const mockAction = {
         type: 'ADD_PROJECTS',

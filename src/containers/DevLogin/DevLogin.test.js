@@ -1,19 +1,19 @@
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import React from 'react';
 import { 
   DevLogin, 
   mapStateToProps, 
   mapDispatchToProps 
 } from './DevLogin';
-
-import firebase from '../../firebase/firebase';
 import { Redirect } from 'react-router-dom';
 jest.mock('../../firebase/firebase');
 jest.mock('../../helpers/DataCleaner.js', () => {
   return jest.fn().mockImplementation(() => {
     return {
-      cleanDevLogin: jest.fn().mockImplementation(() => Promise.resolve({user: 'name'})),
-      cleanError: jest.fn().mockImplementation(() => Promise.resolve({error: 'error'}))
+      cleanDevLogin: jest.fn().mockImplementation(() => 
+        Promise.resolve({user: 'name'})),
+      cleanError: jest.fn().mockImplementation(() =>  
+        Promise.resolve({error: 'error'}))
     };
   });
 });
@@ -21,7 +21,7 @@ jest.mock('../../helpers/DataCleaner.js', () => {
 
 describe('DevLogin', () => {
   it('should match snapshot', () => {
-    const devLogin = shallow(<DevLogin dev={{}} />)
+    const devLogin = shallow(<DevLogin dev={{}} />);
 
     expect(devLogin).toMatchSnapshot();
   });
@@ -39,11 +39,13 @@ describe('DevLogin', () => {
       };
       
       devLogin = shallow(<DevLogin {...mockProps} />);
-      devLogin.instance().database.gitHubLogin = jest.fn().mockImplementation(() => Promise.resolve({user: 'name'}));
+      devLogin.instance()
+        .database.gitHubLogin = jest.fn().mockImplementation(() => 
+          Promise.resolve({user: 'name'}));
     });
   
     it('should call the expected methods of firebase', () => {
-      devLogin.instance().handleLogin()
+      devLogin.instance().handleLogin();
 
       expect(devLogin.instance().database.gitHubLogin).toHaveBeenCalled();
     });
@@ -62,11 +64,13 @@ describe('DevLogin', () => {
       };
       
       devLogin = shallow(<DevLogin {...mockProps} />);
-      devLogin.instance().database.gitHubLogin = jest.fn().mockImplementation(() => Promise.resolve({user: 'name'}));
+      devLogin.instance()
+        .database.gitHubLogin = jest.fn().mockImplementation(() => 
+          Promise.resolve({user: 'name'}));
     });
 
     it('should call redirect if dev issigned in', () => {
-      const expected = devLogin.instance().logInCheck(mockProps.dev)
+      const expected = devLogin.instance().logInCheck(mockProps.dev);
 
       expect(expected).toEqual(<Redirect to='/dev-profile'/>);
     });
@@ -85,23 +89,27 @@ describe('DevLogin', () => {
       };
       
       devLogin = shallow(<DevLogin {...mockProps} />);
-      devLogin.instance().database.gitHubLogin = jest.fn().mockImplementation(() => Promise.resolve({user: 'name'}));
+      devLogin.instance()
+        .database.gitHubLogin = jest.fn().mockImplementation(() => 
+          Promise.resolve({user: 'name'}));
     });
       
     
     it('should call the required functions when called', async () => {
-      const instance = devLogin.instance()
+      const instance = devLogin.instance();
       
-      await instance.handleLogin()
+      await instance.handleLogin();
       
-      expect(instance.database.gitHubLogin).toHaveBeenCalled()
+      expect(instance.database.gitHubLogin).toHaveBeenCalled();
     });
 
-    it('should call the required functions when there is an error', async () => {
-      devLogin.instance().database.gitHubLogin = jest.fn().mockImplementation(() => Promise.reject({Error: 'error'}));
-      const instance = devLogin.instance()
+    it('should call the required functions when error', async () => {
+      devLogin.instance()
+        .database.gitHubLogin = jest.fn().mockImplementation(() => 
+          Promise.reject({Error: 'error'}));
+      const instance = devLogin.instance();
       
-      await instance.handleLogin()
+      await instance.handleLogin();
       
       expect(instance.cleaner.cleanError).toHaveBeenCalled();
       expect(instance.props.history.push).toHaveBeenCalled();
@@ -112,20 +120,20 @@ describe('DevLogin', () => {
     it('returns an object with Dev info', () => {
 
       const mockState = {
-        dev: {name: 'Tony'},
-      }
+        dev: {name: 'Tony'}
+      };
 
       const mappedProps = mapStateToProps(mockState);
       expect(mappedProps).toEqual(mockState);
       
-    })
-  })
+    });
+  });
 
   describe('mapDispatchToProps', () => {
     it('should call dispatch on signInDevwith the correct params', () => {
 
       const mockDispatch = jest.fn();
-      const user = {name: 'Tony'}
+      const user = {name: 'Tony'};
       const mappedProps = mapDispatchToProps(mockDispatch);
       const mockAction = {
         type: 'SIGN_IN_DEV',
@@ -139,7 +147,7 @@ describe('DevLogin', () => {
     it('should call dispatch on DevError with the correct params', () => {
 
       const mockDispatch = jest.fn();
-      const error = {error: 'error'}
+      const error = {error: 'error'};
       const mappedProps = mapDispatchToProps(mockDispatch);
       const mockAction = {
         type: 'DEV_ERROR',

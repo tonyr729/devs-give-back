@@ -96,7 +96,7 @@ export class DevProjectList extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

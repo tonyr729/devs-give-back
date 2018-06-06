@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import { connect } from 'react-redux';
 import { createCompletedProblem } from '../../actions/actions';
 
-import './PriorProblem.css'
+import './PriorProblem.css';
 
 export class PriorProblem extends Component {
   constructor() {
@@ -14,18 +13,18 @@ export class PriorProblem extends Component {
 
   componentDidMount = async () => {
     if (this.props.client) {
-      const clientID = this.props.client.id 
+      const clientID = this.props.client.id; 
       const problem = await this.database.findMatchingProblem(clientID);
       if (problem) {
-        await this.props.createCompletedProblem(problem)
+        await this.props.createCompletedProblem(problem);
       }
     }
   }
   
   handleClick = () => {
-    const value = Object.keys(this.props.clientsProblem)
+    const value = Object.keys(this.props.clientsProblem);
     if (value.length === 0){
-      this.props.history.push("/client-login")
+      this.props.history.push("/client-login");
     } else {
       this.props.history.push("/client-profile");
     }
@@ -36,11 +35,11 @@ export class PriorProblem extends Component {
       <div className='client-background'>
         <p className='sorry-text'>Sorry,</p>
         <p className='info-message'>You can only have one listed problem at a time.</p>
-          <button className='nav-button' onClick={ this.handleClick }>Go to my profile</button>
+        <button className='nav-button' onClick={ this.handleClick }>Go to my profile</button>
       </div>
     );
   }
-};
+}
 
 export const mapStateToProps = (state) => ({
   client: state.client,

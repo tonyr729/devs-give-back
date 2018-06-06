@@ -11,19 +11,19 @@ export class ProblemBody extends Component {
     super();
     this.state = {
       input: ''
-    }
+    };
   }
 
   handleInputChange= (event) => {
     this.setState({
       input: event.target.value
-    })
+    });
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.createProblemBody(this.state.input);
-    this.props.history.push("/problem-category")
+    this.props.history.push("/problem-category");
   }
 
   submitInput = (event) => {
@@ -41,7 +41,7 @@ export class ProblemBody extends Component {
   
 
   render() {
-    this.logInCheck(this.props.client)
+    this.logInCheck(this.props.client);
     const name = this.props.client.name || 'client unknown';
     const firstName = name.split(' ')[0];
 

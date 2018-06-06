@@ -6,10 +6,10 @@ class APIHelper {
     const data = await response.json();
     const numberOfHours = data.reduce((numberOfHours, day) => {
       if (day[2] > 0) {
-        numberOfHours++
+        numberOfHours++;
       }
       return numberOfHours;
-    }, 0)
+    }, 0);
     return numberOfHours;
   }
 
@@ -19,12 +19,12 @@ class APIHelper {
     const numberOfUpdates = data.reduce((numberOfUpdates, week) => {
       numberOfUpdates += week.total;
       return numberOfUpdates;
-    }, 0)
+    }, 0);
     return numberOfUpdates;
   }
 
   fetchNumberOfContributers = async (url) => {
-    const response = await fetch(url + '/stats/contributors')
+    const response = await fetch(url + '/stats/contributors');
     const data = await response.json();
     const numberOfContributers = data.length;
     return numberOfContributers;

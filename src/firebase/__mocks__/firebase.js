@@ -2,29 +2,17 @@ import * as firebase from 'firebase';
 
 const onAuthStateChanged = jest.fn();
 
-const getRedirectResult = jest.fn(() => {
-  return Promise.resolve({
-    user: {
-      displayName: 'redirectResultTestDisplayName',
-      email: 'redirectTest@test.com',
-      emailVerified: true
-    }
-  })
-})
-
 const sendEmailVerification = jest.fn(() => {
   return Promise.resolve('result of sendEmailVerification');
-})
-
-const sendPasswordResetEmail = jest.fn(() => Promise.resolve());
+});
 
 const createUserWithEmailAndPassword = jest.fn(() => {
   return Promise.resolve('result of createUserWithEmailAndPassword');
-})
+});
 
 const signInWithEmailAndPassword = jest.fn(() => {
   return Promise.resolve('result of signInWithEmailAndPassword');
-})
+});
 
 const signInWithPopup = jest.fn(() => {
   return Promise.resolve({
@@ -33,7 +21,7 @@ const signInWithPopup = jest.fn(() => {
       accessToken: 123
     }
   });
-})
+});
 
 const set = jest.fn();
 
@@ -44,14 +32,14 @@ let once = jest.fn(() => {
     val: jest.fn(()=> {
       return ({
         problem: {
-          clientID: 12,
+          clientID: 12
         },
         projects: {
           1: {
             projectID: 12
           }
         }
-      })
+      });
     })
   });
 });
@@ -67,10 +55,10 @@ const initializeApp = jest
           currentUser: {
             sendEmailVerification
           }
-        }
+        };
       }
-    }
-  })
+    };
+  });
 
 jest.spyOn(firebase, 'auth').mockImplementation(() => {
   return {
@@ -91,7 +79,7 @@ jest.spyOn(firebase, 'database').mockImplementation(() => {
         set,
         once,
         push
-      }
+      };
     }
   };
 });

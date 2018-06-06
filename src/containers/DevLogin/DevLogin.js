@@ -3,10 +3,9 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
 import { signInDev, devError} from '../../actions/actions';
-import firebase from '../../firebase/firebase';
 import DataCleaner from '../../helpers/DataCleaner';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
-import './DevLogin.css'
+import './DevLogin.css';
 
 export class DevLogin extends Component {
   constructor() {
@@ -21,12 +20,12 @@ export class DevLogin extends Component {
       const result = await this.database.gitHubLogin();
       const cleanDev = this.cleaner.cleanDevLogin(result.user, result.token);
       this.props.signInDev(cleanDev);
-      this.database.writeDevToDatabase(cleanDev)
+      this.database.writeDevToDatabase(cleanDev);
     } catch (error) {
       const cleanError = this.cleaner.cleanError(error);
       this.props.devError(cleanError);
-      this.props.history.push("/error-page")
-    };
+      this.props.history.push("/error-page");
+    }
   };
 
   logInCheck = (dev) => {

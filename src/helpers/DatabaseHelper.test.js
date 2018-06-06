@@ -22,7 +22,7 @@ describe('Database Helper', () => {
 
       const actual = await database.gitHubLogin();
 
-      expect(actual).toEqual(expected)
+      expect(actual).toEqual(expected);
     });
   });
 
@@ -44,7 +44,7 @@ describe('Database Helper', () => {
 
       const actual = await database.googleLogin();
 
-      expect(actual).toEqual(expected)
+      expect(actual).toEqual(expected);
     });
   });
 
@@ -56,17 +56,17 @@ describe('Database Helper', () => {
     });
 
     it('should call firebase database refrence', () => {
-      database.findMatchingProblem()
+      database.findMatchingProblem();
 
       expect(firebase.database().ref().once).toHaveBeenCalled();
     });
 
     it('should return an object given correct params', async () => {
-      const expected = {"clientID": 12}
+      const expected = {"clientID": 12};
     
       const actual = await database.findMatchingProblem(12);
 
-      expect(actual).toEqual(expected)
+      expect(actual).toEqual(expected);
     });
 
     it('should return null if given incorrect params', async () => {
@@ -74,7 +74,7 @@ describe('Database Helper', () => {
 
       const actual = await database.findMatchingProblem(11);
 
-      expect(actual).toEqual(expected)
+      expect(actual).toEqual(expected);
     });
   });
 
@@ -86,7 +86,7 @@ describe('Database Helper', () => {
     });
 
     it('should call firebase database refrence', () => {
-      database.pullProblemsFromDatabase()
+      database.pullProblemsFromDatabase();
 
       expect(firebase.database().ref().once).toHaveBeenCalled();
     });
@@ -101,7 +101,7 @@ describe('Database Helper', () => {
 
       const actual = await database.pullProblemsFromDatabase();
 
-      expect(actual).toEqual(expected)
+      expect(actual).toEqual(expected);
     });
   });
 
@@ -113,7 +113,7 @@ describe('Database Helper', () => {
     });
 
     it('should call firebase database refrence', () => {
-      database.pullCategoriesFromDatabase()
+      database.pullCategoriesFromDatabase();
 
       expect(firebase.database().ref().once).toHaveBeenCalled();
     });
@@ -128,7 +128,7 @@ describe('Database Helper', () => {
 
       const actual = await database.pullCategoriesFromDatabase();
 
-      expect(actual).toEqual(expected)
+      expect(actual).toEqual(expected);
     });
   });
 
@@ -140,7 +140,7 @@ describe('Database Helper', () => {
     });
 
     it('should call firebase database refrence', () => {
-      database.pullProjectsFromDatabase()
+      database.pullProjectsFromDatabase();
 
       expect(firebase.database().ref().once).toHaveBeenCalled();
     });
@@ -155,7 +155,7 @@ describe('Database Helper', () => {
 
       const actual = await database.pullProjectsFromDatabase();
 
-      expect(actual).toEqual([expected])
+      expect(actual).toEqual([expected]);
     });
 
     it('should call matchProjects', async () => {
@@ -163,7 +163,7 @@ describe('Database Helper', () => {
 
       const actual = await database.pullProjectsFromDatabase();
 
-      expect(database.matchProjects).toHaveBeenCalled()
+      expect(database.matchProjects).toHaveBeenCalled();
     });
   });
 
@@ -188,7 +188,7 @@ describe('Database Helper', () => {
 
       const actual = await database.matchProjects(mockData);
 
-      expect(actual).toEqual([expected])
+      expect(actual).toEqual([expected]);
     });
   });
 
@@ -200,7 +200,7 @@ describe('Database Helper', () => {
     });
 
     it('should call set method of firebase', () => {
-      const mockClient = {id: 14}
+      const mockClient = {id: 14};
 
       database.writeClientToDatabase(mockClient);
 
@@ -218,7 +218,7 @@ describe('Database Helper', () => {
     });
 
     it('should call set method of firebase', () => {
-      const mockDev = {id: 14}
+      const mockDev = {id: 14};
 
       database.writeDevToDatabase(mockDev);
 
@@ -236,7 +236,7 @@ describe('Database Helper', () => {
     });
 
     it('should call push method of firebase', () => {
-     database.writeDevProjectToDatabase(14, 14);
+      database.writeDevProjectToDatabase(14, 14);
 
       const mockPush = firebase.database().ref().push;
       
