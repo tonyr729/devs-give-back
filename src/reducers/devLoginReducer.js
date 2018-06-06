@@ -7,7 +7,7 @@ export const devLoginReducer = (state = initalState, action) => {
     default:
       return state;
   }
-}
+};
 
 export const devErrorReducer = (state = initalState, action) => {
   switch (action.type) {
@@ -16,4 +16,4 @@ export const devErrorReducer = (state = initalState, action) => {
     default:
       return state;
   }
-}
+};

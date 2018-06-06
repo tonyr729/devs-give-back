@@ -1,0 +1,898 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DevProfile should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DevProfile
+    addProjects={[Function]}
+    dev={
+        Object {
+            "name": "Tony",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        undefined,
+        <div
+          className="dev-header"
+>
+          <div
+                    className="dev-header-container"
+          >
+                    <p>
+                              Tony
+                    </p>
+                    <img
+                              alt="developer profile picture"
+                              className="profile-picture"
+                              src={undefined}
+                    />
+                    <button
+                              className="signout-button"
+                              onClick={[Function]}
+                    >
+                              Sign Out
+                    </button>
+          </div>
+</div>,
+        <div
+          className="main"
+>
+          <div
+                    className="main-container"
+          >
+                    <p
+                              className="main-section-titles"
+                    >
+                              <NavLink
+                                        activeClassName="active"
+                                        ariaCurrent="true"
+                                        to="/dev-project-list"
+                              >
+                                        New Project
+                              </NavLink>
+                               |  
+                              <NavLink
+                                        activeClassName="active"
+                                        ariaCurrent="true"
+                                        to="/dev-profile"
+                              >
+                                        Open Projects
+                              </NavLink>
+                               |  
+                              <NavLink
+                                        activeClassName="active"
+                                        ariaCurrent="true"
+                                        to="/dev-closed-projects"
+                              >
+                                        Closed Projects
+                              </NavLink>
+                    </p>
+                    <div
+                              className="current-projects"
+                    >
+                              <div
+                                        className="info-text"
+                              >
+                                        <p>
+                                                  You currently have no open projects.
+                                        </p>
+                                        <p>
+                                                  Click "New Project" to see avalible projects.
+                                        </p>
+                              </div>
+                    </div>
+          </div>
+</div>,
+      ],
+      "className": "profile-background",
+    },
+    "ref": null,
+    "rendered": Array [
+      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="dev-header-container"
+>
+            <p>
+                        Tony
+            </p>
+            <img
+                        alt="developer profile picture"
+                        className="profile-picture"
+                        src={undefined}
+            />
+            <button
+                        className="signout-button"
+                        onClick={[Function]}
+            >
+                        Sign Out
+            </button>
+</div>,
+          "className": "dev-header",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Tony
+</p>,
+              <img
+                alt="developer profile picture"
+                className="profile-picture"
+                src={undefined}
+/>,
+              <button
+                className="signout-button"
+                onClick={[Function]}
+>
+                Sign Out
+</button>,
+            ],
+            "className": "dev-header-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Tony",
+              },
+              "ref": null,
+              "rendered": "Tony",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "developer profile picture",
+                "className": "profile-picture",
+                "src": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Sign Out",
+                "className": "signout-button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Sign Out",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="main-container"
+>
+            <p
+                        className="main-section-titles"
+            >
+                        <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/dev-project-list"
+                        >
+                                    New Project
+                        </NavLink>
+                         |  
+                        <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/dev-profile"
+                        >
+                                    Open Projects
+                        </NavLink>
+                         |  
+                        <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/dev-closed-projects"
+                        >
+                                    Closed Projects
+                        </NavLink>
+            </p>
+            <div
+                        className="current-projects"
+            >
+                        <div
+                                    className="info-text"
+                        >
+                                    <p>
+                                                You currently have no open projects.
+                                    </p>
+                                    <p>
+                                                Click "New Project" to see avalible projects.
+                                    </p>
+                        </div>
+            </div>
+</div>,
+          "className": "main",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="main-section-titles"
+>
+                <NavLink
+                                activeClassName="active"
+                                ariaCurrent="true"
+                                to="/dev-project-list"
+                >
+                                New Project
+                </NavLink>
+                 |  
+                <NavLink
+                                activeClassName="active"
+                                ariaCurrent="true"
+                                to="/dev-profile"
+                >
+                                Open Projects
+                </NavLink>
+                 |  
+                <NavLink
+                                activeClassName="active"
+                                ariaCurrent="true"
+                                to="/dev-closed-projects"
+                >
+                                Closed Projects
+                </NavLink>
+</p>,
+              <div
+                className="current-projects"
+>
+                <div
+                                className="info-text"
+                >
+                                <p>
+                                                You currently have no open projects.
+                                </p>
+                                <p>
+                                                Click "New Project" to see avalible projects.
+                                </p>
+                </div>
+</div>,
+            ],
+            "className": "main-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    to="/dev-project-list"
+>
+                    New Project
+</NavLink>,
+                  " |  ",
+                  <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    to="/dev-profile"
+>
+                    Open Projects
+</NavLink>,
+                  " |  ",
+                  <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    to="/dev-closed-projects"
+>
+                    Closed Projects
+</NavLink>,
+                ],
+                "className": "main-section-titles",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "ariaCurrent": "true",
+                    "children": "New Project",
+                    "to": "/dev-project-list",
+                  },
+                  "ref": null,
+                  "rendered": "New Project",
+                  "type": [Function],
+                },
+                " |  ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "ariaCurrent": "true",
+                    "children": "Open Projects",
+                    "to": "/dev-profile",
+                  },
+                  "ref": null,
+                  "rendered": "Open Projects",
+                  "type": [Function],
+                },
+                " |  ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "ariaCurrent": "true",
+                    "children": "Closed Projects",
+                    "to": "/dev-closed-projects",
+                  },
+                  "ref": null,
+                  "rendered": "Closed Projects",
+                  "type": [Function],
+                },
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="info-text"
+>
+                  <p>
+                                    You currently have no open projects.
+                  </p>
+                  <p>
+                                    Click "New Project" to see avalible projects.
+                  </p>
+</div>,
+                "className": "current-projects",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p>
+                      You currently have no open projects.
+</p>,
+                    <p>
+                      Click "New Project" to see avalible projects.
+</p>,
+                  ],
+                  "className": "info-text",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "You currently have no open projects.",
+                    },
+                    "ref": null,
+                    "rendered": "You currently have no open projects.",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Click \\"New Project\\" to see avalible projects.",
+                    },
+                    "ref": null,
+                    "rendered": "Click \\"New Project\\" to see avalible projects.",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          undefined,
+          <div
+            className="dev-header"
+>
+            <div
+                        className="dev-header-container"
+            >
+                        <p>
+                                    Tony
+                        </p>
+                        <img
+                                    alt="developer profile picture"
+                                    className="profile-picture"
+                                    src={undefined}
+                        />
+                        <button
+                                    className="signout-button"
+                                    onClick={[Function]}
+                        >
+                                    Sign Out
+                        </button>
+            </div>
+</div>,
+          <div
+            className="main"
+>
+            <div
+                        className="main-container"
+            >
+                        <p
+                                    className="main-section-titles"
+                        >
+                                    <NavLink
+                                                activeClassName="active"
+                                                ariaCurrent="true"
+                                                to="/dev-project-list"
+                                    >
+                                                New Project
+                                    </NavLink>
+                                     |  
+                                    <NavLink
+                                                activeClassName="active"
+                                                ariaCurrent="true"
+                                                to="/dev-profile"
+                                    >
+                                                Open Projects
+                                    </NavLink>
+                                     |  
+                                    <NavLink
+                                                activeClassName="active"
+                                                ariaCurrent="true"
+                                                to="/dev-closed-projects"
+                                    >
+                                                Closed Projects
+                                    </NavLink>
+                        </p>
+                        <div
+                                    className="current-projects"
+                        >
+                                    <div
+                                                className="info-text"
+                                    >
+                                                <p>
+                                                            You currently have no open projects.
+                                                </p>
+                                                <p>
+                                                            Click "New Project" to see avalible projects.
+                                                </p>
+                                    </div>
+                        </div>
+            </div>
+</div>,
+        ],
+        "className": "profile-background",
+      },
+      "ref": null,
+      "rendered": Array [
+        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="dev-header-container"
+>
+              <p>
+                            Tony
+              </p>
+              <img
+                            alt="developer profile picture"
+                            className="profile-picture"
+                            src={undefined}
+              />
+              <button
+                            className="signout-button"
+                            onClick={[Function]}
+              >
+                            Sign Out
+              </button>
+</div>,
+            "className": "dev-header",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Tony
+</p>,
+                <img
+                  alt="developer profile picture"
+                  className="profile-picture"
+                  src={undefined}
+/>,
+                <button
+                  className="signout-button"
+                  onClick={[Function]}
+>
+                  Sign Out
+</button>,
+              ],
+              "className": "dev-header-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Tony",
+                },
+                "ref": null,
+                "rendered": "Tony",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "developer profile picture",
+                  "className": "profile-picture",
+                  "src": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Sign Out",
+                  "className": "signout-button",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Sign Out",
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="main-container"
+>
+              <p
+                            className="main-section-titles"
+              >
+                            <NavLink
+                                          activeClassName="active"
+                                          ariaCurrent="true"
+                                          to="/dev-project-list"
+                            >
+                                          New Project
+                            </NavLink>
+                             |  
+                            <NavLink
+                                          activeClassName="active"
+                                          ariaCurrent="true"
+                                          to="/dev-profile"
+                            >
+                                          Open Projects
+                            </NavLink>
+                             |  
+                            <NavLink
+                                          activeClassName="active"
+                                          ariaCurrent="true"
+                                          to="/dev-closed-projects"
+                            >
+                                          Closed Projects
+                            </NavLink>
+              </p>
+              <div
+                            className="current-projects"
+              >
+                            <div
+                                          className="info-text"
+                            >
+                                          <p>
+                                                        You currently have no open projects.
+                                          </p>
+                                          <p>
+                                                        Click "New Project" to see avalible projects.
+                                          </p>
+                            </div>
+              </div>
+</div>,
+            "className": "main",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p
+                  className="main-section-titles"
+>
+                  <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/dev-project-list"
+                  >
+                                    New Project
+                  </NavLink>
+                   |  
+                  <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/dev-profile"
+                  >
+                                    Open Projects
+                  </NavLink>
+                   |  
+                  <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/dev-closed-projects"
+                  >
+                                    Closed Projects
+                  </NavLink>
+</p>,
+                <div
+                  className="current-projects"
+>
+                  <div
+                                    className="info-text"
+                  >
+                                    <p>
+                                                      You currently have no open projects.
+                                    </p>
+                                    <p>
+                                                      Click "New Project" to see avalible projects.
+                                    </p>
+                  </div>
+</div>,
+              ],
+              "className": "main-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <NavLink
+                      activeClassName="active"
+                      ariaCurrent="true"
+                      to="/dev-project-list"
+>
+                      New Project
+</NavLink>,
+                    " |  ",
+                    <NavLink
+                      activeClassName="active"
+                      ariaCurrent="true"
+                      to="/dev-profile"
+>
+                      Open Projects
+</NavLink>,
+                    " |  ",
+                    <NavLink
+                      activeClassName="active"
+                      ariaCurrent="true"
+                      to="/dev-closed-projects"
+>
+                      Closed Projects
+</NavLink>,
+                  ],
+                  "className": "main-section-titles",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "ariaCurrent": "true",
+                      "children": "New Project",
+                      "to": "/dev-project-list",
+                    },
+                    "ref": null,
+                    "rendered": "New Project",
+                    "type": [Function],
+                  },
+                  " |  ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "ariaCurrent": "true",
+                      "children": "Open Projects",
+                      "to": "/dev-profile",
+                    },
+                    "ref": null,
+                    "rendered": "Open Projects",
+                    "type": [Function],
+                  },
+                  " |  ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "ariaCurrent": "true",
+                      "children": "Closed Projects",
+                      "to": "/dev-closed-projects",
+                    },
+                    "ref": null,
+                    "rendered": "Closed Projects",
+                    "type": [Function],
+                  },
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="info-text"
+>
+                    <p>
+                                        You currently have no open projects.
+                    </p>
+                    <p>
+                                        Click "New Project" to see avalible projects.
+                    </p>
+</div>,
+                  "className": "current-projects",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p>
+                        You currently have no open projects.
+</p>,
+                      <p>
+                        Click "New Project" to see avalible projects.
+</p>,
+                    ],
+                    "className": "info-text",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "You currently have no open projects.",
+                      },
+                      "ref": null,
+                      "rendered": "You currently have no open projects.",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Click \\"New Project\\" to see avalible projects.",
+                      },
+                      "ref": null,
+                      "rendered": "Click \\"New Project\\" to see avalible projects.",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

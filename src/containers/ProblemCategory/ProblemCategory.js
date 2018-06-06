@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './ProblemCategory.css';
-import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import DatabaseHelper from '../../helpers/DatabaseHelper';
@@ -10,12 +9,12 @@ import rightArrow from '../../images/right_arrow.svg';
 import leftArrow from '../../images/left_arrow.svg';
 
 
-class ProblemCategory extends Component {
+export class ProblemCategory extends Component {
   constructor() {
     super();
     this.state = {
       categories: []
-    }
+    };
     this.database = new DatabaseHelper();
   }
 
@@ -51,11 +50,11 @@ class ProblemCategory extends Component {
     }
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = () => {
     const {title, body, clientID} = this.props;
-    this.props.selectCategories(this.state.categories)
+    this.props.selectCategories(this.state.categories);
     this.database.writeProblemToDatabase(title, body, this.state.categories, clientID);
-    this.props.history.push("/problem-created")
+    this.props.history.push("/problem-created");
   }
 
   logInCheck = (client) => {
@@ -79,15 +78,19 @@ class ProblemCategory extends Component {
           {categories}
         </div>
         <div className="button-container">
-          <button className='previous-button' onClick={()=> this.props.history.push("/problem-body")} ><img className='left-arrow-img' src={leftArrow} /></button>
-          <button className='next-button' onClick={this.handleSubmit} ><img className='right-arrow-img' src={rightArrow} /></button>
+          <button className='previous-button' onClick={()=> this.props.history.push("/problem-body")} >
+            <img className='left-arrow-img' src={leftArrow} />
+          </button>
+          <button className='next-button' onClick={this.handleSubmit} >
+            <img className='right-arrow-img' src={rightArrow} />
+          </button>
         </div>
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   client: state.client,
   clientID: state.problem.client,
   title: state.problem.title,
@@ -95,10 +98,10 @@ const mapStateToProps = (state) => ({
   categories: state.categories
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   addCategories: categories => dispatch(addCategories(categories)),
   selectCategories: categories => dispatch(selectCategories(categories))
-})
+});
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProblemCategory);

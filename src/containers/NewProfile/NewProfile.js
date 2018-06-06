@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import DatabaseHelper from '../../helpers/DatabaseHelper';
-import DataCleaner from '../../helpers/DataCleaner';
-import APIHelper from '../../helpers/APIHelper';
 
 import './NewProfile.css';
 
@@ -12,9 +9,9 @@ export class NewProfile extends Component {
   displayCategories = (categories) => {
     let display = null;
     if (categories) {
-      display = categories.map(category => {
+      display = categories.map((category, index) => {
         return (
-          <button className="display-category">{category}</button>
+          <button key = {index} className="display-category">{category}</button>
         );
       });
     }
@@ -24,7 +21,7 @@ export class NewProfile extends Component {
   logInCheck = (client) => {
     const value = Object.keys(client).length;
     if ( value === 0 ) {
-      return <Redirect to='/client-login'/>
+      return <Redirect to='/client-login'/>;
     }
   }
   
@@ -62,7 +59,7 @@ export class NewProfile extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   client: state.client,
   problem: state.problem
 });

@@ -7,4 +7,4 @@ export const repoStatsReducer = (state = initalState, action) => {
     default:
       return state;
   }
-}
+};

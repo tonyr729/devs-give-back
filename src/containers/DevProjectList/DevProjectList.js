@@ -10,7 +10,7 @@ import SignupButton from '../../components/Statefull/SignupButton/SignupButton';
 
 
 
-class DevProjectList extends Component {
+export class DevProjectList extends Component {
   constructor() {
     super();
     this.database = new DatabaseHelper();
@@ -45,7 +45,11 @@ class DevProjectList extends Component {
           <div key={index} className="problem-card">
             <p className="dev-problem-title">{problem.title}</p>
             <p className="dev-problem-body">{problem.body}</p>
-            <SignupButton handleSignup={ this.props.handleSignup } clientID={ problem.clientID } matchingDev={ matchingDev } />
+            <SignupButton 
+              handleSignup={ this.props.handleSignup } 
+              clientID={ problem.clientID } 
+              matchingDev={ matchingDev } 
+            />
             <div className="dev-category-container">
               {categories}
             </div>
@@ -96,17 +100,17 @@ class DevProjectList extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   dev: state.dev,
   allProblems: state.allProblems,
   signup: state.signup
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   addAllProblems: (problems) => dispatch(addAllProblems(problems)),
   addProjects: (projects) => dispatch(addProjects(projects)),
   handleSignup: (status, problemID) => dispatch(handleSignup(status, problemID))

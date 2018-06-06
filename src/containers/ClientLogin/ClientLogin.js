@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import firebase from '../../firebase/firebase';
 import './ClientLogin.css';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
@@ -18,20 +17,20 @@ export class ClientLogin extends Component {
   handleLogin = async () => {
     try {
       const user = await this.database.googleLogin();
-      const client = this.cleaner.cleanClientLogin(user)
+      const client = this.cleaner.cleanClientLogin(user);
       this.props.signInClient(client);
       this.database.writeClientToDatabase(client);
     } catch (error) {
-      const cleanError = this.cleaner.cleanError(error)
+      const cleanError = this.cleaner.cleanError(error);
       this.props.clientError(cleanError);
-      this.props.history.push("/error-page")
+      this.props.history.push("/error-page");
     }
   };
   
   logInCheck = (client) => {
     const value = Object.keys(client).length;
     if ( value !== 0 ) {
-      return <Redirect to='/problem-title'/>
+      return <Redirect to='/problem-title'/>;
     }
   }
   
@@ -50,7 +49,7 @@ export class ClientLogin extends Component {
 export const mapStateToProps = (state) => ({
   client: state.client,
   clientError: state.clientError
-})
+});
 
 export const mapDispatchToProps = (dispatch) => ({
   signInClient: (client) => dispatch(signInClient(client)),

@@ -8,8 +8,10 @@ describe('CategoryButton', () => {
 
   beforeEach(() => {
     mockSelectCategory = jest.fn();
-    wrapper = shallow(<CategoryButton selectCategory={mockSelectCategory} category={'category'}  />);
-  })
+    wrapper = shallow(<CategoryButton 
+      selectCategory={mockSelectCategory} 
+      category={'category'}  />);
+  });
 
   it('should match snapshot', () => {
 
@@ -19,7 +21,7 @@ describe('CategoryButton', () => {
   
   describe('handleClick', () => {
     it('should call prop methods and values', () => {
-      wrapper.instance().handleClick()
+      wrapper.instance().handleClick();
 
       expect(mockSelectCategory).toHaveBeenCalled();
     });

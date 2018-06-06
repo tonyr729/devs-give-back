@@ -5,11 +5,11 @@ class CategoryButton extends Component {
     super();
     this.state = {
       selected: false
-    }
+    };
   }
 
 
-  handleClick = (event) => {
+  handleClick = () => {
     if (!this.state.selected) {
       this.props.handleSignup(true, this.props.clientID);
       this.setState({

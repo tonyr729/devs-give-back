@@ -7,7 +7,7 @@ import DatabaseHelper from '../../helpers/DatabaseHelper';
 
 
 
-class DevProfile extends Component {
+export class DevProfile extends Component {
   constructor() {
     super();
     this.database = new DatabaseHelper();
@@ -21,8 +21,7 @@ class DevProfile extends Component {
   }
 
   displayProjects = (projects) => {
-    console.log(projects)
-    const goodProjects = projects && projects.filter(problems => problems !== undefined)
+    const goodProjects = projects && projects.filter(problems => problems !== undefined);
     if (goodProjects && goodProjects.length !== 0) {
       const display = goodProjects.map((project, index) => {
         return (
@@ -36,15 +35,7 @@ class DevProfile extends Component {
         );
       });
       return display;
-    }
-  }
-
-  statusCheck = (dev) => {
-    const users = Object.keys(dev).length;
-    if ( users === 0 ) {
-      return <Redirect to='/dev-login'/>;
-    }
-    if (!this.props.projects) {
+    } else {
       return (
         <div className="info-text">
           <p>You currently have no open projects.</p>
@@ -54,11 +45,19 @@ class DevProfile extends Component {
     }
   }
 
+  statusCheck = (dev) => {
+    const users = Object.keys(dev).length;
+    if ( users === 0 ) {
+      return <Redirect to='/dev-login'/>;
+    }
+  }
+
   render() {
     const redirect = this.statusCheck(this.props.dev);
     const currentProjects = this.displayProjects(this.props.projects);
     return (
       <div className="profile-background">
+        {redirect}
         <div className="dev-header">
           <div className="dev-header-container">
             <p>{this.props.dev.name}</p>
@@ -80,24 +79,23 @@ class DevProfile extends Component {
               </NavLink>
             </p>
             <div className="current-projects">
-              {redirect}
               {currentProjects}
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   dev: state.dev,
   projects: state.projects
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   addProjects: (projects) => dispatch(addProjects(projects)),
-  signInDev: (user, token) => dispatch(signInDev(user, token))
+  signInDev: (user) => dispatch(signInDev(user))
 });
 
 

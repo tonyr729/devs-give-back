@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './SplitLogin.css'
+import './SplitLogin.css';
 
 export const SplitLogin =() => {
   return (

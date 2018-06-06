@@ -1,0 +1,409 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUp should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SignUp
+    dev={
+        Object {
+            "name": "tony",
+          }
+    }
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
+    signup={
+        Object {
+            "status": false,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Redirect
+          push={false}
+          to="/dev-profile"
+/>,
+        <div
+          className="signup-form"
+>
+          <p
+                    className="signup-title"
+          >
+                    Awesome!
+          </p>
+          <p
+                    className="signup-info"
+          >
+                    Please create a GitHub Repo for this project and prefered contact info for the client and other developers regarding this project.
+          </p>
+          <input
+                    autoFocus={true}
+                    className="repo-input"
+                    name="repo"
+                    onChange={[Function]}
+                    placeholder="https://github.com/:user/:repo"
+                    type="text"
+                    value=""
+          />
+          <input
+                    className="contact-info"
+                    name="contact"
+                    onChange={[Function]}
+                    placeholder="Contact Info"
+                    type="text"
+                    value=""
+          />
+          <button
+                    className="submit-signup"
+                    onClick={[Function]}
+          >
+                    Submit!
+          </button>
+</div>,
+      ],
+      "className": "overlay",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "push": false,
+          "to": "/dev-profile",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p
+              className="signup-title"
+>
+              Awesome!
+</p>,
+            <p
+              className="signup-info"
+>
+              Please create a GitHub Repo for this project and prefered contact info for the client and other developers regarding this project.
+</p>,
+            <input
+              autoFocus={true}
+              className="repo-input"
+              name="repo"
+              onChange={[Function]}
+              placeholder="https://github.com/:user/:repo"
+              type="text"
+              value=""
+/>,
+            <input
+              className="contact-info"
+              name="contact"
+              onChange={[Function]}
+              placeholder="Contact Info"
+              type="text"
+              value=""
+/>,
+            <button
+              className="submit-signup"
+              onClick={[Function]}
+>
+              Submit!
+</button>,
+          ],
+          "className": "signup-form",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Awesome!",
+              "className": "signup-title",
+            },
+            "ref": null,
+            "rendered": "Awesome!",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Please create a GitHub Repo for this project and prefered contact info for the client and other developers regarding this project.",
+              "className": "signup-info",
+            },
+            "ref": null,
+            "rendered": "Please create a GitHub Repo for this project and prefered contact info for the client and other developers regarding this project.",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "autoFocus": true,
+              "className": "repo-input",
+              "name": "repo",
+              "onChange": [Function],
+              "placeholder": "https://github.com/:user/:repo",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "contact-info",
+              "name": "contact",
+              "onChange": [Function],
+              "placeholder": "Contact Info",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Submit!",
+              "className": "submit-signup",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Submit!",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Redirect
+            push={false}
+            to="/dev-profile"
+/>,
+          <div
+            className="signup-form"
+>
+            <p
+                        className="signup-title"
+            >
+                        Awesome!
+            </p>
+            <p
+                        className="signup-info"
+            >
+                        Please create a GitHub Repo for this project and prefered contact info for the client and other developers regarding this project.
+            </p>
+            <input
+                        autoFocus={true}
+                        className="repo-input"
+                        name="repo"
+                        onChange={[Function]}
+                        placeholder="https://github.com/:user/:repo"
+                        type="text"
+                        value=""
+            />
+            <input
+                        className="contact-info"
+                        name="contact"
+                        onChange={[Function]}
+                        placeholder="Contact Info"
+                        type="text"
+                        value=""
+            />
+            <button
+                        className="submit-signup"
+                        onClick={[Function]}
+            >
+                        Submit!
+            </button>
+</div>,
+        ],
+        "className": "overlay",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "push": false,
+            "to": "/dev-profile",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="signup-title"
+>
+                Awesome!
+</p>,
+              <p
+                className="signup-info"
+>
+                Please create a GitHub Repo for this project and prefered contact info for the client and other developers regarding this project.
+</p>,
+              <input
+                autoFocus={true}
+                className="repo-input"
+                name="repo"
+                onChange={[Function]}
+                placeholder="https://github.com/:user/:repo"
+                type="text"
+                value=""
+/>,
+              <input
+                className="contact-info"
+                name="contact"
+                onChange={[Function]}
+                placeholder="Contact Info"
+                type="text"
+                value=""
+/>,
+              <button
+                className="submit-signup"
+                onClick={[Function]}
+>
+                Submit!
+</button>,
+            ],
+            "className": "signup-form",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Awesome!",
+                "className": "signup-title",
+              },
+              "ref": null,
+              "rendered": "Awesome!",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Please create a GitHub Repo for this project and prefered contact info for the client and other developers regarding this project.",
+                "className": "signup-info",
+              },
+              "ref": null,
+              "rendered": "Please create a GitHub Repo for this project and prefered contact info for the client and other developers regarding this project.",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "autoFocus": true,
+                "className": "repo-input",
+                "name": "repo",
+                "onChange": [Function],
+                "placeholder": "https://github.com/:user/:repo",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "contact-info",
+                "name": "contact",
+                "onChange": [Function],
+                "placeholder": "Contact Info",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Submit!",
+                "className": "submit-signup",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Submit!",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

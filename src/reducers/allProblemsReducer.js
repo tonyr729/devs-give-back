@@ -7,4 +7,4 @@ export const allProblemsReducer = (state = initalState, action) => {
     default:
       return state;
   }
-}
+};

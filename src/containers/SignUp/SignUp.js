@@ -5,21 +5,21 @@ import { Redirect } from 'react-router-dom';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import { handleSignup } from '../../actions/actions';
 
-class SignUp extends Component {
+export class SignUp extends Component {
   constructor() {
     super();
     this.state = {
       repo: '',
       contact: ''
-    }
+    };
     this.database = new DatabaseHelper();
   }
 
   handleInputChange = (event) => {
-    const { name, value } = event.target
+    const { name, value } = event.target;
     this.setState({
       [name]: value
-    })
+    });
   }
 
   handleSubmit = () => {
@@ -39,36 +39,38 @@ class SignUp extends Component {
         <div className="signup-form">
           <p className="signup-title">Awesome!</p>
           <p className="signup-info">
-            Please create a GitHub Repo for this project and prefered contact info for the client and other developers regarding this project. 
+            Please create a GitHub Repo for this project 
+            and prefered contact info for the client and 
+            other developers regarding this project. 
           </p>
           <input type="text" 
-                 name="repo" 
-                 placeholder="https://github.com/:user/:repo" 
-                 className="repo-input" 
-                 value={this.state.repo} 
-                 onChange={this.handleInputChange}
-                 autoFocus/>
+            name="repo" 
+            placeholder="https://github.com/:user/:repo" 
+            className="repo-input" 
+            value={this.state.repo} 
+            onChange={this.handleInputChange}
+            autoFocus/>
           <input type="text" 
-                 name="contact" 
-                 placeholder="Contact Info" 
-                 className="contact-info" 
-                 value={this.state.contact}
-                 onChange={this.handleInputChange}/>
+            name="contact" 
+            placeholder="Contact Info" 
+            className="contact-info" 
+            value={this.state.contact}
+            onChange={this.handleInputChange}/>
           <button onClick={this.handleSubmit} className="submit-signup">Submit!</button>
         </div>
       </div>
-    )
-  };
-};
+    );
+  }
+}
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   dev: state.dev,
   signup: state.signup
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   handleSignup: (status) => dispatch(handleSignup(status))
-})
+});
 
 
 

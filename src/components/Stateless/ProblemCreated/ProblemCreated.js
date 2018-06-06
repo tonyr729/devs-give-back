@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './ProblemCreated.css'
+import './ProblemCreated.css';
 
 export const ProblemCreated = () => {
   return (

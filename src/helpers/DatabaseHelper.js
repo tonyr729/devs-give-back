@@ -1,15 +1,14 @@
 import firebase from '../firebase/firebase';
-import { log } from 'util';
 
 class DatabaseHelper {
 
   gitHubLogin = async () => {
-    const provider = new firebase.auth.GithubAuthProvider()
+    const provider = new firebase.auth.GithubAuthProvider();
     provider.addScope('public_repo');
     const response = await firebase.auth().signInWithPopup(provider);
     const token = response.credential.accessToken;
     const user = response.user;
-    return {user, token}
+    return {user, token};
   }
   
   googleLogin = async () => {
@@ -24,7 +23,7 @@ class DatabaseHelper {
     let problem = null;
     if (response.val()) {
       const problems = response.val();
-      const matchingID = Object.keys(problems).find(problem => problems[problem].clientID === userID)
+      const matchingID = Object.keys(problems).find(problem => problems[problem].clientID === userID);
       if (matchingID) {
         problem = problems[matchingID];
       }
@@ -116,7 +115,7 @@ class DatabaseHelper {
   setCategoriesInDatabase = (categories) => {
     firebase.database().ref('/Categories').set({
       categories
-    })
+    });
   }
 
 }

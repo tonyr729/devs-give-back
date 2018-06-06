@@ -6,27 +6,27 @@ import rightArrow from '../../images/right_arrow.svg';
 import leftArrow from '../../images/left_arrow.svg';
 
 
-class ProblemBody extends Component {
+export class ProblemBody extends Component {
   constructor() {
     super();
     this.state = {
       input: ''
-    }
+    };
   }
 
   handleInputChange= (event) => {
     this.setState({
       input: event.target.value
-    })
+    });
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.createProblemBody(this.state.input);
-    this.props.history.push("/problem-category")
+    this.props.history.push("/problem-category");
   }
 
-  addInput = (event) => {
+  submitInput = (event) => {
     if (event.keyCode === 13 && event.shiftKey === false) {
       this.handleSubmit(event);
     }
@@ -41,7 +41,7 @@ class ProblemBody extends Component {
   
 
   render() {
-    this.logInCheck(this.props.client)
+    this.logInCheck(this.props.client);
     const name = this.props.client.name || 'client unknown';
     const firstName = name.split(' ')[0];
 
@@ -49,24 +49,34 @@ class ProblemBody extends Component {
       <div className='client-background'>
         <p className='welcome'>Sounds great {firstName},</p>
         <p className='body-instructions'>Now give us some more detail</p>
-        <textarea className='body-input' onKeyDown={this.addInput} onChange={this.handleInputChange} maxLength='400' value={this.state.input} autoFocus/>
+        <textarea 
+          className='body-input' 
+          onKeyDown={this.submitInput} 
+          onChange={this.handleInputChange} 
+          maxLength='400' value={this.state.input} 
+          autoFocus
+        />
         <div className="button-container">
-          <button className='previous-button' onClick={()=> this.props.history.push("/problem-title")} ><img className='left-arrow-img' src={leftArrow} /></button>
-          <button className='next-button' onClick={this.handleSubmit} ><img className='right-arrow-img' src={rightArrow} /></button>
+          <button className='previous-button' onClick={()=> this.props.history.push("/problem-title")} >
+            <img className='left-arrow-img' src={leftArrow} />
+          </button>
+          <button className='next-button' onClick={this.handleSubmit} >
+            <img className='right-arrow-img' src={rightArrow} />
+          </button>
         </div>
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   client: state.client,
   clientID: state.problemClient,
   title: state.problemTitle,
   body: state.problemBody
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   createProblemBody: (body) => dispatch(createProblemBody(body))
 });
 

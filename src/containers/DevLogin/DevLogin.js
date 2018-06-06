@@ -3,31 +3,29 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
 import { signInDev, devError} from '../../actions/actions';
-import firebase from '../../firebase/firebase';
 import DataCleaner from '../../helpers/DataCleaner';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
-import './DevLogin.css'
-
-const cleaner = new DataCleaner();
+import './DevLogin.css';
 
 export class DevLogin extends Component {
   constructor() {
     super();
     this.database = new DatabaseHelper();
+    this.cleaner = new DataCleaner();
   }
 
 
   handleLogin = async () => {
     try {
       const result = await this.database.gitHubLogin();
-      const cleanDev = cleaner.cleanDevLogin(result.user, result.token);
+      const cleanDev = this.cleaner.cleanDevLogin(result.user, result.token);
       this.props.signInDev(cleanDev);
-      this.database.writeDevToDatabase(cleanDev)
+      this.database.writeDevToDatabase(cleanDev);
     } catch (error) {
-      const cleanError = cleaner.cleanError(error);
+      const cleanError = this.cleaner.cleanError(error);
       this.props.devError(cleanError);
-      this.props.history.push("/error-page")
-    };
+      this.props.history.push("/error-page");
+    }
   };
 
   logInCheck = (dev) => {
@@ -49,11 +47,11 @@ export class DevLogin extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   dev: state.dev
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   signInDev: (user, token) => dispatch(signInDev(user, token)),
   devError: (error) => dispatch(devError(error))
 });
