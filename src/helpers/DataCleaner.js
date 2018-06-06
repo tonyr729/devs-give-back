@@ -22,6 +22,7 @@ class DataCleaner {
   })
 
   cleanRepoURL = (repoURL) => {
+    console.log(repoURL)
     const repoInfo = repoURL.split('/');
     const devID = repoInfo[3];
     const projectName = repoInfo[4];

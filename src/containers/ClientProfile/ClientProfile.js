@@ -29,8 +29,11 @@ export class ClientProfile extends Component {
   getRepoStats = async (problem) => {
     let stats = null;
     if (problem && problem.dev) {
-      const repoURL = problem.dev.repo;
+
+      const repoDev = Object.values(problem.dev).find(dev => dev.repo)
+      const repoURL = repoDev.repo;
       const apiURL = this.cleaner.cleanRepoURL(repoURL);
+      console.log(apiURL)
       try {
         const lines = await this.api.fetchLinesOfCode(apiURL);
         const contributers = await this.api.fetchNumberOfContributers(apiURL);
@@ -39,6 +42,7 @@ export class ClientProfile extends Component {
         stats = { lines, contributers, updates, hours };
       } catch (error) {
         throw new Error('Failed to fetch data');
+        this.props.history.push('/error-page')
       }
     }
     return stats;
