@@ -1,0 +1,411 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProblemBody should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ProblemBody
+    client={
+        Object {
+            "name": "tony",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          className="welcome"
+>
+          Sounds great 
+          tony
+          ,
+</p>,
+        <p
+          className="body-instructions"
+>
+          Now give us some more detail
+</p>,
+        <textarea
+          autoFocus={true}
+          className="body-input"
+          maxLength="400"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          value=""
+/>,
+        <div
+          className="button-container"
+>
+          <button
+                    className="previous-button"
+                    onClick={[Function]}
+          >
+                    <img
+                              className="left-arrow-img"
+                              src="left_arrow.svg"
+                    />
+          </button>
+          <button
+                    className="next-button"
+                    onClick={[Function]}
+          >
+                    <img
+                              className="right-arrow-img"
+                              src="right_arrow.svg"
+                    />
+          </button>
+</div>,
+      ],
+      "className": "client-background",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Sounds great ",
+            "tony",
+            ",",
+          ],
+          "className": "welcome",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Sounds great ",
+          "tony",
+          ",",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Now give us some more detail",
+          "className": "body-instructions",
+        },
+        "ref": null,
+        "rendered": "Now give us some more detail",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "autoFocus": true,
+          "className": "body-input",
+          "maxLength": "400",
+          "onChange": [Function],
+          "onKeyDown": [Function],
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "textarea",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <button
+              className="previous-button"
+              onClick={[Function]}
+>
+              <img
+                            className="left-arrow-img"
+                            src="left_arrow.svg"
+              />
+</button>,
+            <button
+              className="next-button"
+              onClick={[Function]}
+>
+              <img
+                            className="right-arrow-img"
+                            src="right_arrow.svg"
+              />
+</button>,
+          ],
+          "className": "button-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                className="left-arrow-img"
+                src="left_arrow.svg"
+/>,
+              "className": "previous-button",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "left-arrow-img",
+                "src": "left_arrow.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                className="right-arrow-img"
+                src="right_arrow.svg"
+/>,
+              "className": "next-button",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "right-arrow-img",
+                "src": "right_arrow.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            className="welcome"
+>
+            Sounds great 
+            tony
+            ,
+</p>,
+          <p
+            className="body-instructions"
+>
+            Now give us some more detail
+</p>,
+          <textarea
+            autoFocus={true}
+            className="body-input"
+            maxLength="400"
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            value=""
+/>,
+          <div
+            className="button-container"
+>
+            <button
+                        className="previous-button"
+                        onClick={[Function]}
+            >
+                        <img
+                                    className="left-arrow-img"
+                                    src="left_arrow.svg"
+                        />
+            </button>
+            <button
+                        className="next-button"
+                        onClick={[Function]}
+            >
+                        <img
+                                    className="right-arrow-img"
+                                    src="right_arrow.svg"
+                        />
+            </button>
+</div>,
+        ],
+        "className": "client-background",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Sounds great ",
+              "tony",
+              ",",
+            ],
+            "className": "welcome",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Sounds great ",
+            "tony",
+            ",",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Now give us some more detail",
+            "className": "body-instructions",
+          },
+          "ref": null,
+          "rendered": "Now give us some more detail",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "autoFocus": true,
+            "className": "body-input",
+            "maxLength": "400",
+            "onChange": [Function],
+            "onKeyDown": [Function],
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "textarea",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <button
+                className="previous-button"
+                onClick={[Function]}
+>
+                <img
+                                className="left-arrow-img"
+                                src="left_arrow.svg"
+                />
+</button>,
+              <button
+                className="next-button"
+                onClick={[Function]}
+>
+                <img
+                                className="right-arrow-img"
+                                src="right_arrow.svg"
+                />
+</button>,
+            ],
+            "className": "button-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  className="left-arrow-img"
+                  src="left_arrow.svg"
+/>,
+                "className": "previous-button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "left-arrow-img",
+                  "src": "left_arrow.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  className="right-arrow-img"
+                  src="right_arrow.svg"
+/>,
+                "className": "next-button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "right-arrow-img",
+                  "src": "right_arrow.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
