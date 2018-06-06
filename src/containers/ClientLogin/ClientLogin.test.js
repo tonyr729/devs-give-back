@@ -1,7 +1,12 @@
 import { shallow, mount } from 'enzyme';
 import React from 'react';
-import { ClientLogin } from './ClientLogin';
-import firebase from '../../firebase/firebase'
+import { 
+  ClientLogin, 
+  mapStateToProps, 
+  mapDispatchToProps 
+} from './ClientLogin';
+
+import firebase from '../../firebase/firebase';
 import { Redirect } from 'react-router-dom';
 jest.mock('../../firebase/firebase');
 jest.mock('../../helpers/DataCleaner.js', () => {
@@ -81,7 +86,7 @@ describe('ClientLogin', () => {
   
   describe('handleLogin', () => {
     let mockProps;
-    let clientLogin
+    let clientLogin;
     
     beforeEach(() => {
       mockProps = {
@@ -92,7 +97,7 @@ describe('ClientLogin', () => {
       };
       
       clientLogin = shallow(<ClientLogin {...mockProps} />);
-      clientLogin.instance().api.googleLogin = jest.fn().mockImplementation(() => Promise.resolve({user: 'name'}));
+      clientLogin.instance().database.googleLogin = jest.fn().mockImplementation(() => Promise.resolve({user: 'name'}));
     });
       
     
@@ -101,12 +106,21 @@ describe('ClientLogin', () => {
       
       await instance.handleLogin()
       
-      expect(instance.api.googleLogin).toHaveBeenCalled()
+      expect(instance.database.googleLogin).toHaveBeenCalled()
       expect(instance.cleaner.cleanClientLogin).toHaveBeenCalled();
       expect(instance.props.signInClient).toHaveBeenCalled();
     });
-  });
 
+    it('should call the required functions when there is an error', async () => {
+      clientLogin.instance().database.googleLogin = jest.fn().mockImplementation(() => Promise.reject({Error: 'error'}));
+      const instance = clientLogin.instance()
+      
+      await instance.handleLogin()
+      
+      expect(instance.cleaner.cleanError).toHaveBeenCalled();
+      expect(instance.props.history.push).toHaveBeenCalled();
+    });
+  });
 
   describe('writeToDatabase', () => {
     let mockProps;
@@ -128,6 +142,52 @@ describe('ClientLogin', () => {
 
 
       expect(firebase.database().ref().set).toHaveBeenCalled();
+    });
+  });
+
+  describe('mapStateToProps', () => {
+    it('returns an object with client info', () => {
+
+      const mockState = {
+        client: {name: 'Tony'},
+        clientError: {error: "error"}
+      }
+
+      const mappedProps = mapStateToProps(mockState);
+      expect(mappedProps).toEqual(mockState);
+      
+    })
+  })
+
+  describe('mapDispatchToProps', () => {
+    it('should call dispatch on signInClientwith the correct params', () => {
+
+      const mockDispatch = jest.fn();
+      const user = {name: 'Tony'}
+      const mappedProps = mapDispatchToProps(mockDispatch);
+      const mockAction = {
+        type: 'SIGN_IN_CLIENT',
+        user
+      };
+      
+      mappedProps.signInClient(user);
+      expect(mockDispatch).toHaveBeenCalledWith(mockAction);
+      
+    });
+
+    it('should call dispatch on clientError with the correct params', () => {
+
+      const mockDispatch = jest.fn();
+      const error = {error: 'error'}
+      const mappedProps = mapDispatchToProps(mockDispatch);
+      const mockAction = {
+        type: 'CLIENT_ERROR',
+        error
+      };
+      
+      mappedProps.clientError(error);
+      expect(mockDispatch).toHaveBeenCalledWith(mockAction);
+      
     });
   });
 });
