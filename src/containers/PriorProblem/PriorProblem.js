@@ -24,9 +24,9 @@ export class PriorProblem extends Component {
   
   handleClick = () => {
     const value = Object.keys(this.props.clientsProblem)
-    if (value === 0){
+    if (value.length === 0){
       this.props.history.push("/client-login")
-    } else{
+    } else {
       this.props.history.push("/client-profile");
     }
   }
@@ -42,12 +42,12 @@ export class PriorProblem extends Component {
   }
 };
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   client: state.client,
   clientsProblem: state.clientsProblem
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   createCompletedProblem: (problem) => dispatch(createCompletedProblem(problem))
 });
 
