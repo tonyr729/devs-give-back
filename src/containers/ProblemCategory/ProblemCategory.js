@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ProblemCategory.css';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import { addCategories, selectCategories } from '../../actions/actions';
@@ -103,5 +104,15 @@ export const mapDispatchToProps = dispatch => ({
   selectCategories: categories => dispatch(selectCategories(categories))
 });
 
+ProblemCategory.propTypes = {
+  addCategories: PropTypes.func,
+  categories: PropTypes.array,
+  client: PropTypes.object,
+  selectCategories: PropTypes.func,
+  history: PropTypes.object,
+  title: PropTypes.string,
+  body: PropTypes.string,
+  clientID: PropTypes.number
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProblemCategory);

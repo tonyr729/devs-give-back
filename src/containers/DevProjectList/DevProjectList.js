@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './DevProjectList.css';
 import { connect } from 'react-redux';
 import { Redirect, NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import { addAllProblems, addProjects, handleSignup } from '../../actions/actions';
@@ -116,6 +117,15 @@ export const mapDispatchToProps = (dispatch) => ({
   handleSignup: (status, problemID) => dispatch(handleSignup(status, problemID))
 });
 
+DevProjectList.propTypes = {
+  dev: PropTypes.object,
+  addAllProblems: PropTypes.func,
+  addProjects: PropTypes.func,
+  handleSignup: PropTypes.func,
+  allProblems: PropTypes.array,
+  signup: PropTypes.object,
+  history: PropTypes.object
+};
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(DevProjectList);

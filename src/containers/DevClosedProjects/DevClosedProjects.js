@@ -8,7 +8,7 @@ export const DevClosedProjects = () => {
       <h1 className="warning">UNDER CONSTRUCTION!</h1>
       <p className="blah">
         Yayyy thanks for clicking that link but... 
-        this isn't done yet. Probably because I'm 
+        this isnt done yet. Probably because Im 
         sitting here making this message when I could be coding it... 
         but whatever!
       </p>

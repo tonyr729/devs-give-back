@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class CategoryButton extends Component {
   constructor() {
@@ -25,5 +26,11 @@ class CategoryButton extends Component {
     );
   }
 }
+
+CategoryButton.propTypes = {
+  handleSignup: PropTypes.func,
+  clientID: PropTypes.string,
+  matchingDev: PropTypes.bool
+};
 
 export default CategoryButton;

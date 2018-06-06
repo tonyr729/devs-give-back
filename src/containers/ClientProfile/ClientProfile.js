@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import DataCleaner from '../../helpers/DataCleaner';
 import APIHelper from '../../helpers/APIHelper';
@@ -142,5 +144,13 @@ export const mapDispatchToProps = (dispatch) => ({
   addRepoStats: (stats) => dispatch(addRepoStats(stats))
 });
 
+ClientProfile.propTypes = {
+  clientsProblem: PropTypes.object,
+  client: PropTypes.object,
+  repoStats: PropTypes.bool,
+  addRepoStats: PropTypes.func,
+  signInClient: PropTypes.func,
+  history: PropTypes.object
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ClientProfile);

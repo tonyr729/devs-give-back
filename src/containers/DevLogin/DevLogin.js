@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import { signInDev, devError} from '../../actions/actions';
 import DataCleaner from '../../helpers/DataCleaner';
@@ -55,6 +56,14 @@ export const mapDispatchToProps = (dispatch) => ({
   signInDev: (user, token) => dispatch(signInDev(user, token)),
   devError: (error) => dispatch(devError(error))
 });
+
+DevLogin.propTypes = {
+  signInDev: PropTypes.func,
+  devError: PropTypes.func,
+  history: PropTypes.object,
+  push: PropTypes.func,
+  dev: PropTypes.object
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(DevLogin);
 
