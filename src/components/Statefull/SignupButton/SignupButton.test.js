@@ -23,5 +23,16 @@ describe('SignupButton', () => {
 
       expect(mockHandleSignup).toHaveBeenCalled();
     });
+
+    it('should do nothing if state of selected is true', () => {
+      wrapper.setState({
+        selected: true
+      });
+
+      wrapper.instance().handleClick()
+
+      expect(mockHandleSignup).not.toHaveBeenCalled();
+      
+    });
   });
 });
