@@ -10,7 +10,7 @@ import rightArrow from '../../images/right_arrow.svg';
 import leftArrow from '../../images/left_arrow.svg';
 
 
-class ProblemCategory extends Component {
+export class ProblemCategory extends Component {
   constructor() {
     super();
     this.state = {
@@ -87,7 +87,7 @@ class ProblemCategory extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   client: state.client,
   clientID: state.problem.client,
   title: state.problem.title,
@@ -95,7 +95,7 @@ const mapStateToProps = (state) => ({
   categories: state.categories
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   addCategories: categories => dispatch(addCategories(categories)),
   selectCategories: categories => dispatch(selectCategories(categories))
 })
