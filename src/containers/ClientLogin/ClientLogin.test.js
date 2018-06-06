@@ -172,7 +172,6 @@ describe('ClientLogin', () => {
       
       mappedProps.signInClient(user);
       expect(mockDispatch).toHaveBeenCalledWith(mockAction);
-      
     });
 
     it('should call dispatch on clientError with the correct params', () => {
