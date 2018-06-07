@@ -4,11 +4,11 @@ import './ProblemCreated.css';
 
 export const ProblemCreated = () => {
   return (
-    <div>
+    <div className='problem-created'>
       <p className='thanks-text'>Thank you!</p>
       <p className='info-message'>Your problem has been created.</p>
       <NavLink to='/new-profile'>
-        <p>Go to my profile</p>
+        <button className="goto-profile-button">GO TO PROFILE</button>
       </NavLink>
     </div>
   );

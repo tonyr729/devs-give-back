@@ -1,12 +1,13 @@
 .profile-background {
-  background-color: #1db6fc;
+  background-color: #ffffff;
   width: 100vw;
   height: 100vh; }
 
 .dev-header {
-  height: 20vh;
+  height: 9vh;
   width: 100vw;
-  background-color: #1db6fc; }
+  padding-top: 4rem;
+  background-color: #03a9f4; }
 
 .dev-header-container {
   height: 100%;
@@ -21,7 +22,6 @@
   .dev-header-container p {
     font-size: 2rem;
     text-align: -webkit-auto;
-    position: relative;
     font-weight: 100;
     top: 9rem; }
   .dev-header-container ul {
@@ -38,7 +38,7 @@
 .main {
   height: 40vh;
   width: 100vw;
-  background-color: #1db6fc; }
+  background-color: #ffffff; }
 
 .main-container {
   height: 80vh;
@@ -51,13 +51,14 @@
   font-size: 3rem;
   padding-top: 2rem;
   font-weight: 100;
-  margin-left: 14rem;
-  width: 60rem;
-  color: #000; }
+  width: 60rem; }
   .main-section-titles a {
-    color: #7c7c7c; }
+    color: #ffffff;
+    padding: 0 4rem; }
     .main-section-titles a:hover {
-      color: #03a9f4; }
+      color: #00364e; }
+    .main-section-titles a:active {
+      border-bottom: 1px solid #ffffff; }
 
 .info-text {
   background-color: #fff;
@@ -73,7 +74,7 @@
   background-color: #fff;
   width: 59rem;
   height: 34rem;
-  margin: 4rem auto 0 14.5rem;
+  margin: 4rem auto 0;
   overflow: scroll; }
   .current-projects button {
     border: 1px solid;
@@ -97,12 +98,3 @@
 
 .project-button {
   margin-left: 1.5rem; }
-
-.signout-button {
-  background: none;
-  display: block;
-  margin: .5rem 0 0 4.2rem;
-  font-size: 1rem;
-  color: #07a8f4; }
-  .signout-button:hover {
-    color: #800080; }

@@ -62,24 +62,21 @@ export class DevProfile extends Component {
         {redirect}
         <div className="dev-header">
           <div className="dev-header-container">
-            <p>{this.props.dev.name}</p>
-            <img className='profile-picture' src={this.props.dev.photoURL} alt="developer profile picture"/>
-            <button onClick={() => this.props.signInDev('')} className="signout-button">Sign Out</button>
-          </div>
-        </div>
-        <div className="main">
-          <div className="main-container">
             <p className="main-section-titles">
               <NavLink to='/dev-project-list'>
                 New Project
-              </NavLink> | &nbsp;
+              </NavLink>
               <NavLink to='/dev-profile'>
                 Open Projects
-              </NavLink> | &nbsp;
+              </NavLink>
               <NavLink to='/dev-closed-projects'>
                 Closed Projects 
               </NavLink>
             </p>
+          </div>
+        </div>
+        <div className="main">
+          <div className="main-container">
             <div className="current-projects">
               {currentProjects}
             </div>

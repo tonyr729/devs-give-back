@@ -27,9 +27,6 @@ export class DevProjectList extends Component {
     }
   }
 
-  componentDidUpdate() {}
-
-
   displayAllProblems = (problems) => {
     let display = null;
     let matchingDev = false;
@@ -39,7 +36,9 @@ export class DevProjectList extends Component {
           <button key={index} className="category-display">{category}</button>
         ));
         if (problem.dev) {
-          matchingDev = problem.dev.devID === this.props.dev.id;
+          const devStats = Object.values(problem.dev);
+          
+          matchingDev = devStats[0].devID === this.props.dev.id;
         }
 
         return (
@@ -77,23 +76,21 @@ export class DevProjectList extends Component {
         { !this.props.signup.status || <SignUp history={this.props.history}/>}
         <div className="dev-header">
           <div className="dev-header-container">
-            <p>{this.props.dev.name}</p>
-            <img className='profile-picture' src={this.props.dev.photoURL} alt="developer profile picture"/>
-          </div>
-        </div>
-        <div className="main">
-          <div className="main-container">
             <p className="main-section-titles">
               <NavLink to='/dev-project-list'>
                 New Project
-              </NavLink> | &nbsp;
+              </NavLink>
               <NavLink to='/dev-profile'>
                 Open Projects
-              </NavLink> | &nbsp;
+              </NavLink>
               <NavLink to='/dev-closed-projects'>
                 Closed Projects 
               </NavLink>
             </p>
+          </div>
+        </div>
+        <div className="main">
+          <div className="main-container">
             <p className="main-section-choice">Choose from a problem below</p>
             <div className="main-section">
               {problems}

@@ -56,14 +56,15 @@ export class ProblemBody extends Component {
           onKeyDown={this.submitInput} 
           onChange={this.handleInputChange} 
           maxLength='400' value={this.state.input} 
+          placeholder="I need a website or app to track..."
           autoFocus
         />
         <div className="button-container">
           <button className='previous-button' onClick={()=> this.props.history.push("/problem-title")} >
-            <img className='left-arrow-img' src={leftArrow} />
+            PREV
           </button>
           <button className='next-button' onClick={this.handleSubmit} >
-            <img className='right-arrow-img' src={rightArrow} />
+            NEXT
           </button>
         </div>
       </div>

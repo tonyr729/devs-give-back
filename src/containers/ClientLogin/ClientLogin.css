@@ -1,14 +1,16 @@
 .client-background {
-  background-color: #607d8b;
+  background-color: #ffffff;
   width: 100vw;
   height: 100vh; }
 
-.login-message {
+.client-login-message {
   font-size: 5rem;
-  padding-top: 12rem; }
+  padding-top: 12rem;
+  color: #4f4f4f; }
 
 .login-button {
   border: none;
+  border-radius: .3rem;
   width: 12rem;
   height: 2.9rem;
   background-repeat: no-repeat;
@@ -17,11 +19,13 @@
   font-size: 1rem;
   color: #6d6c6c;
   margin: 4rem auto;
-  display: block; }
+  display: block;
+  background-color: #03a9f4;
+  color: #ffffff; }
   .login-button:hover {
-    color: #f8f8ff;
+    color: #ffffff;
     background-image: url("../../images/btn_google_light_focus_ios.svg");
-    background-color: #448aff; }
+    background-color: #597cb8; }
   .login-button:active {
     color: #f8f8ff;
     background-image: url("../../images/btn_google_light_focus_ios.svg");

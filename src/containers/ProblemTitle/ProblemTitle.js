@@ -61,17 +61,19 @@ export class ProblemTitle extends Component {
     return (
       <div className='client-background'>
         <p className='welcome'>Hi {firstName},</p>
-        <p className='title-instructions'>Briefly describe your problem...</p>
+        <p className='title-instructions'>Give a title for your problem.</p>
         <p className='example'>Ex: Looking for a solution to help an afterschool program</p> 
+        <p className='example'>MAX 70 CHARACTERS</p> 
         <input 
           className='title-input' 
           onKeyDown={this.submitInput}  
           onChange={this.handleInputChange} 
           maxLength='70' value={this.state.input} 
+          placeholder="Looking for a solution to..."
           autoFocus
         />
         <button className='title-next-button' onClick={this.handleSubmit} >
-          <img className='right-arrow-img' src={rightArrow}/>
+          NEXT
         </button>
       </div>
     );

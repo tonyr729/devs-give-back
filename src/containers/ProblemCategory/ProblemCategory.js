@@ -80,10 +80,10 @@ export class ProblemCategory extends Component {
         </div>
         <div className="button-container">
           <button className='previous-button' onClick={()=> this.props.history.push("/problem-body")} >
-            <img className='left-arrow-img' src={leftArrow} />
+            PREV
           </button>
           <button className='next-button' onClick={this.handleSubmit} >
-            <img className='right-arrow-img' src={rightArrow} />
+            NEXT
           </button>
         </div>
       </div>

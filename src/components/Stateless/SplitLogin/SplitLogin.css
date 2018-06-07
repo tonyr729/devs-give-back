@@ -1,6 +1,6 @@
 .client-login {
-  color: #f5f5f5;
-  background-color: #607d8b;
+  color: #4f4f4f;
+  background-color: #ffffff;
   height: 50vh; }
   .client-login a p {
     font-size: 5rem;
@@ -16,4 +16,4 @@
     font-size: 5rem;
     padding: 12rem; }
     .dev-login a p:hover {
-      color: #607d8b; }
+      color: #ffffff; }

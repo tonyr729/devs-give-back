@@ -1,3 +1,10 @@
+$grey: #4f4f4f;
+$white: #ffffff;
+$green: #39bda7;
+$blue: #03a9f4;
+$transparent: rgba(255, 255, 255, 0);
+$black-05: rgba(0, 0, 0, 0.05);
+
 .welcome {
   font-size: 2rem;
   padding-top: 10rem;
@@ -6,7 +13,7 @@
 .title-instructions {
   font-size: 4rem;
   padding-top: 4rem;
-  color: #f8f8ff
+  color: $grey
 }
 
 .example {
@@ -16,18 +23,17 @@
 }
 
 .title-input {
-  background-color: rgba(0, 0, 0, 0);
-  color: #ffaaaa;
+  background-color: $transparent;
+  color: $blue;
   border: none;
-  border-bottom: 1px solid #ffaaaa;
+  border-bottom: 1px solid $blue;
   margin: 4rem auto;
   display: block;
   width: 58rem;
-  font-size: 2rem;
+  font-size: 1.9rem;
   height: 4rem;
-  text-align: center;
   &::placeholder {
-    color: #ff5990;
+    color: rgba(3, 168, 244, 0.342);
   }
   &:focus {
     border-bottom: none;
@@ -36,16 +42,43 @@
 }
 
 .title-next-button {
-  width: 6rem;
-  height: 6rem;
-  background: none;
-  border: none;
+  background:$blue;
+  color:$white;
+  border:none;
+  margin: 7rem auto;
+  position: relative;
+  border-radius: 7rem;
   display: block;
-  margin: 10.5rem auto 0;
-  img {
-    width: 4rem;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor: pointer;
+  transition:800ms ease all;
+  outline:none;
+  &:hover{
+    background:$transparent;
+    color:#002e42;
   }
-  &:hover {
-    color: #03a9f4
+  &:before,
+  &:after {
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: $blue;
+    transition:400ms ease all;
   }
+  &:after {
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  &:hover:before,
+  &:hover:after {
+    width:100%;
+    transition:800ms ease all;
+  }  
 }

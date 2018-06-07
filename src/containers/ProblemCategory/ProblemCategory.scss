@@ -1,14 +1,21 @@
+$grey: #4f4f4f;
+$white: #ffffff;
+$green: #39bda7;
+$blue: #03a9f4;
+$transparent: rgba(255, 255, 255, 0);
+$black-05: rgba(0, 0, 0, 0.05);
+
 .categories-instructions {
   font-size: 4rem;
   padding-top: 2rem;
-  color: #f8f8ff;
+  color: $grey;
   line-height: 4rem;
   margin-bottom: .6rem;
 }
 
 .categories {
   display: block;
-  background-color: #607d8b;
+  background-color: $white;
   margin: 2rem auto;
   width: 60%;
   height: 22rem;

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import { signInDev, devError} from '../../actions/actions';
+import { signInDev, signInClient, devError} from '../../actions/actions';
 import DataCleaner from '../../helpers/DataCleaner';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import './DevLogin.css';
@@ -13,6 +13,10 @@ export class DevLogin extends Component {
     super();
     this.database = new DatabaseHelper();
     this.cleaner = new DataCleaner();
+  }
+
+  componentDidMount() {
+    this.props.signInClient({})
   }
 
 
@@ -41,7 +45,7 @@ export class DevLogin extends Component {
     return (
       <div>
         { redirect }
-        <p className='login-message'>Please login</p>
+        <p className='dev-login-message'>Please login</p>
         <button className='login-button-github'onClick={()=> this.handleLogin()}>Login with GitHub</button>
       </div>
     );
@@ -54,6 +58,7 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   signInDev: (user, token) => dispatch(signInDev(user, token)),
+  signInClient: (client) => dispatch(signInClient(client)),
   devError: (error) => dispatch(devError(error))
 });
 

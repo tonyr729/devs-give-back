@@ -5,40 +5,69 @@
 .body-instructions {
   font-size: 4rem;
   padding-top: 4rem;
-  color: #f8f8ff; }
+  color: #4f4f4f; }
 
 .body-input {
-  background-color: rgba(0, 0, 0, 0);
-  color: #ffaaaa;
-  border: 1px solid #ffaaaa;
+  background-color: rgba(255, 255, 255, 0);
+  color: #03a9f4;
+  border: 1px solid #03a9f4;
   margin: 4rem auto 0;
   display: block;
   width: 54rem;
   font-size: 2rem;
   height: 20rem;
-  text-align: center;
   resize: none; }
   .body-input::placeholder {
-    color: #ffaaaa; }
+    color: rgba(3, 168, 244, 0.342); }
   .body-input:focus {
     outline: none;
     border: none; }
 
 .button-container {
   display: flex;
-  width: 10rem;
+  width: 18rem;
   height: 5rem;
   margin: 0 auto;
-  background-color: #607d8b; }
+  background-color: #ffffff; }
 
 .next-button,
 .previous-button {
-  width: 6rem;
-  height: 6rem;
-  background: none;
+  background: #03a9f4;
+  color: #ffffff;
   border: none;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 7rem;
   display: block;
-  margin: 0rem auto; }
-  .next-button img,
-  .previous-button img {
-    width: 4rem; }
+  height: 60px;
+  font-size: 1.6em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none; }
+  .next-button:hover,
+  .previous-button:hover {
+    background: rgba(255, 255, 255, 0);
+    color: #002e42; }
+  .next-button:before, .next-button:after,
+  .previous-button:before,
+  .previous-button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #03a9f4;
+    transition: 400ms ease all; }
+  .next-button:after,
+  .previous-button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0; }
+  .next-button:hover:before, .next-button:hover:after,
+  .previous-button:hover:before,
+  .previous-button:hover:after {
+    width: 100%;
+    transition: 800ms ease all; }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './ClientLogin.css';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { signInClient, clientError } from '../../actions/actions';
+import { signInClient, signInDev, clientError } from '../../actions/actions';
 import DatabaseHelper from '../../helpers/DatabaseHelper';
 import DataCleaner from '../../helpers/DataCleaner';
 import PropTypes from 'prop-types';
@@ -13,6 +13,10 @@ export class ClientLogin extends Component {
     super();
     this.database = new DatabaseHelper();
     this.cleaner = new DataCleaner();
+  }
+
+  componentDidMount() {
+    this.props.signInDev({})
   }
   
   handleLogin = async () => {
@@ -40,7 +44,7 @@ export class ClientLogin extends Component {
     return (
       <div className='client-background'>
         { redirect }
-        <p className='login-message'>Please login</p>
+        <p className='client-login-message'>Please login</p>
         <button className='login-button'onClick={()=> this.handleLogin()}>Login with Google</button>
       </div>
     );
@@ -54,6 +58,7 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   signInClient: (client) => dispatch(signInClient(client)),
+  signInDev: (dev) => dispatch(signInDev(dev)),
   clientError: (error) => dispatch(clientError(error))
 });
 

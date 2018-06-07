@@ -1,6 +1,13 @@
+$grey: #4f4f4f;
+$white: #ffffff;
+$green: #39bda7;
+$blue: #03a9f4;
+$transparent: rgba(255, 255, 255, 0);
+$black-05: rgba(0, 0, 0, 0.05);
+
 .client-login {
-  color: #f5f5f5;
-  background-color: #607d8b;
+  color: $grey;
+  background-color: $white;
   height: 50vh;
   a {
     p {
@@ -24,7 +31,7 @@
       font-size: 5rem;
       padding: 12rem;
       &:hover {
-        color: #607d8b;
+        color: $white;
       }
     }
   }

@@ -1,3 +1,6 @@
+.problem-created {
+  background-color: #fff; }
+
 .thanks-text {
   font-size: 2rem;
   padding-top: 10rem; }
@@ -12,3 +15,38 @@ a p {
   padding: 7rem; }
   a p:hover {
     color: #29bbff; }
+
+.goto-profile-button {
+  background: #03a9f4;
+  color: #ffffff;
+  border: none;
+  margin: 7rem auto;
+  position: relative;
+  border-radius: 7rem;
+  display: block;
+  height: 60px;
+  font-size: 1.6em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none; }
+  .goto-profile-button:hover {
+    background: rgba(255, 255, 255, 0);
+    color: #002e42; }
+  .goto-profile-button:before, .goto-profile-button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #03a9f4;
+    transition: 400ms ease all; }
+  .goto-profile-button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0; }
+  .goto-profile-button:hover:before, .goto-profile-button:hover:after {
+    width: 100%;
+    transition: 800ms ease all; }

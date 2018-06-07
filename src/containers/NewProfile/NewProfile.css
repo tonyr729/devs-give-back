@@ -1,16 +1,16 @@
 .header {
   height: 20vh;
   width: 100vw;
-  background-color: #607d8b; }
+  background-color: #ffffff; }
 
 .header-container {
   height: 100%;
   width: 80rem;
   display: block;
   margin: 0 auto;
-  background-color: #465b65; }
+  background-color: #ffffff; }
   .header-container img {
-    border-radius: 3rem;
+    border-radius: 5rem;
     width: 9rem;
     margin: 3rem 2rem 0; }
   .header-container p {
@@ -33,23 +33,34 @@
 .problem {
   height: 40vh;
   width: 100vw;
-  background-color: #607d8b; }
+  background-color: #ffffff; }
 
 .problem-container {
   height: 100%;
   width: 80rem;
   display: block;
   margin: 0 auto;
-  background-color: #000; }
+  background-color: #ffffff; }
 
-.section-title {
+.section-title,
+.stats-section-title {
   font-size: 3rem;
-  padding-top: 2rem;
+  padding-top: 7rem;
+  font-weight: 100; }
+
+.stats-section-title {
+  color: #ffffff;
+  padding: 3rem 0 2rem; }
+
+.no-repo-info {
+  color: #ffffff;
+  font-size: 3rem;
+  padding-top: 7rem;
   font-weight: 100; }
 
 .problem-title {
   font-size: 1.6rem;
-  padding: 4rem 6rem 0 6.2rem;
+  padding: 2rem 6rem 0 6.2rem;
   text-align: -webkit-auto; }
 
 .problem-body {
@@ -58,36 +69,76 @@
   text-align: left;
   color: grey;
   margin: 0 0 0 12rem;
-  font-weight: 100; }
+  font-weight: 100;
+  height: 7rem;
+  overflow: scroll; }
 
 .stats {
-  height: 40vh;
+  height: 60vh;
   width: 100vw;
-  background-color: #607d8b; }
+  background-color: #03a9f4; }
 
-.stats-container {
+.stats-section {
   height: 100%;
   width: 80rem;
   display: block;
   margin: 0 auto;
-  background-color: #1471c9; }
+  background-color: #03a9f4; }
+
+.stats-container {
+  height: 16rem;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  background-color: #03a9f4;
+  display: flex;
+  flex-wrap: wrap; }
+
+.stats-card {
+  background-color: #ffffff;
+  height: 24rem;
+  width: 18rem;
+  margin: 1rem; }
 
 .stats-title {
-  font-size: 2rem;
-  padding: 4rem 6rem 0;
-  text-align: -webkit-auto; }
+  font-size: 1.4rem;
+  padding: 3rem 0 0 0;
+  width: 15rem;
+  text-align: center; }
 
 .category-tags {
   width: 56.2rem;
   height: 2.4rem;
   margin: 0 auto;
-  background-color: #000000; }
+  background-color: #ffffff; }
 
 .display-category {
-  height: 2rem;
-  font-size: 1rem;
+  height: 1.5rem;
+  font-size: .7rem;
   padding: 0 1rem;
-  margin: 0 .2rem;
-  color: #f8f8ff;
+  margin: .2rem .2rem;
+  color: #ffffff;
   border: none;
-  background-color: #1b9b1b; }
+  border-radius: 1rem;
+  background-color: #03a9f4; }
+
+.updates-image {
+  width: 21.4rem;
+  position: relative;
+  right: 2.6rem; }
+
+.lines-image {
+  width: 23rem;
+  margin: 2.1rem;
+  position: relative;
+  right: 4rem; }
+
+.contributer-image {
+  width: 23rem;
+  position: relative;
+  margin: 2.1rem;
+  right: 5rem; }
+
+.hour-image {
+  width: 13rem;
+  margin: 2.1rem; }

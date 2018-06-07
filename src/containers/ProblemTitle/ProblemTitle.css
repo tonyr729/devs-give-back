@@ -5,7 +5,7 @@
 .title-instructions {
   font-size: 4rem;
   padding-top: 4rem;
-  color: #f8f8ff; }
+  color: #4f4f4f; }
 
 .example {
   font-size: 1rem;
@@ -13,30 +13,52 @@
   color: #a0a0a0; }
 
 .title-input {
-  background-color: rgba(0, 0, 0, 0);
-  color: #ffaaaa;
+  background-color: rgba(255, 255, 255, 0);
+  color: #03a9f4;
   border: none;
-  border-bottom: 1px solid #ffaaaa;
+  border-bottom: 1px solid #03a9f4;
   margin: 4rem auto;
   display: block;
   width: 58rem;
-  font-size: 2rem;
-  height: 4rem;
-  text-align: center; }
+  font-size: 1.9rem;
+  height: 4rem; }
   .title-input::placeholder {
-    color: #ff5990; }
+    color: rgba(3, 168, 244, 0.342); }
   .title-input:focus {
     border-bottom: none;
     outline: none; }
 
 .title-next-button {
-  width: 6rem;
-  height: 6rem;
-  background: none;
+  background: #03a9f4;
+  color: #ffffff;
   border: none;
+  margin: 7rem auto;
+  position: relative;
+  border-radius: 7rem;
   display: block;
-  margin: 10.5rem auto 0; }
-  .title-next-button img {
-    width: 4rem; }
+  height: 60px;
+  font-size: 1.6em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none; }
   .title-next-button:hover {
-    color: #03a9f4; }
+    background: rgba(255, 255, 255, 0);
+    color: #002e42; }
+  .title-next-button:before, .title-next-button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #03a9f4;
+    transition: 400ms ease all; }
+  .title-next-button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0; }
+  .title-next-button:hover:before, .title-next-button:hover:after {
+    width: 100%;
+    transition: 800ms ease all; }

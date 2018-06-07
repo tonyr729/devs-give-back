@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
-import { Splash } from './components/Stateless/Splash/Splash';
+import { Route, NavLink} from 'react-router-dom';
+
+import NavBar from './containers/NavBar/NavBar';
+import Splash from './components/Stateless/Splash/Splash';
 import { Choice } from './components/Stateless/Choice/Choice';
 import { SplitLogin } from './components/Stateless/SplitLogin/SplitLogin';
 import { ErrorPage } from './components/Stateless/ErrorPage/ErrorPage';
@@ -23,22 +25,25 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        <Route exact path='/' component={ Splash } />
-        <Route path='/choice' component={ Choice } />
-        <Route path='/split-login' component={ SplitLogin } />
-        <Route path='/error-page' component={ ErrorPage } />
-        <Route path='/dev-login' component={ DevLogin } />
-        <Route path='/client-login' component={ ClientLogin } />
-        <Route path='/problem-title' component={ ProblemTitle } />
-        <Route path='/problem-body' component={ ProblemBody } />
-        <Route path='/problem-category' component={ ProblemCategory } />
-        <Route path='/problem-created' component={ ProblemCreated } />
-        <Route path='/prior-problem' component={ PriorProblem } />
-        <Route path='/new-profile' component={ NewProfile } />
-        <Route path='/client-profile' component={ ClientProfile } />
-        <Route path='/dev-profile' component={ DevProfile } />
-        <Route path='/dev-project-list' component={ DevProjectList } />
-        <Route path='/dev-closed-projects' component={ DevClosedProjects } />
+        <NavBar />
+        <div className="body-container">
+          <Route exact path='/' component={ Splash } />
+          <Route path='/choice' component={ Choice } />
+          <Route path='/split-login' component={ SplitLogin } />
+          <Route path='/error-page' component={ ErrorPage } />
+          <Route path='/dev-login' component={ DevLogin } />
+          <Route path='/client-login' component={ ClientLogin } />
+          <Route path='/problem-title' component={ ProblemTitle } />
+          <Route path='/problem-body' component={ ProblemBody } />
+          <Route path='/problem-category' component={ ProblemCategory } />
+          <Route path='/problem-created' component={ ProblemCreated } />
+          <Route path='/prior-problem' component={ PriorProblem } />
+          <Route path='/new-profile' component={ NewProfile } />
+          <Route path='/client-profile' component={ ClientProfile } />
+          <Route path='/dev-profile' component={ DevProfile } />
+          <Route path='/dev-project-list' component={ DevProjectList } />
+          <Route path='/dev-closed-projects' component={ DevClosedProjects } />
+        </div>
       </div>
     );
   }

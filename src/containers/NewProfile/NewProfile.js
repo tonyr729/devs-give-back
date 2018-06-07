@@ -33,10 +33,6 @@ export class NewProfile extends Component {
       <div className="frame-container">
         {redirect}
         <div className="header">
-          <div className="header-container">
-            <p>{this.props.client.name}</p>
-            <img className='profile-picture' src={this.props.client.photoURL} alt="user profile picture"/>
-          </div>
         </div>
         <div className="problem">
           <div className="problem-container">
@@ -50,8 +46,10 @@ export class NewProfile extends Component {
         </div>
         <div className="stats">
           <div className="stats-container">
-            <p className="section-title">Heres whats happening</p>
-            <p className="stats-title">Nothing at this time :(</p>
+            
+            <p className="no-repo-info">
+              Thank you! <br /> We will notify you by email when someone signs up as a contributor to your problem.
+            </p>
           </div>
         </div>
       </div>

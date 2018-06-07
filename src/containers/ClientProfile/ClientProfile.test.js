@@ -106,7 +106,7 @@ describe('ClientProfile', () => {
     it.only('should return stats object if problem is present', async () => {
       const actual = await wrapper.instance().getRepoStats(mockProps.clientsProblem);
       const expected = { 
-        lines: [ '2345', '-234' ],
+        lines: ['2345', '-234'],
         contributers: [ 'person1', 'person2' ],
         updates: [ 'commit1', 'commit2' ],
         hours: [ 'hour1', 'hour2' ] 

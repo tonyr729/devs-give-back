@@ -3,9 +3,10 @@ div {
   width: 100vw;
   height: 100vh; }
 
-.login-message {
+.dev-login-message {
   font-size: 5rem;
-  padding-top: 12rem; }
+  padding-top: 12rem;
+  color: #ffffff; }
 
 .login-button-github {
   border: none;

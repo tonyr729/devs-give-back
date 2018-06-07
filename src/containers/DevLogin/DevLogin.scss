@@ -1,12 +1,21 @@
+//COLORS
+$grey: #4f4f4f;
+$white: #ffffff;
+$green: #39bda7;
+$blue: #03a9f4;
+$transparent: rgba(255, 255, 255, 0);
+$black-05: rgba(0, 0, 0, 0.05);
+
 div {
   background-color: #03a9f4;
   width: 100vw;
   height: 100vh;
 }
 
-.login-message {
+.dev-login-message {
   font-size: 5rem;
   padding-top: 12rem;
+  color: $white;
 }
 
 .login-button-github {

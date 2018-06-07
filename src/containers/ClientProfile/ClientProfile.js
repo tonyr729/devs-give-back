@@ -7,6 +7,10 @@ import DatabaseHelper from '../../helpers/DatabaseHelper';
 import DataCleaner from '../../helpers/DataCleaner';
 import APIHelper from '../../helpers/APIHelper';
 import { addRepoStats, signInClient } from '../../actions/actions';
+import handsPhoto from '../../images/hands.svg';
+import linesPhoto from '../../images/code.svg';
+import updatesPhoto from '../../images/update.svg';
+import hourPhoto from '../../images/time.svg';
 
 import './ClientProfile.css';
 
@@ -34,6 +38,7 @@ export class ClientProfile extends Component {
 
       const repoDev = Object.values(problem.dev).find(dev => dev.repo);
       const repoURL = repoDev.repo;
+      console.log(repoURL);
       const apiURL = this.cleaner.cleanRepoURL(repoURL);
       try {
         const lines = await this.api.fetchLinesOfCode(apiURL);
@@ -42,8 +47,8 @@ export class ClientProfile extends Component {
         const hours = await this.api.fetchNumberOfHours(apiURL);
         stats = { lines, contributers, updates, hours };
       } catch (error) {
+        console.log(error)
         this.props.history.push('/error-page');
-        throw new Error('Failed to fetch data');
       }
     }
     return stats;
@@ -51,19 +56,31 @@ export class ClientProfile extends Component {
 
   displayStats = (stats) => {
     if (stats){
-      const contributer = stats.contributer > 1 ? 'contributers' : 'contributer';
+      const contributer = stats.contributer > 1 ? 'contributer' : 'contributers';
       return (
         <div className="stats-container">
-          <p className="stats-title">{stats.contributers} {contributer}!</p>
-          <p className="stats-title">{stats.lines} lines of code created!</p>
-          <p className="stats-title">{stats.updates} updates!</p>
-          <p className="stats-title">Roughly {stats.hours} hours spent on your project!</p>
+          <div className="stats-card">
+            <img src={handsPhoto} alt="illustration of hands" className="contributer-image"/>
+            <p className="stats-title">{stats.contributers} {contributer}!</p>
+          </div>
+          <div className="stats-card">
+            <img src={linesPhoto} alt="illustration of lines of code" className="lines-image"/>
+            <p className="stats-title">{stats.lines} lines of code</p>
+          </div>
+          <div className="stats-card">
+            <img src={updatesPhoto} alt="illustration of updates" className="updates-image"/>
+            <p className="stats-title">{stats.updates} updates!</p>
+          </div>
+          <div className="stats-card">
+            <img src={hourPhoto} alt="illustration of a hourglass" className="hour-image"/>
+            <p className="stats-title">Roughly {stats.hours} hours spent</p>
+          </div>
         </div>
       );
     } else {
       return (
         <div className="stats-container">
-          <p className="stats-title">Nothing at this time :(</p>
+          <p className="stats-title">Nothing at this time</p>
         </div>
 
       ); 
@@ -104,16 +121,9 @@ export class ClientProfile extends Component {
     return (
       <div className="frame-container">
         {redirect}
-        <div className="header">
-          <div className="header-container">
-            <p>{this.props.client.name}</p>
-            <img className='profile-picture' src={this.props.client.photoURL} alt="user profile picture"/>
-            <button onClick={() => this.props.signInClient('')} className="signout-button">Sign Out</button>
-          </div>
-        </div>
         <div className="problem">
+          <p className="section-title">Heres your problem</p>
           <div className="problem-container">
-            <p className="section-title">Heres your problem</p>
             <p className="problem-title">{clientsProblem.title}</p>
             <p className="problem-body">{clientsProblem.body}</p>
             <div className="category-tags">
@@ -123,7 +133,7 @@ export class ClientProfile extends Component {
         </div>
         <div className="stats">
           <div className="stats-section">
-            <p className="section-title">Heres whats happening</p>
+            <p className="stats-section-title">Heres whats happening</p>
             {displayStats}
           </div>
         </div>
