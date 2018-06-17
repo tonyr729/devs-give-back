@@ -15,7 +15,7 @@ View mock user flow [here](https://s3.amazonaws.com/assets.mockflow.com/app/wire
 
 ##### Welcome screen
 
-![devsGIVEback](https://user-images.githubusercontent.com/34175382/41035328-88a80c44-6949-11e8-95b3-6dfd80ed2239.png)
+![devsGIVEback](https://user-images.githubusercontent.com/34175382/41512062-2eb2a9a6-7240-11e8-98a2-6d7844ee08f7.PNG)
 
 ---
 
