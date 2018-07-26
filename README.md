@@ -2,7 +2,10 @@
 
 ## Synopsis
 
-devsGIVEback is a platform to connect non-developers with developers. Those out there that have an issue that can be solved by software can meet developers that are willing to volunteer their time and skill to solve civic minded problems or issues that effect large groups of people.
+devsGIVEback is a platform to connect non-developers with developers. Those out there that have an issue that can be solved by software can meet developers that are willing to volunteer their time and skill to solve civic-minded problems or issues that affect large groups of people.
+
+### *Learning Goals:* 
+Final assessment of a module focused on React Development to showcase cumulative skills.
 
 ### *Tools:* 
 React, React-Router, Redux, SCSS
