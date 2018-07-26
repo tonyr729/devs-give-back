@@ -22,8 +22,11 @@ View mock user flow [here](https://s3.amazonaws.com/assets.mockflow.com/app/wire
 
 ---
 
-## Contributor
+## Set Up
 
-[Tony Robertson](https://github.com/tonyr729)
+* Clone this project
+* Run `npm install` from the root directory
+* Run `npm start` and visit localhost:3000 in your browser
+* Run tests with `npm test`
 
 _(**Turing School of Software & Design Front-end Engineering project - Mod 3:** Personal Project utilizing full tech stack learned)_
